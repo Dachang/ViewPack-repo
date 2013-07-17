@@ -28,6 +28,13 @@
 {
     [super viewDidLoad];
     self.navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
+    UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 33)];
+    [button setImage:[UIImage imageNamed:@"NavBarButton.png"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    navigationItem.rightBarButtonItem = rightBarButton;
+    [self.navBar pushNavigationItem:navigationItem animated:NO];
     
     [self.view addSubview:navBar];
     // Do any additional setup after loading the view from its nib.
@@ -38,7 +45,7 @@
 
 - (void) backButtonPressed
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning

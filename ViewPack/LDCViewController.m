@@ -105,8 +105,7 @@
 
     if(row == 0 && section == 0)
     {
-        LDCSettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
-        [self.navigationController pushViewController:vc animated:YES];
+        //
     }
     else
     {
@@ -122,7 +121,8 @@
 - (void) myActionSettings
 {
     UIViewController *vc = [[LDCSettingsViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:NULL];
+    [vc release];
 }
 
 - (void)didReceiveMemoryWarning
