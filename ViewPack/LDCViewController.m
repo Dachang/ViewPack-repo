@@ -14,7 +14,7 @@
 @end
 
 @implementation LDCViewController
-@synthesize names,keys,tableViewA,imageA,navBar;
+@synthesize names,keys,tableViewA,imageA,navBar,modalTransitionStyle;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RootVCTableViewASource" ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -92,6 +93,8 @@
     cell.textLabel.font = [UIFont fontWithName:@"Helvectica" size:15.0];
     cell.textLabel.textColor = [UIColor darkTextColor];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     return cell;
     //add image
 }
@@ -105,7 +108,9 @@
 
     if(row == 0 && section == 0)
     {
-        //
+        UIViewController *vc = [[LDCSettingsViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
     }
     else
     {

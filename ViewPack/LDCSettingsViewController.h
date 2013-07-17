@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LDCSettingsViewController : UIViewController
+@interface LDCSettingsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 {
-    UINavigationBar *navBar;    
+    UINavigationBar *navBar;
+    UITableView *shelfView;
 }
 
 @property (strong, nonatomic) UINavigationBar *navBar;
+@property (nonatomic, strong) UITableView *shelfView;
+
+@property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
+
 @end

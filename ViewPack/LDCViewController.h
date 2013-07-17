@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LDCViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface LDCViewController : UIViewController<UITableViewDelegate, UITableViewDataSource,UINavigationControllerDelegate>
 {
     NSDictionary *names;
     NSArray *keys;
@@ -22,4 +22,7 @@
 @property (nonatomic, strong) UITableView *tableViewA;
 @property (strong, nonatomic) UIImageView *imageA;
 @property (strong, nonatomic) UINavigationBar *navBar;
+
+@property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
+
 @end

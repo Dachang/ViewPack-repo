@@ -24,6 +24,16 @@
 		13B1658517963B4600C6808A /* NavBarButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B1658317963B4600C6808A /* NavBarButton@2x.png */; };
 		13B1658617963B4600C6808A /* NavBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B1658417963B4600C6808A /* NavBarButton.png */; };
 		13B165941796457900C6808A /* LDCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B165921796457900C6808A /* LDCSettingsViewController.m */; };
+		13B165981796B4CA00C6808A /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165961796B4CA00C6808A /* backButton@2x.png */; };
+		13B165991796B4CA00C6808A /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165971796B4CA00C6808A /* backButton.png */; };
+		13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1659D1796CBCE00C6808A /* LDCShelfTableViewCell.m */; };
+		13B165A11796CFAF00C6808A /* ShelfHolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B1659F1796CFAF00C6808A /* ShelfHolder@2x.png */; };
+		13B165A21796CFAF00C6808A /* ShelfHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A01796CFAF00C6808A /* ShelfHolder.png */; };
+		13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A41796D7AB00C6808A /* shelfBG@2x.png */; };
+		13B165A71796D7AC00C6808A /* shelfBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A51796D7AC00C6808A /* shelfBG.png */; };
+		13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */; };
+		13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AC1796FB4100C6808A /* Icon@2x.png */; };
+		13B165AF1796FB4100C6808A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AD1796FB4100C6808A /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +60,17 @@
 		13B1658417963B4600C6808A /* NavBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarButton.png; sourceTree = "<group>"; };
 		13B165911796457900C6808A /* LDCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSettingsViewController.h; sourceTree = "<group>"; };
 		13B165921796457900C6808A /* LDCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSettingsViewController.m; sourceTree = "<group>"; };
+		13B165961796B4CA00C6808A /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
+		13B165971796B4CA00C6808A /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		13B1659C1796CBCE00C6808A /* LDCShelfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCShelfTableViewCell.h; sourceTree = "<group>"; };
+		13B1659D1796CBCE00C6808A /* LDCShelfTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCShelfTableViewCell.m; sourceTree = "<group>"; };
+		13B1659F1796CFAF00C6808A /* ShelfHolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShelfHolder@2x.png"; sourceTree = "<group>"; };
+		13B165A01796CFAF00C6808A /* ShelfHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShelfHolder.png; sourceTree = "<group>"; };
+		13B165A41796D7AB00C6808A /* shelfBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shelfBG@2x.png"; sourceTree = "<group>"; };
+		13B165A51796D7AC00C6808A /* shelfBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelfBG.png; sourceTree = "<group>"; };
+		13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCShelfTableViewCell.xib; sourceTree = "<group>"; };
+		13B165AC1796FB4100C6808A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		13B165AD1796FB4100C6808A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +122,7 @@
 				13B1656F179592B400C6808A /* MainStoryboard.storyboard */,
 				13B16572179592B400C6808A /* LDCViewController.h */,
 				13B16573179592B400C6808A /* LDCViewController.m */,
+				13B1659B1796CB9200C6808A /* View */,
 				13B1658717963DBE00C6808A /* Controller */,
 				13B1657C1795B08F00C6808A /* Image */,
 				13B1655E179592B400C6808A /* Supporting Files */,
@@ -126,6 +148,14 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13B165AC1796FB4100C6808A /* Icon@2x.png */,
+				13B165AD1796FB4100C6808A /* Icon.png */,
+				13B165A41796D7AB00C6808A /* shelfBG@2x.png */,
+				13B165A51796D7AC00C6808A /* shelfBG.png */,
+				13B1659F1796CFAF00C6808A /* ShelfHolder@2x.png */,
+				13B165A01796CFAF00C6808A /* ShelfHolder.png */,
+				13B165961796B4CA00C6808A /* backButton@2x.png */,
+				13B165971796B4CA00C6808A /* backButton.png */,
 				13B1658317963B4600C6808A /* NavBarButton@2x.png */,
 				13B1658417963B4600C6808A /* NavBarButton.png */,
 				13B1657F179634D000C6808A /* NavBarBG@2x.png */,
@@ -141,6 +171,16 @@
 				13B165921796457900C6808A /* LDCSettingsViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		13B1659B1796CB9200C6808A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13B1659C1796CBCE00C6808A /* LDCShelfTableViewCell.h */,
+				13B1659D1796CBCE00C6808A /* LDCShelfTableViewCell.m */,
+				13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +245,15 @@
 				13B16582179634D000C6808A /* NavBarBG.png in Resources */,
 				13B1658517963B4600C6808A /* NavBarButton@2x.png in Resources */,
 				13B1658617963B4600C6808A /* NavBarButton.png in Resources */,
+				13B165981796B4CA00C6808A /* backButton@2x.png in Resources */,
+				13B165991796B4CA00C6808A /* backButton.png in Resources */,
+				13B165A11796CFAF00C6808A /* ShelfHolder@2x.png in Resources */,
+				13B165A21796CFAF00C6808A /* ShelfHolder.png in Resources */,
+				13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */,
+				13B165A71796D7AC00C6808A /* shelfBG.png in Resources */,
+				13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */,
+				13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */,
+				13B165AF1796FB4100C6808A /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +268,7 @@
 				13B16568179592B400C6808A /* LDCAppDelegate.m in Sources */,
 				13B16574179592B400C6808A /* LDCViewController.m in Sources */,
 				13B165941796457900C6808A /* LDCSettingsViewController.m in Sources */,
+				13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
