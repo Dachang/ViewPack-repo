@@ -14,11 +14,12 @@
     NSArray *keys;
     UITableView *tableViewA;
     UIImageView *imageA;
+    UINavigationBar *navBar;
 }
 
 @property (strong, nonatomic) NSDictionary *names;
 @property (nonatomic, strong) NSArray *keys;
 @property (nonatomic, strong) UITableView *tableViewA;
 @property (strong, nonatomic) UIImageView *imageA;
-
+@property (strong, nonatomic) UINavigationBar *navBar;
 @end

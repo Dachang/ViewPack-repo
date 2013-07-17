@@ -7,13 +7,14 @@
 //
 
 #import "LDCViewController.h"
+#import "LDCSettingsViewController.h"
 
 @interface LDCViewController ()
 
 @end
 
 @implementation LDCViewController
-@synthesize names,keys,tableViewA,imageA;
+@synthesize names,keys,tableViewA,imageA,navBar;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,19 +28,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RootVCTableViewASource" ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
     self.names = dict;
     NSArray *array = [[names allKeys] sortedArrayUsingSelector:@selector(compare:)];
     self.keys = array;
     
-    UITableView *TVA = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024) style:UITableViewStyleGrouped];
+    UITableView *TVA = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 768, 1024) style:UITableViewStyleGrouped];
     TVA.backgroundView = nil;
     self.tableViewA = TVA;
     
     [tableViewA setDelegate: self];
     [tableViewA setDataSource: self];
+    
+    //Navigation Bar
+    self.navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
+    UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 33)];
+    [button setImage:[UIImage imageNamed:@"NavBarButton.png"] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(myActionSettings) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    navigationItem.rightBarButtonItem = rightBarButton;
+    [self.navBar pushNavigationItem:navigationItem animated:NO];
+    
+    
     [self.view addSubview:tableViewA];
+    [self.view addSubview:navBar];
+    
 }
 
 #pragma mark
@@ -78,6 +94,35 @@
     
     return cell;
     //add image
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell setSelected:UITableViewCellSelectionStyleNone];
+
+    if(row == 0 && section == 0)
+    {
+        LDCSettingsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsViewController"];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else
+    {
+        NSString *settingSelected = [keys objectAtIndex:[indexPath row]];
+        NSString *msg = [[NSString alloc] initWithFormat:@"Settings:%@",settingSelected];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Settings:" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+#pragma mark
+#pragma mark Action - Settings
+- (void) myActionSettings
+{
+    UIViewController *vc = [[LDCSettingsViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
