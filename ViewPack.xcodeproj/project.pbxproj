@@ -7,7 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13433A651797A540008FD042 /* LDCScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13433A641797A540008FD042 /* LDCScrollViewController.m */; };
+		131F95F71797D61200123B6C /* scrollViewBackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F31797D61200123B6C /* scrollViewBackButton.png */; };
+		131F95F81797D61200123B6C /* scrollViewBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */; };
+		131F95F91797D61200123B6C /* TabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F51797D61200123B6C /* TabBar@2x.png */; };
+		131F95FA1797D61200123B6C /* TabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F61797D61200123B6C /* TabBar.png */; };
+		131F960017982C0800123B6C /* LDCBasicScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131F95FE17982C0800123B6C /* LDCBasicScrollViewController.m */; };
+		131F960117982C0800123B6C /* LDCBasicScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 131F95FF17982C0800123B6C /* LDCBasicScrollViewController.xib */; };
+		131F960817982F4200123B6C /* poster3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960217982F4200123B6C /* poster3@2x.png */; };
+		131F960917982F4200123B6C /* poster1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960317982F4200123B6C /* poster1@2x.png */; };
+		131F960A17982F4200123B6C /* poster3.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960417982F4200123B6C /* poster3.png */; };
+		131F960B17982F4200123B6C /* poster1.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960517982F4200123B6C /* poster1.png */; };
+		131F960C17982F4200123B6C /* poster2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960617982F4200123B6C /* poster2@2x.png */; };
+		131F960D17982F4200123B6C /* poster2.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960717982F4200123B6C /* poster2.png */; };
+		131F961017984F4400123B6C /* Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960E17984F4400123B6C /* Light.png */; };
+		131F961117984F4400123B6C /* Light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960F17984F4400123B6C /* Light@2x.png */; };
 		13433A6A1797AC45008FD042 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A661797AC45008FD042 /* 0.png */; };
 		13433A6B1797AC45008FD042 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A671797AC45008FD042 /* 1.png */; };
 		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
@@ -43,8 +56,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13433A631797A540008FD042 /* LDCScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCScrollViewController.h; sourceTree = "<group>"; };
-		13433A641797A540008FD042 /* LDCScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCScrollViewController.m; sourceTree = "<group>"; };
+		131F95F31797D61200123B6C /* scrollViewBackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrollViewBackButton.png; sourceTree = "<group>"; };
+		131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scrollViewBackButton@2x.png"; sourceTree = "<group>"; };
+		131F95F51797D61200123B6C /* TabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar@2x.png"; sourceTree = "<group>"; };
+		131F95F61797D61200123B6C /* TabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBar.png; sourceTree = "<group>"; };
+		131F95FD17982C0800123B6C /* LDCBasicScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCBasicScrollViewController.h; sourceTree = "<group>"; };
+		131F95FE17982C0800123B6C /* LDCBasicScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCBasicScrollViewController.m; sourceTree = "<group>"; };
+		131F95FF17982C0800123B6C /* LDCBasicScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCBasicScrollViewController.xib; sourceTree = "<group>"; };
+		131F960217982F4200123B6C /* poster3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poster3@2x.png"; sourceTree = "<group>"; };
+		131F960317982F4200123B6C /* poster1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poster1@2x.png"; sourceTree = "<group>"; };
+		131F960417982F4200123B6C /* poster3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster3.png; sourceTree = "<group>"; };
+		131F960517982F4200123B6C /* poster1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster1.png; sourceTree = "<group>"; };
+		131F960617982F4200123B6C /* poster2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poster2@2x.png"; sourceTree = "<group>"; };
+		131F960717982F4200123B6C /* poster2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster2.png; sourceTree = "<group>"; };
+		131F960E17984F4400123B6C /* Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Light.png; sourceTree = "<group>"; };
+		131F960F17984F4400123B6C /* Light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Light@2x.png"; sourceTree = "<group>"; };
 		13433A661797AC45008FD042 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		13433A671797AC45008FD042 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		13433A681797AC45008FD042 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -148,13 +174,13 @@
 			isa = PBXGroup;
 			children = (
 				13B1655F179592B400C6808A /* ViewPack-Info.plist */,
+				13B1657A179595A800C6808A /* RootVCTableViewASource.plist */,
 				13B16560179592B400C6808A /* InfoPlist.strings */,
 				13B16563179592B400C6808A /* main.m */,
 				13B16565179592B400C6808A /* ViewPack-Prefix.pch */,
 				13B16569179592B400C6808A /* Default.png */,
 				13B1656B179592B400C6808A /* Default@2x.png */,
 				13B1656D179592B400C6808A /* Default-568h@2x.png */,
-				13B1657A179595A800C6808A /* RootVCTableViewASource.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,6 +188,18 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				131F960E17984F4400123B6C /* Light.png */,
+				131F960F17984F4400123B6C /* Light@2x.png */,
+				131F960217982F4200123B6C /* poster3@2x.png */,
+				131F960317982F4200123B6C /* poster1@2x.png */,
+				131F960417982F4200123B6C /* poster3.png */,
+				131F960517982F4200123B6C /* poster1.png */,
+				131F960617982F4200123B6C /* poster2@2x.png */,
+				131F960717982F4200123B6C /* poster2.png */,
+				131F95F31797D61200123B6C /* scrollViewBackButton.png */,
+				131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */,
+				131F95F51797D61200123B6C /* TabBar@2x.png */,
+				131F95F61797D61200123B6C /* TabBar.png */,
 				13433A661797AC45008FD042 /* 0.png */,
 				13433A671797AC45008FD042 /* 1.png */,
 				13433A681797AC45008FD042 /* 2.png */,
@@ -187,8 +225,9 @@
 			children = (
 				13B165911796457900C6808A /* LDCShelfViewController.h */,
 				13B165921796457900C6808A /* LDCShelfViewController.m */,
-				13433A631797A540008FD042 /* LDCScrollViewController.h */,
-				13433A641797A540008FD042 /* LDCScrollViewController.m */,
+				131F95FD17982C0800123B6C /* LDCBasicScrollViewController.h */,
+				131F95FE17982C0800123B6C /* LDCBasicScrollViewController.m */,
+				131F95FF17982C0800123B6C /* LDCBasicScrollViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,6 +318,19 @@
 				13433A6B1797AC45008FD042 /* 1.png in Resources */,
 				13433A6C1797AC45008FD042 /* 2.png in Resources */,
 				13433A6D1797AC45008FD042 /* 3.png in Resources */,
+				131F95F71797D61200123B6C /* scrollViewBackButton.png in Resources */,
+				131F95F81797D61200123B6C /* scrollViewBackButton@2x.png in Resources */,
+				131F95F91797D61200123B6C /* TabBar@2x.png in Resources */,
+				131F95FA1797D61200123B6C /* TabBar.png in Resources */,
+				131F960117982C0800123B6C /* LDCBasicScrollViewController.xib in Resources */,
+				131F960817982F4200123B6C /* poster3@2x.png in Resources */,
+				131F960917982F4200123B6C /* poster1@2x.png in Resources */,
+				131F960A17982F4200123B6C /* poster3.png in Resources */,
+				131F960B17982F4200123B6C /* poster1.png in Resources */,
+				131F960C17982F4200123B6C /* poster2@2x.png in Resources */,
+				131F960D17982F4200123B6C /* poster2.png in Resources */,
+				131F961017984F4400123B6C /* Light.png in Resources */,
+				131F961117984F4400123B6C /* Light@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +346,7 @@
 				13B16574179592B400C6808A /* LDCViewController.m in Sources */,
 				13B165941796457900C6808A /* LDCShelfViewController.m in Sources */,
 				13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */,
-				13433A651797A540008FD042 /* LDCScrollViewController.m in Sources */,
+				131F960017982C0800123B6C /* LDCBasicScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

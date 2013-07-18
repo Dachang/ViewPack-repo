@@ -8,6 +8,7 @@
 
 #import "LDCViewController.h"
 #import "LDCShelfViewController.h"
+#import "LDCBasicScrollViewController.h"
 
 @interface LDCViewController ()
 
@@ -110,6 +111,12 @@
     if(row == 0 && section == 0)
     {
         UIViewController *vc = [[LDCShelfViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
+    else if(row == 1 && section == 0)
+    {
+        UIViewController *vc = [[LDCBasicScrollViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }

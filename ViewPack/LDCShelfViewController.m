@@ -58,7 +58,7 @@
     self.shelfView = shelfTV;
     
     shelfView.backgroundColor = [UIColor clearColor];
-    shelfView.scrollEnabled = NO;
+    shelfView.scrollEnabled = YES;
     [shelfView setDelegate:self];
     [shelfView setDataSource:self];
     
