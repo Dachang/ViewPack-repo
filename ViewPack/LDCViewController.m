@@ -7,14 +7,14 @@
 //
 
 #import "LDCViewController.h"
-#import "LDCSettingsViewController.h"
+#import "LDCShelfViewController.h"
 
 @interface LDCViewController ()
 
 @end
 
 @implementation LDCViewController
-@synthesize names,keys,tableViewA,imageA,navBar,modalTransitionStyle;
+@synthesize names,keys,tableViewA,imageA,navBar,navController,modalTransitionStyle;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,6 +44,7 @@
     [tableViewA setDataSource: self];
     
     //Navigation Bar
+    //self.navController = [[UINavigationController alloc] initWithRootViewController:self];
     self.navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 36, 33)];
@@ -108,7 +109,7 @@
 
     if(row == 0 && section == 0)
     {
-        UIViewController *vc = [[LDCSettingsViewController alloc] init];
+        UIViewController *vc = [[LDCShelfViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
@@ -125,8 +126,8 @@
 #pragma mark Action - Settings
 - (void) myActionSettings
 {
-    UIViewController *vc = [[LDCSettingsViewController alloc] init];
-    [self presentViewController:vc animated:YES completion:NULL];
+    UIViewController *vc = [[UINavigationController alloc] initWithRootViewController:[[LDCShelfViewController alloc] init]];
+    [self.navigationController pushViewController:vc animated:YES];
     [vc release];
 }
 

@@ -15,6 +15,7 @@
     UITableView *tableViewA;
     UIImageView *imageA;
     UINavigationBar *navBar;
+    UINavigationController *navController;
 }
 
 @property (strong, nonatomic) NSDictionary *names;
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) UITableView *tableViewA;
 @property (strong, nonatomic) UIImageView *imageA;
 @property (strong, nonatomic) UINavigationBar *navBar;
+@property (strong, nonatomic) UINavigationController *navController;
 
 @property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
 

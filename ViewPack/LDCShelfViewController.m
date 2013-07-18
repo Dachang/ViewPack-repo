@@ -6,15 +6,15 @@
 //  Copyright (c) 2013年 大畅. All rights reserved.
 //
 
-#import "LDCSettingsViewController.h"
+#import "LDCShelfViewController.h"
 #import "LDCShelfTableViewCell.h"
 
-@interface LDCSettingsViewController ()
+@interface LDCShelfViewController ()
 
 @end
 
-@implementation LDCSettingsViewController
-@synthesize navBar,shelfView,modalTransitionStyle;
+@implementation LDCShelfViewController
+@synthesize navBar,shelfView,modalTransitionStyle,imageList;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +31,7 @@
     self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"shelfBG.png"]];
     
+    //Navigation Bar
     self.navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 768, 44)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 51, 30)];
@@ -40,6 +41,17 @@
     navigationItem.leftBarButtonItem = leftBarButton;
     [self.navBar pushNavigationItem:navigationItem animated:NO];
     
+    //Image DataSource
+    NSMutableArray *tmpImageArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < 4; i++)
+    {
+        NSString *imageUrl = [[NSString alloc] initWithFormat:@"%i.png",i];
+        UIImage *image = [UIImage imageNamed:imageUrl];
+        [tmpImageArray addObject:image];
+    }
+    self.imageList = [tmpImageArray copy];
+    
+    //TableView
     UITableView *shelfTV = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, 768, 1400) style:UITableViewStylePlain];
     shelfTV.backgroundView = nil;
     shelfTV.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -81,6 +93,7 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSUInteger row = [indexPath row];
     static NSString *cellIdentifier = @"LDCShelfTableViewCell";
     LDCShelfTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if(cell == nil)
@@ -88,6 +101,7 @@
         cell = [[LDCShelfTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.imageOnShelf.image = [imageList objectAtIndex:row];
     return cell;
 }
 

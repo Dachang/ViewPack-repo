@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13433A651797A540008FD042 /* LDCScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13433A641797A540008FD042 /* LDCScrollViewController.m */; };
+		13433A6A1797AC45008FD042 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A661797AC45008FD042 /* 0.png */; };
+		13433A6B1797AC45008FD042 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A671797AC45008FD042 /* 1.png */; };
+		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
+		13433A6D1797AC45008FD042 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A691797AC45008FD042 /* 3.png */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -23,7 +28,7 @@
 		13B16582179634D000C6808A /* NavBarBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B16580179634D000C6808A /* NavBarBG.png */; };
 		13B1658517963B4600C6808A /* NavBarButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B1658317963B4600C6808A /* NavBarButton@2x.png */; };
 		13B1658617963B4600C6808A /* NavBarButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B1658417963B4600C6808A /* NavBarButton.png */; };
-		13B165941796457900C6808A /* LDCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B165921796457900C6808A /* LDCSettingsViewController.m */; };
+		13B165941796457900C6808A /* LDCShelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B165921796457900C6808A /* LDCShelfViewController.m */; };
 		13B165981796B4CA00C6808A /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165961796B4CA00C6808A /* backButton@2x.png */; };
 		13B165991796B4CA00C6808A /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165971796B4CA00C6808A /* backButton.png */; };
 		13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B1659D1796CBCE00C6808A /* LDCShelfTableViewCell.m */; };
@@ -34,9 +39,16 @@
 		13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */; };
 		13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AC1796FB4100C6808A /* Icon@2x.png */; };
 		13B165AF1796FB4100C6808A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AD1796FB4100C6808A /* Icon.png */; };
+		13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B67C1797054D00B03787 /* LDCViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13433A631797A540008FD042 /* LDCScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCScrollViewController.h; sourceTree = "<group>"; };
+		13433A641797A540008FD042 /* LDCScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCScrollViewController.m; sourceTree = "<group>"; };
+		13433A661797AC45008FD042 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		13433A671797AC45008FD042 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		13433A681797AC45008FD042 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		13433A691797AC45008FD042 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,8 +70,8 @@
 		13B16580179634D000C6808A /* NavBarBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarBG.png; sourceTree = "<group>"; };
 		13B1658317963B4600C6808A /* NavBarButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBarButton@2x.png"; sourceTree = "<group>"; };
 		13B1658417963B4600C6808A /* NavBarButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavBarButton.png; sourceTree = "<group>"; };
-		13B165911796457900C6808A /* LDCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSettingsViewController.h; sourceTree = "<group>"; };
-		13B165921796457900C6808A /* LDCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSettingsViewController.m; sourceTree = "<group>"; };
+		13B165911796457900C6808A /* LDCShelfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCShelfViewController.h; sourceTree = "<group>"; };
+		13B165921796457900C6808A /* LDCShelfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCShelfViewController.m; sourceTree = "<group>"; };
 		13B165961796B4CA00C6808A /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
 		13B165971796B4CA00C6808A /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 		13B1659C1796CBCE00C6808A /* LDCShelfTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCShelfTableViewCell.h; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCShelfTableViewCell.xib; sourceTree = "<group>"; };
 		13B165AC1796FB4100C6808A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		13B165AD1796FB4100C6808A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		13E5B67C1797054D00B03787 /* LDCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +135,7 @@
 				13B1656F179592B400C6808A /* MainStoryboard.storyboard */,
 				13B16572179592B400C6808A /* LDCViewController.h */,
 				13B16573179592B400C6808A /* LDCViewController.m */,
+				13E5B67C1797054D00B03787 /* LDCViewController.xib */,
 				13B1659B1796CB9200C6808A /* View */,
 				13B1658717963DBE00C6808A /* Controller */,
 				13B1657C1795B08F00C6808A /* Image */,
@@ -148,6 +162,10 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13433A661797AC45008FD042 /* 0.png */,
+				13433A671797AC45008FD042 /* 1.png */,
+				13433A681797AC45008FD042 /* 2.png */,
+				13433A691797AC45008FD042 /* 3.png */,
 				13B165AC1796FB4100C6808A /* Icon@2x.png */,
 				13B165AD1796FB4100C6808A /* Icon.png */,
 				13B165A41796D7AB00C6808A /* shelfBG@2x.png */,
@@ -167,8 +185,10 @@
 		13B1658717963DBE00C6808A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13B165911796457900C6808A /* LDCSettingsViewController.h */,
-				13B165921796457900C6808A /* LDCSettingsViewController.m */,
+				13B165911796457900C6808A /* LDCShelfViewController.h */,
+				13B165921796457900C6808A /* LDCShelfViewController.m */,
+				13433A631797A540008FD042 /* LDCScrollViewController.h */,
+				13433A641797A540008FD042 /* LDCScrollViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -254,6 +274,11 @@
 				13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */,
 				13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */,
 				13B165AF1796FB4100C6808A /* Icon.png in Resources */,
+				13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */,
+				13433A6A1797AC45008FD042 /* 0.png in Resources */,
+				13433A6B1797AC45008FD042 /* 1.png in Resources */,
+				13433A6C1797AC45008FD042 /* 2.png in Resources */,
+				13433A6D1797AC45008FD042 /* 3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +292,9 @@
 				13B16564179592B400C6808A /* main.m in Sources */,
 				13B16568179592B400C6808A /* LDCAppDelegate.m in Sources */,
 				13B16574179592B400C6808A /* LDCViewController.m in Sources */,
-				13B165941796457900C6808A /* LDCSettingsViewController.m in Sources */,
+				13B165941796457900C6808A /* LDCShelfViewController.m in Sources */,
 				13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */,
+				13433A651797A540008FD042 /* LDCScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

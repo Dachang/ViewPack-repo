@@ -7,9 +7,9 @@
 //
 
 #import "LDCAppDelegate.h"
+#import "LDCViewController.h"
 
 @implementation LDCAppDelegate
-@synthesize navController = _navController;
 
 #pragma mark
 #pragma mark Application lifecycle
@@ -22,8 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBarBG.png"] forBarMetrics:UIBarMetricsDefault]; 
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBarBG.png"] forBarMetrics:UIBarMetricsDefault];
     return YES;
 }
 							

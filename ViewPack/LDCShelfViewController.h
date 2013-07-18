@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LDCSettingsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface LDCShelfViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 {
     UINavigationBar *navBar;
     UITableView *shelfView;
@@ -18,5 +18,7 @@
 @property (nonatomic, strong) UITableView *shelfView;
 
 @property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
+
+@property (strong, nonatomic) NSArray *imageList;
 
 @end
