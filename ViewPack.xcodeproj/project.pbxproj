@@ -21,6 +21,32 @@
 		131F960D17982F4200123B6C /* poster2.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960717982F4200123B6C /* poster2.png */; };
 		131F961017984F4400123B6C /* Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960E17984F4400123B6C /* Light.png */; };
 		131F961117984F4400123B6C /* Light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F960F17984F4400123B6C /* Light@2x.png */; };
+		132E891B17993F2A00CF50E9 /* navBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E891917993F2A00CF50E9 /* navBG@2x.png */; };
+		132E891C17993F2A00CF50E9 /* navBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E891A17993F2A00CF50E9 /* navBG.png */; };
+		132E89211799434000CF50E9 /* poster4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E891D1799434000CF50E9 /* poster4@2x.png */; };
+		132E89221799434000CF50E9 /* poster4.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E891E1799434000CF50E9 /* poster4.png */; };
+		132E89231799434000CF50E9 /* poster0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E891F1799434000CF50E9 /* poster0@2x.png */; };
+		132E89241799434000CF50E9 /* poster0.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89201799434000CF50E9 /* poster0.png */; };
+		132E89271799608B00CF50E9 /* detailImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89251799608B00CF50E9 /* detailImage.png */; };
+		132E89281799608B00CF50E9 /* detailImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89261799608B00CF50E9 /* detailImage@2x.png */; };
+		132E892A1799650700CF50E9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89291799650700CF50E9 /* Icon@2x.png */; };
+		132E892C1799650B00CF50E9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E892B1799650B00CF50E9 /* Icon.png */; };
+		132E89371799687F00CF50E9 /* Bach.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E892D1799687E00CF50E9 /* Bach.png */; };
+		132E89381799687F00CF50E9 /* Bach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E892E1799687E00CF50E9 /* Bach@2x.png */; };
+		132E89391799687F00CF50E9 /* Beethoven.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E892F1799687E00CF50E9 /* Beethoven.png */; };
+		132E893A1799687F00CF50E9 /* Beethoven@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89301799687E00CF50E9 /* Beethoven@2x.png */; };
+		132E893B1799687F00CF50E9 /* Chopin.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89311799687F00CF50E9 /* Chopin.png */; };
+		132E893C1799687F00CF50E9 /* Chopin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89321799687F00CF50E9 /* Chopin@2x.png */; };
+		132E893D1799687F00CF50E9 /* Hayden.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89331799687F00CF50E9 /* Hayden.png */; };
+		132E893E1799687F00CF50E9 /* Hayden@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89341799687F00CF50E9 /* Hayden@2x.png */; };
+		132E893F1799687F00CF50E9 /* Shubert.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89351799687F00CF50E9 /* Shubert.png */; };
+		132E89401799687F00CF50E9 /* Shubert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E89361799687F00CF50E9 /* Shubert@2x.png */; };
+		132E894717996C7600CF50E9 /* Chords1.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894117996C7600CF50E9 /* Chords1.png */; };
+		132E894817996C7600CF50E9 /* Chords1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894217996C7600CF50E9 /* Chords1@2x.png */; };
+		132E894917996C7600CF50E9 /* Chords2.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894317996C7600CF50E9 /* Chords2.png */; };
+		132E894A17996C7600CF50E9 /* Chords2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894417996C7600CF50E9 /* Chords2@2x.png */; };
+		132E894B17996C7600CF50E9 /* Chords3.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894517996C7600CF50E9 /* Chords3.png */; };
+		132E894C17996C7600CF50E9 /* Chords3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E894617996C7600CF50E9 /* Chords3@2x.png */; };
 		13433A6A1797AC45008FD042 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A661797AC45008FD042 /* 0.png */; };
 		13433A6B1797AC45008FD042 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A671797AC45008FD042 /* 1.png */; };
 		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
@@ -50,8 +76,6 @@
 		13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A41796D7AB00C6808A /* shelfBG@2x.png */; };
 		13B165A71796D7AC00C6808A /* shelfBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A51796D7AC00C6808A /* shelfBG.png */; };
 		13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */; };
-		13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AC1796FB4100C6808A /* Icon@2x.png */; };
-		13B165AF1796FB4100C6808A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AD1796FB4100C6808A /* Icon.png */; };
 		13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B67C1797054D00B03787 /* LDCViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +95,32 @@
 		131F960717982F4200123B6C /* poster2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster2.png; sourceTree = "<group>"; };
 		131F960E17984F4400123B6C /* Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Light.png; sourceTree = "<group>"; };
 		131F960F17984F4400123B6C /* Light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Light@2x.png"; sourceTree = "<group>"; };
+		132E891917993F2A00CF50E9 /* navBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBG@2x.png"; sourceTree = "<group>"; };
+		132E891A17993F2A00CF50E9 /* navBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navBG.png; sourceTree = "<group>"; };
+		132E891D1799434000CF50E9 /* poster4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poster4@2x.png"; sourceTree = "<group>"; };
+		132E891E1799434000CF50E9 /* poster4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster4.png; sourceTree = "<group>"; };
+		132E891F1799434000CF50E9 /* poster0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poster0@2x.png"; sourceTree = "<group>"; };
+		132E89201799434000CF50E9 /* poster0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poster0.png; sourceTree = "<group>"; };
+		132E89251799608B00CF50E9 /* detailImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailImage.png; sourceTree = "<group>"; };
+		132E89261799608B00CF50E9 /* detailImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detailImage@2x.png"; sourceTree = "<group>"; };
+		132E89291799650700CF50E9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		132E892B1799650B00CF50E9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		132E892D1799687E00CF50E9 /* Bach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bach.png; sourceTree = "<group>"; };
+		132E892E1799687E00CF50E9 /* Bach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bach@2x.png"; sourceTree = "<group>"; };
+		132E892F1799687E00CF50E9 /* Beethoven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beethoven.png; sourceTree = "<group>"; };
+		132E89301799687E00CF50E9 /* Beethoven@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beethoven@2x.png"; sourceTree = "<group>"; };
+		132E89311799687F00CF50E9 /* Chopin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chopin.png; sourceTree = "<group>"; };
+		132E89321799687F00CF50E9 /* Chopin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chopin@2x.png"; sourceTree = "<group>"; };
+		132E89331799687F00CF50E9 /* Hayden.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hayden.png; sourceTree = "<group>"; };
+		132E89341799687F00CF50E9 /* Hayden@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hayden@2x.png"; sourceTree = "<group>"; };
+		132E89351799687F00CF50E9 /* Shubert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shubert.png; sourceTree = "<group>"; };
+		132E89361799687F00CF50E9 /* Shubert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shubert@2x.png"; sourceTree = "<group>"; };
+		132E894117996C7600CF50E9 /* Chords1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chords1.png; sourceTree = "<group>"; };
+		132E894217996C7600CF50E9 /* Chords1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chords1@2x.png"; sourceTree = "<group>"; };
+		132E894317996C7600CF50E9 /* Chords2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chords2.png; sourceTree = "<group>"; };
+		132E894417996C7600CF50E9 /* Chords2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chords2@2x.png"; sourceTree = "<group>"; };
+		132E894517996C7600CF50E9 /* Chords3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chords3.png; sourceTree = "<group>"; };
+		132E894617996C7600CF50E9 /* Chords3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chords3@2x.png"; sourceTree = "<group>"; };
 		13433A661797AC45008FD042 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		13433A671797AC45008FD042 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		13433A681797AC45008FD042 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
@@ -107,8 +157,6 @@
 		13B165A41796D7AB00C6808A /* shelfBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shelfBG@2x.png"; sourceTree = "<group>"; };
 		13B165A51796D7AC00C6808A /* shelfBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelfBG.png; sourceTree = "<group>"; };
 		13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCShelfTableViewCell.xib; sourceTree = "<group>"; };
-		13B165AC1796FB4100C6808A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		13B165AD1796FB4100C6808A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		13E5B67C1797054D00B03787 /* LDCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +177,8 @@
 		13B1654B179592B400C6808A = {
 			isa = PBXGroup;
 			children = (
+				132E892B1799650B00CF50E9 /* Icon.png */,
+				132E89291799650700CF50E9 /* Icon@2x.png */,
 				13B1655D179592B400C6808A /* ViewPack */,
 				13B16556179592B400C6808A /* Frameworks */,
 				13B16555179592B400C6808A /* Products */,
@@ -188,14 +238,38 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				132E894117996C7600CF50E9 /* Chords1.png */,
+				132E894217996C7600CF50E9 /* Chords1@2x.png */,
+				132E894317996C7600CF50E9 /* Chords2.png */,
+				132E894417996C7600CF50E9 /* Chords2@2x.png */,
+				132E894517996C7600CF50E9 /* Chords3.png */,
+				132E894617996C7600CF50E9 /* Chords3@2x.png */,
+				132E892D1799687E00CF50E9 /* Bach.png */,
+				132E892E1799687E00CF50E9 /* Bach@2x.png */,
+				132E892F1799687E00CF50E9 /* Beethoven.png */,
+				132E89301799687E00CF50E9 /* Beethoven@2x.png */,
+				132E89311799687F00CF50E9 /* Chopin.png */,
+				132E89321799687F00CF50E9 /* Chopin@2x.png */,
+				132E89331799687F00CF50E9 /* Hayden.png */,
+				132E89341799687F00CF50E9 /* Hayden@2x.png */,
+				132E89351799687F00CF50E9 /* Shubert.png */,
+				132E89361799687F00CF50E9 /* Shubert@2x.png */,
+				132E89251799608B00CF50E9 /* detailImage.png */,
+				132E89261799608B00CF50E9 /* detailImage@2x.png */,
+				132E891917993F2A00CF50E9 /* navBG@2x.png */,
+				132E891A17993F2A00CF50E9 /* navBG.png */,
 				131F960E17984F4400123B6C /* Light.png */,
 				131F960F17984F4400123B6C /* Light@2x.png */,
+				132E891D1799434000CF50E9 /* poster4@2x.png */,
+				132E891E1799434000CF50E9 /* poster4.png */,
 				131F960217982F4200123B6C /* poster3@2x.png */,
-				131F960317982F4200123B6C /* poster1@2x.png */,
 				131F960417982F4200123B6C /* poster3.png */,
-				131F960517982F4200123B6C /* poster1.png */,
 				131F960617982F4200123B6C /* poster2@2x.png */,
 				131F960717982F4200123B6C /* poster2.png */,
+				131F960317982F4200123B6C /* poster1@2x.png */,
+				131F960517982F4200123B6C /* poster1.png */,
+				132E891F1799434000CF50E9 /* poster0@2x.png */,
+				132E89201799434000CF50E9 /* poster0.png */,
 				131F95F31797D61200123B6C /* scrollViewBackButton.png */,
 				131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */,
 				131F95F51797D61200123B6C /* TabBar@2x.png */,
@@ -204,8 +278,6 @@
 				13433A671797AC45008FD042 /* 1.png */,
 				13433A681797AC45008FD042 /* 2.png */,
 				13433A691797AC45008FD042 /* 3.png */,
-				13B165AC1796FB4100C6808A /* Icon@2x.png */,
-				13B165AD1796FB4100C6808A /* Icon.png */,
 				13B165A41796D7AB00C6808A /* shelfBG@2x.png */,
 				13B165A51796D7AC00C6808A /* shelfBG.png */,
 				13B1659F1796CFAF00C6808A /* ShelfHolder@2x.png */,
@@ -311,8 +383,6 @@
 				13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */,
 				13B165A71796D7AC00C6808A /* shelfBG.png in Resources */,
 				13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */,
-				13B165AE1796FB4100C6808A /* Icon@2x.png in Resources */,
-				13B165AF1796FB4100C6808A /* Icon.png in Resources */,
 				13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */,
 				13433A6A1797AC45008FD042 /* 0.png in Resources */,
 				13433A6B1797AC45008FD042 /* 1.png in Resources */,
@@ -331,6 +401,32 @@
 				131F960D17982F4200123B6C /* poster2.png in Resources */,
 				131F961017984F4400123B6C /* Light.png in Resources */,
 				131F961117984F4400123B6C /* Light@2x.png in Resources */,
+				132E891B17993F2A00CF50E9 /* navBG@2x.png in Resources */,
+				132E891C17993F2A00CF50E9 /* navBG.png in Resources */,
+				132E89211799434000CF50E9 /* poster4@2x.png in Resources */,
+				132E89221799434000CF50E9 /* poster4.png in Resources */,
+				132E89231799434000CF50E9 /* poster0@2x.png in Resources */,
+				132E89241799434000CF50E9 /* poster0.png in Resources */,
+				132E89271799608B00CF50E9 /* detailImage.png in Resources */,
+				132E89281799608B00CF50E9 /* detailImage@2x.png in Resources */,
+				132E892A1799650700CF50E9 /* Icon@2x.png in Resources */,
+				132E892C1799650B00CF50E9 /* Icon.png in Resources */,
+				132E89371799687F00CF50E9 /* Bach.png in Resources */,
+				132E89381799687F00CF50E9 /* Bach@2x.png in Resources */,
+				132E89391799687F00CF50E9 /* Beethoven.png in Resources */,
+				132E893A1799687F00CF50E9 /* Beethoven@2x.png in Resources */,
+				132E893B1799687F00CF50E9 /* Chopin.png in Resources */,
+				132E893C1799687F00CF50E9 /* Chopin@2x.png in Resources */,
+				132E893D1799687F00CF50E9 /* Hayden.png in Resources */,
+				132E893E1799687F00CF50E9 /* Hayden@2x.png in Resources */,
+				132E893F1799687F00CF50E9 /* Shubert.png in Resources */,
+				132E89401799687F00CF50E9 /* Shubert@2x.png in Resources */,
+				132E894717996C7600CF50E9 /* Chords1.png in Resources */,
+				132E894817996C7600CF50E9 /* Chords1@2x.png in Resources */,
+				132E894917996C7600CF50E9 /* Chords2.png in Resources */,
+				132E894A17996C7600CF50E9 /* Chords2@2x.png in Resources */,
+				132E894B17996C7600CF50E9 /* Chords3.png in Resources */,
+				132E894C17996C7600CF50E9 /* Chords3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

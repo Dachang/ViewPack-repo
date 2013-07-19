@@ -14,7 +14,7 @@
 
 @implementation LDCBasicScrollViewController
 
-@synthesize tabBar,navController,tabBarController,images,imageScrollView,ImageA,ImageB,ImageC,modalTransitionStyle;
+@synthesize tabBar,navController,tabBarController,images,imageScrollView = _imageScrollView,ImageA,ImageB,ImageC,ImageD,imageE,modalTransitionStyle,MusicianImageScrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,38 +30,45 @@
     [super viewDidLoad];
     self.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
-    //navigation Controller
-    //    self.navController = [[UINavigationController alloc] init];
-    //    [self.view addSubview:self.navController.view];
-    //tabBar Controller
-    //    self.tabBarController = [[UITabBarController alloc] init];
-    //    [self.view addSubview:self.tabBarController.view];
-    
     self.tabBar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 1024 - 65, 768, 47)];
     self.tabBar.backgroundImage = [UIImage imageNamed:@"TabBar.png"];
     [self.view addSubview:tabBar];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"shelfBG.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"navBG.png"]];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 51, 30)];
     [button setImage:[UIImage imageNamed:@"scrollViewBackButton.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
-    UIImageView *lightImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Light.png"]];
-    lightImage.frame = CGRectMake(0, 0, 768, 203);
-    lightImage.alpha = 0.65;
-    [self.view addSubview:lightImage];
-    
     //scrollView
-    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithObjects:@"poster1.png",@"poster2.png",@"poster3.png", nil];
+    NSMutableArray *imageArray = [[NSMutableArray alloc] initWithObjects:@"poster1.png",@"Chords1.png",@"Chords2.png",@"poster4.png",@"Chords3.png", nil];
     images = imageArray;
+
+    self.ImageA.image = [UIImage imageNamed:[images objectAtIndex:1]];
+    self.imageE.image = [UIImage imageNamed:[images objectAtIndex:2]];
+    self.ImageD.image = [UIImage imageNamed:[images objectAtIndex:4]];
     
-    self.ImageA.image = [UIImage imageNamed:[images objectAtIndex:0]];
-    self.ImageB.image = [UIImage imageNamed:[images objectAtIndex:1]];
-    self.ImageC.image = [UIImage imageNamed:[images objectAtIndex:2]];
+    [_imageScrollView setDelegate:self];
+    MusicianImageScrollView.delegate = self;
+    MusicianImageScrollView.contentSize = CGSizeMake(2800, MusicianImageScrollView.frame.size.height);
+    MusicianImageScrollView.showsHorizontalScrollIndicator = NO;
+    for(int i = 0; i<10; i++)
+    {
+        NSMutableArray *imageArray = [[NSMutableArray alloc] initWithObjects:@"Chopin.png",@"Bach.png",@"Beethoven.png",@"Hayden.png",@"Shubert.png",@"Chopin.png",@"Bach.png",@"Beethoven.png",@"Hayden.png",@"Shubert.png", nil];
+        UIImageView *tempDetailImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[imageArray objectAtIndex:i]]];
+        tempDetailImage.frame = CGRectMake(i*280, 0, 280, 280);
+        [MusicianImageScrollView addSubview:tempDetailImage];
+    }
     
-    imageScrollView.contentSize = CGSizeMake((ImageA.frame.size.width + 24) * images.count - 24, imageScrollView.frame.size.height);
-    [imageScrollView setDelegate:self];
+    //Timer - Debug
+    //    NSTimer *timer = [NSTimer  scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(log) userInfo:nil repeats:YES];
+    //    [timer fire];
+
+}
+
+- (void)log
+{
+    NSLog(@"x %f",_imageScrollView.contentSize.width);
 }
 
 - (void)didReceiveMemoryWarning
@@ -164,4 +171,8 @@
 //}
 
 
+- (void)dealloc {
+    [MusicianImageScrollView release];
+    [super dealloc];
+}
 @end

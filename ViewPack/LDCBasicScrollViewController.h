@@ -24,7 +24,10 @@
 @property (strong, nonatomic) IBOutlet UIImageView *ImageA;
 @property (strong, nonatomic) IBOutlet UIImageView *ImageB;
 @property (strong, nonatomic) IBOutlet UIImageView *ImageC;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageD;
+@property (strong, nonatomic) IBOutlet UIImageView *imageE;
 @property (strong, nonatomic) IBOutlet UIScrollView *imageScrollView;
+@property (strong, nonatomic) IBOutlet UIScrollView *MusicianImageScrollView;
 
 @property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
 
