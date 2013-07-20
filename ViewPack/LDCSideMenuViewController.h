@@ -12,5 +12,11 @@
 @interface LDCSideMenuViewController : UIViewController
 
 @property (strong, readonly, nonatomic) RESideMenu *sideMenu;
+@property (strong, nonatomic) UIButton *startButton;
+
+@property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+
+- (void)showSideMenu;
+- (void)pan: (UIPanGestureRecognizer*)gesture;
 
 @end

@@ -63,6 +63,8 @@
 		1390D1A7179A618E00EF9537 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1A6179A618E00EF9537 /* QuartzCore.framework */; };
 		1390D1AA179A707600EF9537 /* startButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1A8179A707600EF9537 /* startButton@2x.png */; };
 		1390D1AB179A707600EF9537 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1A9179A707600EF9537 /* startButton.png */; };
+		1390D1AF179A78BF00EF9537 /* LDCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1AE179A78BF00EF9537 /* LDCHomeViewController.m */; };
+		1390D1B2179A80E800EF9537 /* LDCControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1B1179A80E800EF9537 /* LDCControlPanelViewController.m */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -157,6 +159,10 @@
 		1390D1A6179A618E00EF9537 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1390D1A8179A707600EF9537 /* startButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startButton@2x.png"; sourceTree = "<group>"; };
 		1390D1A9179A707600EF9537 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		1390D1AD179A78BF00EF9537 /* LDCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCHomeViewController.h; sourceTree = "<group>"; };
+		1390D1AE179A78BF00EF9537 /* LDCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCHomeViewController.m; sourceTree = "<group>"; };
+		1390D1B0179A80E800EF9537 /* LDCControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCControlPanelViewController.h; sourceTree = "<group>"; };
+		1390D1B1179A80E800EF9537 /* LDCControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCControlPanelViewController.m; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -234,6 +240,17 @@
 				1390D18E179A5CC500EF9537 /* RESideMenu */,
 			);
 			name = Library;
+			sourceTree = "<group>";
+		};
+		1390D1AC179A787600EF9537 /* SideMenuSubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1390D1AD179A78BF00EF9537 /* LDCHomeViewController.h */,
+				1390D1AE179A78BF00EF9537 /* LDCHomeViewController.m */,
+				1390D1B0179A80E800EF9537 /* LDCControlPanelViewController.h */,
+				1390D1B1179A80E800EF9537 /* LDCControlPanelViewController.m */,
+			);
+			name = SideMenuSubViewController;
 			sourceTree = "<group>";
 		};
 		13B1654B179592B400C6808A = {
@@ -369,6 +386,7 @@
 				1390D189179A4BE700EF9537 /* LDCSideMenuViewController.h */,
 				1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */,
 				1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */,
+				1390D1AC179A787600EF9537 /* SideMenuSubViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -523,6 +541,8 @@
 				1390D1A1179A5CC500EF9537 /* RESideMenuCell.m in Sources */,
 				1390D1A2179A5CC500EF9537 /* RESideMenuItem.m in Sources */,
 				1390D1A3179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m in Sources */,
+				1390D1AF179A78BF00EF9537 /* LDCHomeViewController.m in Sources */,
+				1390D1B2179A80E800EF9537 /* LDCControlPanelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-   
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBarBG.png"] forBarMetrics:UIBarMetricsDefault];
 //    [[UITabBar appearance] setBackgroundImage:[UIImage imageNamed:@"TabBar.png"] forBarMetrics:UIBarMetricsDefault];
     return YES;
