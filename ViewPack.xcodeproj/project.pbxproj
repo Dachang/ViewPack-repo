@@ -51,6 +51,18 @@
 		13433A6B1797AC45008FD042 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A671797AC45008FD042 /* 1.png */; };
 		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
 		13433A6D1797AC45008FD042 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A691797AC45008FD042 /* 3.png */; };
+		1390D18C179A4BE700EF9537 /* LDCSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */; };
+		1390D18D179A4BE700EF9537 /* LDCSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */; };
+		1390D19D179A5CC500EF9537 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D190179A5CC500EF9537 /* AccelerationAnimation.m */; };
+		1390D19E179A5CC500EF9537 /* Evaluate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D192179A5CC500EF9537 /* Evaluate.m */; };
+		1390D19F179A5CC500EF9537 /* REBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D194179A5CC500EF9537 /* REBackgroundView.m */; };
+		1390D1A0179A5CC500EF9537 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D196179A5CC500EF9537 /* RESideMenu.m */; };
+		1390D1A1179A5CC500EF9537 /* RESideMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D198179A5CC500EF9537 /* RESideMenuCell.m */; };
+		1390D1A2179A5CC500EF9537 /* RESideMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D19A179A5CC500EF9537 /* RESideMenuItem.m */; };
+		1390D1A3179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D19C179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m */; };
+		1390D1A7179A618E00EF9537 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1A6179A618E00EF9537 /* QuartzCore.framework */; };
+		1390D1AA179A707600EF9537 /* startButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1A8179A707600EF9537 /* startButton@2x.png */; };
+		1390D1AB179A707600EF9537 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1A9179A707600EF9537 /* startButton.png */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -125,6 +137,26 @@
 		13433A671797AC45008FD042 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		13433A681797AC45008FD042 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		13433A691797AC45008FD042 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		1390D189179A4BE700EF9537 /* LDCSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSideMenuViewController.h; sourceTree = "<group>"; };
+		1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSideMenuViewController.m; sourceTree = "<group>"; };
+		1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCSideMenuViewController.xib; sourceTree = "<group>"; };
+		1390D18F179A5CC500EF9537 /* AccelerationAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerationAnimation.h; sourceTree = "<group>"; };
+		1390D190179A5CC500EF9537 /* AccelerationAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerationAnimation.m; sourceTree = "<group>"; };
+		1390D191179A5CC500EF9537 /* Evaluate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Evaluate.h; sourceTree = "<group>"; };
+		1390D192179A5CC500EF9537 /* Evaluate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Evaluate.m; sourceTree = "<group>"; };
+		1390D193179A5CC500EF9537 /* REBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REBackgroundView.h; sourceTree = "<group>"; };
+		1390D194179A5CC500EF9537 /* REBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REBackgroundView.m; sourceTree = "<group>"; };
+		1390D195179A5CC500EF9537 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		1390D196179A5CC500EF9537 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		1390D197179A5CC500EF9537 /* RESideMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenuCell.h; sourceTree = "<group>"; };
+		1390D198179A5CC500EF9537 /* RESideMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenuCell.m; sourceTree = "<group>"; };
+		1390D199179A5CC500EF9537 /* RESideMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenuItem.h; sourceTree = "<group>"; };
+		1390D19A179A5CC500EF9537 /* RESideMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenuItem.m; sourceTree = "<group>"; };
+		1390D19B179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+RESideMenuExtensions.h"; sourceTree = "<group>"; };
+		1390D19C179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+RESideMenuExtensions.m"; sourceTree = "<group>"; };
+		1390D1A6179A618E00EF9537 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1390D1A8179A707600EF9537 /* startButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "startButton@2x.png"; sourceTree = "<group>"; };
+		1390D1A9179A707600EF9537 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1390D1A7179A618E00EF9537 /* QuartzCore.framework in Frameworks */,
 				13B16558179592B400C6808A /* UIKit.framework in Frameworks */,
 				13B1655A179592B400C6808A /* Foundation.framework in Frameworks */,
 				13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */,
@@ -174,6 +207,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1390D18E179A5CC500EF9537 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1390D18F179A5CC500EF9537 /* AccelerationAnimation.h */,
+				1390D190179A5CC500EF9537 /* AccelerationAnimation.m */,
+				1390D191179A5CC500EF9537 /* Evaluate.h */,
+				1390D192179A5CC500EF9537 /* Evaluate.m */,
+				1390D193179A5CC500EF9537 /* REBackgroundView.h */,
+				1390D194179A5CC500EF9537 /* REBackgroundView.m */,
+				1390D195179A5CC500EF9537 /* RESideMenu.h */,
+				1390D196179A5CC500EF9537 /* RESideMenu.m */,
+				1390D197179A5CC500EF9537 /* RESideMenuCell.h */,
+				1390D198179A5CC500EF9537 /* RESideMenuCell.m */,
+				1390D199179A5CC500EF9537 /* RESideMenuItem.h */,
+				1390D19A179A5CC500EF9537 /* RESideMenuItem.m */,
+				1390D19B179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.h */,
+				1390D19C179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
+		1390D1A4179A5CCF00EF9537 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1390D18E179A5CC500EF9537 /* RESideMenu */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		13B1654B179592B400C6808A = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +258,7 @@
 		13B16556179592B400C6808A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1390D1A6179A618E00EF9537 /* QuartzCore.framework */,
 				13B16557179592B400C6808A /* UIKit.framework */,
 				13B16559179592B400C6808A /* Foundation.framework */,
 				13B1655B179592B400C6808A /* CoreGraphics.framework */,
@@ -212,6 +275,7 @@
 				13B16572179592B400C6808A /* LDCViewController.h */,
 				13B16573179592B400C6808A /* LDCViewController.m */,
 				13E5B67C1797054D00B03787 /* LDCViewController.xib */,
+				1390D1A4179A5CCF00EF9537 /* Library */,
 				13B1659B1796CB9200C6808A /* View */,
 				13B1658717963DBE00C6808A /* Controller */,
 				13B1657C1795B08F00C6808A /* Image */,
@@ -238,6 +302,8 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				1390D1A8179A707600EF9537 /* startButton@2x.png */,
+				1390D1A9179A707600EF9537 /* startButton.png */,
 				132E894117996C7600CF50E9 /* Chords1.png */,
 				132E894217996C7600CF50E9 /* Chords1@2x.png */,
 				132E894317996C7600CF50E9 /* Chords2.png */,
@@ -300,6 +366,9 @@
 				131F95FD17982C0800123B6C /* LDCBasicScrollViewController.h */,
 				131F95FE17982C0800123B6C /* LDCBasicScrollViewController.m */,
 				131F95FF17982C0800123B6C /* LDCBasicScrollViewController.xib */,
+				1390D189179A4BE700EF9537 /* LDCSideMenuViewController.h */,
+				1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */,
+				1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -427,6 +496,9 @@
 				132E894A17996C7600CF50E9 /* Chords2@2x.png in Resources */,
 				132E894B17996C7600CF50E9 /* Chords3.png in Resources */,
 				132E894C17996C7600CF50E9 /* Chords3@2x.png in Resources */,
+				1390D18D179A4BE700EF9537 /* LDCSideMenuViewController.xib in Resources */,
+				1390D1AA179A707600EF9537 /* startButton@2x.png in Resources */,
+				1390D1AB179A707600EF9537 /* startButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +515,14 @@
 				13B165941796457900C6808A /* LDCShelfViewController.m in Sources */,
 				13B1659E1796CBCE00C6808A /* LDCShelfTableViewCell.m in Sources */,
 				131F960017982C0800123B6C /* LDCBasicScrollViewController.m in Sources */,
+				1390D18C179A4BE700EF9537 /* LDCSideMenuViewController.m in Sources */,
+				1390D19D179A5CC500EF9537 /* AccelerationAnimation.m in Sources */,
+				1390D19E179A5CC500EF9537 /* Evaluate.m in Sources */,
+				1390D19F179A5CC500EF9537 /* REBackgroundView.m in Sources */,
+				1390D1A0179A5CC500EF9537 /* RESideMenu.m in Sources */,
+				1390D1A1179A5CC500EF9537 /* RESideMenuCell.m in Sources */,
+				1390D1A2179A5CC500EF9537 /* RESideMenuItem.m in Sources */,
+				1390D1A3179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
