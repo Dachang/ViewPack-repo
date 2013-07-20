@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "RESideMenu.h"
 
-@interface LDCSideMenuViewController : UIViewController
+@interface LDCSideMenuViewController : UIViewController<UIGestureRecognizerDelegate>
 
 @property (strong, readonly, nonatomic) RESideMenu *sideMenu;
 @property (strong, nonatomic) UIButton *startButton;
 
 @property (strong, nonatomic) UIPanGestureRecognizer *panGesture;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipeGesture;
 
 - (void)showSideMenu;
-- (void)pan: (UIPanGestureRecognizer*)gesture;
+//- (void)pan: (UIPanGestureRecognizer*)gesture;
 
 @end

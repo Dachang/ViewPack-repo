@@ -65,6 +65,10 @@
 		1390D1AB179A707600EF9537 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1A9179A707600EF9537 /* startButton.png */; };
 		1390D1AF179A78BF00EF9537 /* LDCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1AE179A78BF00EF9537 /* LDCHomeViewController.m */; };
 		1390D1B2179A80E800EF9537 /* LDCControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1B1179A80E800EF9537 /* LDCControlPanelViewController.m */; };
+		1390D1B4179AD10100EF9537 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1B3179AD10100EF9537 /* AVFoundation.framework */; };
+		1390D1B7179AD24900EF9537 /* Sound01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1B6179AD24900EF9537 /* Sound01.wav */; };
+		1390D1BC179ADAF800EF9537 /* LDCSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */; };
+		1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -163,6 +167,12 @@
 		1390D1AE179A78BF00EF9537 /* LDCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCHomeViewController.m; sourceTree = "<group>"; };
 		1390D1B0179A80E800EF9537 /* LDCControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCControlPanelViewController.h; sourceTree = "<group>"; };
 		1390D1B1179A80E800EF9537 /* LDCControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCControlPanelViewController.m; sourceTree = "<group>"; };
+		1390D1B3179AD10100EF9537 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1390D1B6179AD24900EF9537 /* Sound01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound01.wav; sourceTree = "<group>"; };
+		1390D1BA179ADAF800EF9537 /* LDCSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSoundManager.h; sourceTree = "<group>"; };
+		1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSoundManager.m; sourceTree = "<group>"; };
+		1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCGraphicName.h; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -203,6 +213,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */,
+				1390D1B4179AD10100EF9537 /* AVFoundation.framework in Frameworks */,
 				1390D1A7179A618E00EF9537 /* QuartzCore.framework in Frameworks */,
 				13B16558179592B400C6808A /* UIKit.framework in Frameworks */,
 				13B1655A179592B400C6808A /* Foundation.framework in Frameworks */,
@@ -253,6 +265,37 @@
 			name = SideMenuSubViewController;
 			sourceTree = "<group>";
 		};
+		1390D1B5179AD1A300EF9537 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1390D1B6179AD24900EF9537 /* Sound01.wav */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		1390D1B8179ADA9400EF9537 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1390D1BA179ADAF800EF9537 /* LDCSoundManager.h */,
+				1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */,
+				1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1390D1B9179ADABE00EF9537 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				13B16566179592B400C6808A /* LDCAppDelegate.h */,
+				13B16567179592B400C6808A /* LDCAppDelegate.m */,
+				13B1656F179592B400C6808A /* MainStoryboard.storyboard */,
+				13B16572179592B400C6808A /* LDCViewController.h */,
+				13B16573179592B400C6808A /* LDCViewController.m */,
+				13E5B67C1797054D00B03787 /* LDCViewController.xib */,
+			);
+			name = Basic;
+			sourceTree = "<group>";
+		};
 		13B1654B179592B400C6808A = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +318,8 @@
 		13B16556179592B400C6808A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */,
+				1390D1B3179AD10100EF9537 /* AVFoundation.framework */,
 				1390D1A6179A618E00EF9537 /* QuartzCore.framework */,
 				13B16557179592B400C6808A /* UIKit.framework */,
 				13B16559179592B400C6808A /* Foundation.framework */,
@@ -286,15 +331,12 @@
 		13B1655D179592B400C6808A /* ViewPack */ = {
 			isa = PBXGroup;
 			children = (
-				13B16566179592B400C6808A /* LDCAppDelegate.h */,
-				13B16567179592B400C6808A /* LDCAppDelegate.m */,
-				13B1656F179592B400C6808A /* MainStoryboard.storyboard */,
-				13B16572179592B400C6808A /* LDCViewController.h */,
-				13B16573179592B400C6808A /* LDCViewController.m */,
-				13E5B67C1797054D00B03787 /* LDCViewController.xib */,
-				1390D1A4179A5CCF00EF9537 /* Library */,
+				1390D1B9179ADABE00EF9537 /* Basic */,
+				1390D1B8179ADA9400EF9537 /* Model */,
 				13B1659B1796CB9200C6808A /* View */,
 				13B1658717963DBE00C6808A /* Controller */,
+				1390D1B5179AD1A300EF9537 /* Audio */,
+				1390D1A4179A5CCF00EF9537 /* Library */,
 				13B1657C1795B08F00C6808A /* Image */,
 				13B1655E179592B400C6808A /* Supporting Files */,
 			);
@@ -517,6 +559,7 @@
 				1390D18D179A4BE700EF9537 /* LDCSideMenuViewController.xib in Resources */,
 				1390D1AA179A707600EF9537 /* startButton@2x.png in Resources */,
 				1390D1AB179A707600EF9537 /* startButton.png in Resources */,
+				1390D1B7179AD24900EF9537 /* Sound01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +586,7 @@
 				1390D1A3179A5CC500EF9537 /* UIWindow+RESideMenuExtensions.m in Sources */,
 				1390D1AF179A78BF00EF9537 /* LDCHomeViewController.m in Sources */,
 				1390D1B2179A80E800EF9537 /* LDCControlPanelViewController.m in Sources */,
+				1390D1BC179ADAF800EF9537 /* LDCSoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

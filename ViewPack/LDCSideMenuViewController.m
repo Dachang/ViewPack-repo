@@ -11,13 +11,15 @@
 #import "LDCBasicScrollViewController.h"
 #import "LDCHomeViewController.h"
 #import "LDCControlPanelViewController.h"
+#import "LDCSoundManager.h"
+#import "LDCGraphicName.h"
 
 @interface LDCSideMenuViewController ()
 
 @end
 
 @implementation LDCSideMenuViewController
-@synthesize sideMenu = _sideMenu, startButton;
+@synthesize sideMenu = _sideMenu, startButton,panGesture,swipeGesture;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,25 +33,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Sounds
     
+    //Navgation Bar Button Item
     UIButton *tempButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 53, 30)];
     [tempButton setImage:[UIImage imageNamed:@"scrollViewBackButton.png"] forState:UIControlStateNormal];
     [tempButton addTarget:self action:@selector(showSideMenu) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:tempButton];
     [tempButton release];
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"shelfBG.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:SHELF_BG]];
     //Side Menu Button
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(30, 400, 220, 64)];
     [button setImage:[UIImage imageNamed:@"startButton.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(showSideMenu) forControlEvents:UIControlEventTouchUpInside];
     self.startButton = button;
     [self.view addSubview:startButton];
-    
+    //back Button
     UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 964, 53, 30)];
     [backButton setImage:[UIImage imageNamed:@"scrollViewBackButton.png"] forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:backButton];
+    
+    //Gesture
+//    self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(updateViewWithGesture:)];
+    self.swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(updateViewWithGesture:)];
+    [self.swipeGesture setDirection:UISwipeGestureRecognizerDirectionRight];
+    self.swipeGesture.numberOfTouchesRequired = 2;
+    [self.view addGestureRecognizer:swipeGesture];
 }
 
 - (void)didReceiveMemoryWarning
@@ -113,6 +124,34 @@
     }
 
     [_sideMenu show];
+}
+
+#pragma mark
+#pragma mark Gesture Action
+
+- (void) updateViewWithGesture: (UIGestureRecognizer*) gesture
+{
+    CGPoint _originalLocation;
+    CGPoint _currentLocation;
+    
+    if(gesture.state == UIGestureRecognizerStateBegan)
+    {
+        NSLog(@"Dragging Began");
+        _originalLocation = [gesture locationInView:self.view];
+        _currentLocation = _originalLocation;
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged)
+    {
+        _currentLocation = [gesture locationInView:self.view];
+        NSLog(@"Dragging");
+    }
+    else if (gesture.state == UIGestureRecognizerStateEnded || gesture.state == UIGestureRecognizerStateCancelled)
+    {
+        [self showSideMenu];
+        [[LDCSoundManager sharedManager] playSoundEffectWithFileName:@"Sound01"];
+        NSLog(@"Dragging Finished");
+        //add
+    }
 }
 
 @end
