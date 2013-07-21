@@ -12,6 +12,10 @@
 #import "LDCSideMenuViewController.h"
 #import "LDCWebViewController.h"
 #import "LDCTableViewCellControlViewController.h"
+#import "LDCTabBarViewController.h"
+#import "LDCFirstTabViewController.h"
+#import "LDCSecondTabViewController.h"
+#import "LDCThirdTabViewController.h"
 
 @interface LDCViewController ()
 
@@ -134,6 +138,22 @@
         UIViewController *vc = [[LDCTableViewCellControlViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
+    }
+    else if(row == 0 && section == 1)
+    {
+        NSMutableArray *tabViews = [[NSMutableArray alloc] init];
+        LDCFirstTabViewController *firstTabView = [[LDCFirstTabViewController alloc] init];
+        [tabViews addObject:firstTabView];
+        LDCSecondTabViewController *secondTabView =[[LDCSecondTabViewController alloc] init];
+        [tabViews addObject:secondTabView];
+        LDCThirdTabViewController *thirdTabView = [[LDCThirdTabViewController alloc] init];
+        [tabViews addObject:thirdTabView];
+        
+        LDCTabBarViewController *rootTabView = [[LDCTabBarViewController alloc] init];
+        [rootTabView setTitle:@"TabBarController"];
+        [rootTabView setViewControllers:tabViews];
+        
+        [self presentViewController:rootTabView animated:YES completion:NULL];
     }
     else if(row == 1 && section == 2)
     {
