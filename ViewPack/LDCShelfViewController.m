@@ -14,7 +14,7 @@
 @end
 
 @implementation LDCShelfViewController
-@synthesize navBar,shelfView,modalTransitionStyle,imageList;
+@synthesize navBar,shelfView,modalTransitionStyle,imageList,numOfSections,numOfRows,contentInSections;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +52,11 @@
     self.imageList = [tmpImageArray copy];
     
     //TableView
+    
+    numOfSections = [[NSMutableArray alloc] initWithObjects:@"0", nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"RootVCTableViewASource" ofType:@"plist"];
+    contentInSections = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
     UITableView *shelfTV = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, 768, 1400) style:UITableViewStylePlain];
     shelfTV.backgroundView = nil;
     shelfTV.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -61,6 +66,7 @@
     shelfView.scrollEnabled = YES;
     [shelfView setDelegate:self];
     [shelfView setDataSource:self];
+//    [shelfView setEditing:YES animated:YES];
     
     [self.view addSubview:shelfView];
     [self.view addSubview:navBar];
@@ -75,15 +81,18 @@
 }
 
 #pragma mark
-#pragma mark table View
+#pragma mark table View Data Source
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return numOfSections.count;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    if(numOfSections.count == 0) return 0;
+    NSString *key = [numOfSections objectAtIndex:section];
+    numOfRows = [contentInSections objectForKey:key];
+    return numOfRows.count;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,6 +112,42 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.imageOnShelf.image = [imageList objectAtIndex:row];
     return cell;
+}
+
+#pragma mark
+#pragma mark table View Delegate
+//select
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.accessoryType == UITableViewCellAccessoryNone)
+    {
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
+    else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+//delete
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        int newCount=0;
+        if (indexPath.section<[numOfSections count]) {
+            NSString *_sections = [numOfSections objectAtIndex:indexPath.section];
+            NSArray* _contents = [contentInSections objectForKey:_sections];
+            newCount= [_contents count];
+        }
+        
+        if (newCount<=0) {
+            [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationLeft];
+        }
+        
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void)didReceiveMemoryWarning

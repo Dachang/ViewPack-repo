@@ -10,13 +10,14 @@
 #import "LDCShelfViewController.h"
 #import "LDCBasicScrollViewController.h"
 #import "LDCSideMenuViewController.h"
+#import "LDCWebViewController.h"
 
 @interface LDCViewController ()
 
 @end
 
 @implementation LDCViewController
-@synthesize names,keys,tableViewA,imageA,navBar,navController,modalTransitionStyle;
+@synthesize names,keys,tableViewA,imageA,list,navBar,navController,modalTransitionStyle;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,8 +75,8 @@
 {
     if([keys count] == 0) return 0;
     NSString *key = [keys objectAtIndex:section];
-    NSArray *nameSection = [names objectForKey:key];
-    return [nameSection count];
+    NSArray *namesArray = [names objectForKey:key];
+    return [namesArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,7 +85,7 @@
     NSUInteger row = [indexPath row];
     
     NSString *key = [keys objectAtIndex:section];
-    NSArray *nameSection = [names objectForKey:key];
+    self.list = [names objectForKey:key];
     
     static NSString *sectionsTableIdentifier = @"sectionsTableIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:sectionsTableIdentifier];
@@ -92,7 +93,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:sectionsTableIdentifier];
     }
-    cell.textLabel.text = [nameSection objectAtIndex:row];
+    cell.textLabel.text = [self.list objectAtIndex:row];
     cell.textLabel.font = [UIFont fontWithName:@"Helvectica" size:15.0];
     cell.textLabel.textColor = [UIColor darkTextColor];
     
@@ -127,6 +128,16 @@
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
+    else if(row == 3 && section == 0)
+    {
+        //add
+    }
+    else if(row == 1 && section == 2)
+    {
+        UIViewController *vc = [[LDCWebViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
     else
     {
         NSString *settingSelected = [keys objectAtIndex:[indexPath row]];
@@ -134,6 +145,27 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Settings:" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
+}
+
+//move
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleInsert;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    NSUInteger fromRow = [sourceIndexPath row];
+    NSUInteger toRow = [destinationIndexPath row];
+    
+    id object = [self.list objectAtIndex:fromRow];
+    [self.list removeObjectAtIndex:fromRow];
+    [self.list insertObject:object atIndex:toRow];
 }
 
 #pragma mark

@@ -16,6 +16,10 @@
 
 @property (strong, nonatomic) UINavigationBar *navBar;
 @property (nonatomic, strong) UITableView *shelfView;
+@property (strong, nonatomic) NSMutableArray *numOfSections;
+@property (strong, nonatomic) NSMutableArray *numOfRows;
+@property (strong, nonatomic) NSMutableArray *numOfCells;
+@property (strong, nonatomic) NSDictionary *contentInSections;
 
 @property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
 

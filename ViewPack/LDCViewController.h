@@ -25,6 +25,8 @@
 @property (strong, nonatomic) UINavigationBar *navBar;
 @property (strong, nonatomic) UINavigationController *navController;
 
+@property (strong, nonatomic) NSMutableArray *list;
+
 @property (nonatomic, assign) UIModalTransitionStyle modalTransitionStyle;
 
 @end
