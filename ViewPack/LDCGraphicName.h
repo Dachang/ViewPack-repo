@@ -22,5 +22,7 @@
 #define NAV_BG @"navBG.png"
 
 #define START_BUTTON @"startButton.png"
+#define DONE_BUTTON @"done_button.png"
+#define EDIT_BUTTON @"Edit_button.png"
 
 #endif

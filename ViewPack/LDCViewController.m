@@ -11,6 +11,7 @@
 #import "LDCBasicScrollViewController.h"
 #import "LDCSideMenuViewController.h"
 #import "LDCWebViewController.h"
+#import "LDCTableViewCellControlViewController.h"
 
 @interface LDCViewController ()
 
@@ -130,7 +131,9 @@
     }
     else if(row == 3 && section == 0)
     {
-        //add
+        UIViewController *vc = [[LDCTableViewCellControlViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
     }
     else if(row == 1 && section == 2)
     {
@@ -145,27 +148,6 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Settings:" message:msg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
-}
-
-//move
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return UITableViewCellEditingStyleInsert;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
-{
-    NSUInteger fromRow = [sourceIndexPath row];
-    NSUInteger toRow = [destinationIndexPath row];
-    
-    id object = [self.list objectAtIndex:fromRow];
-    [self.list removeObjectAtIndex:fromRow];
-    [self.list insertObject:object atIndex:toRow];
 }
 
 #pragma mark

@@ -116,39 +116,8 @@
 
 #pragma mark
 #pragma mark table View Delegate
-//select
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell.accessoryType == UITableViewCellAccessoryNone)
-    {
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-    }
-    else
-    {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-//delete
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete)
-    {
-        int newCount=0;
-        if (indexPath.section<[numOfSections count]) {
-            NSString *_sections = [numOfSections objectAtIndex:indexPath.section];
-            NSArray* _contents = [contentInSections objectForKey:_sections];
-            newCount= [_contents count];
-        }
-        
-        if (newCount<=0) {
-            [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationLeft];
-        }
-        
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
+
+//add ## Check this part in LDCTableViewCellControlViewController
 
 - (void)didReceiveMemoryWarning
 {
