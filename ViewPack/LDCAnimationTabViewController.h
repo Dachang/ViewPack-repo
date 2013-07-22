@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LDCSecondTabViewController : UIViewController
+@interface LDCAnimationTabViewController : UIViewController
+{
+    UIImageView *_imageView;
+    UIButton *_pickerButton;
+}
 
 @end

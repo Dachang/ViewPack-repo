@@ -13,8 +13,8 @@
 #import "LDCWebViewController.h"
 #import "LDCTableViewCellControlViewController.h"
 #import "LDCTabBarViewController.h"
-#import "LDCFirstTabViewController.h"
-#import "LDCSecondTabViewController.h"
+#import "LDCPickerTabViewController.h"
+#import "LDCAnimationTabViewController.h"
 #import "LDCThirdTabViewController.h"
 
 @interface LDCViewController ()
@@ -142,9 +142,9 @@
     else if(row == 0 && section == 1)
     {
         NSMutableArray *tabViews = [[NSMutableArray alloc] init];
-        LDCFirstTabViewController *firstTabView = [[LDCFirstTabViewController alloc] init];
+        LDCPickerTabViewController *firstTabView = [[LDCPickerTabViewController alloc] init];
         [tabViews addObject:firstTabView];
-        LDCSecondTabViewController *secondTabView =[[LDCSecondTabViewController alloc] init];
+        LDCAnimationTabViewController *secondTabView =[[LDCAnimationTabViewController alloc] init];
         [tabViews addObject:secondTabView];
         LDCThirdTabViewController *thirdTabView = [[LDCThirdTabViewController alloc] init];
         [tabViews addObject:thirdTabView];

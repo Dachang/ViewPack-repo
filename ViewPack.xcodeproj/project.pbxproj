@@ -59,8 +59,8 @@
 		13613F71179BCF340082BD08 /* Edit_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13613F6F179BCF340082BD08 /* Edit_button.png */; };
 		13613F79179BD2ED0082BD08 /* LDCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F77179BD2ED0082BD08 /* LDCTabBarViewController.m */; };
 		13613F7A179BD2ED0082BD08 /* LDCTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13613F78179BD2ED0082BD08 /* LDCTabBarViewController.xib */; };
-		13613F7D179BD4750082BD08 /* LDCFirstTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7C179BD4750082BD08 /* LDCFirstTabViewController.m */; };
-		13613F80179BD4870082BD08 /* LDCSecondTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7F179BD4870082BD08 /* LDCSecondTabViewController.m */; };
+		13613F7D179BD4750082BD08 /* LDCPickerTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7C179BD4750082BD08 /* LDCPickerTabViewController.m */; };
+		13613F80179BD4870082BD08 /* LDCAnimationTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7F179BD4870082BD08 /* LDCAnimationTabViewController.m */; };
 		13613F83179BD7020082BD08 /* LDCThirdTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F82179BD7020082BD08 /* LDCThirdTabViewController.m */; };
 		1390D18C179A4BE700EF9537 /* LDCSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */; };
 		1390D18D179A4BE700EF9537 /* LDCSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */; };
@@ -125,6 +125,16 @@
 		13DABF86179CEDAC0011CCC6 /* TabButtonE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF72179CEDAC0011CCC6 /* TabButtonE@2x.png */; };
 		13DABF87179CEDAC0011CCC6 /* TabButtonE_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF73179CEDAC0011CCC6 /* TabButtonE_HL.png */; };
 		13DABF88179CEDAC0011CCC6 /* TabButtonE_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF74179CEDAC0011CCC6 /* TabButtonE_HL@2x.png */; };
+		13DABF8B179D00A70011CCC6 /* TabBG_A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF89179D00A70011CCC6 /* TabBG_A@2x.png */; };
+		13DABF8C179D00A70011CCC6 /* TabBG_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF8A179D00A70011CCC6 /* TabBG_A.png */; };
+		13DABF8F179D017E0011CCC6 /* PickerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF8D179D017E0011CCC6 /* PickerButton.png */; };
+		13DABF90179D017E0011CCC6 /* PickerButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF8E179D017E0011CCC6 /* PickerButton@2x.png */; };
+		13DABF93179D116C0011CCC6 /* TabBG_B@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF91179D116C0011CCC6 /* TabBG_B@2x.png */; };
+		13DABF94179D116C0011CCC6 /* TabBG_B.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF92179D116C0011CCC6 /* TabBG_B.png */; };
+		13DABF97179D13B70011CCC6 /* CustomImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF95179D13B70011CCC6 /* CustomImage.png */; };
+		13DABF98179D13B70011CCC6 /* CustomImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF96179D13B70011CCC6 /* CustomImage@2x.png */; };
+		13DABF9B179D19420011CCC6 /* SwitchButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF99179D19420011CCC6 /* SwitchButton@2x.png */; };
+		13DABF9C179D19420011CCC6 /* SwitchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF9A179D19420011CCC6 /* SwitchButton.png */; };
 		13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B67C1797054D00B03787 /* LDCViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -185,10 +195,10 @@
 		13613F76179BD2ED0082BD08 /* LDCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCTabBarViewController.h; sourceTree = "<group>"; };
 		13613F77179BD2ED0082BD08 /* LDCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCTabBarViewController.m; sourceTree = "<group>"; };
 		13613F78179BD2ED0082BD08 /* LDCTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCTabBarViewController.xib; sourceTree = "<group>"; };
-		13613F7B179BD4750082BD08 /* LDCFirstTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCFirstTabViewController.h; sourceTree = "<group>"; };
-		13613F7C179BD4750082BD08 /* LDCFirstTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCFirstTabViewController.m; sourceTree = "<group>"; };
-		13613F7E179BD4870082BD08 /* LDCSecondTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSecondTabViewController.h; sourceTree = "<group>"; };
-		13613F7F179BD4870082BD08 /* LDCSecondTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSecondTabViewController.m; sourceTree = "<group>"; };
+		13613F7B179BD4750082BD08 /* LDCPickerTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCPickerTabViewController.h; sourceTree = "<group>"; };
+		13613F7C179BD4750082BD08 /* LDCPickerTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCPickerTabViewController.m; sourceTree = "<group>"; };
+		13613F7E179BD4870082BD08 /* LDCAnimationTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCAnimationTabViewController.h; sourceTree = "<group>"; };
+		13613F7F179BD4870082BD08 /* LDCAnimationTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCAnimationTabViewController.m; sourceTree = "<group>"; };
 		13613F81179BD7020082BD08 /* LDCThirdTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCThirdTabViewController.h; sourceTree = "<group>"; };
 		13613F82179BD7020082BD08 /* LDCThirdTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCThirdTabViewController.m; sourceTree = "<group>"; };
 		1390D189179A4BE700EF9537 /* LDCSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSideMenuViewController.h; sourceTree = "<group>"; };
@@ -273,6 +283,16 @@
 		13DABF72179CEDAC0011CCC6 /* TabButtonE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonE@2x.png"; sourceTree = "<group>"; };
 		13DABF73179CEDAC0011CCC6 /* TabButtonE_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonE_HL.png; sourceTree = "<group>"; };
 		13DABF74179CEDAC0011CCC6 /* TabButtonE_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonE_HL@2x.png"; sourceTree = "<group>"; };
+		13DABF89179D00A70011CCC6 /* TabBG_A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBG_A@2x.png"; sourceTree = "<group>"; };
+		13DABF8A179D00A70011CCC6 /* TabBG_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBG_A.png; sourceTree = "<group>"; };
+		13DABF8D179D017E0011CCC6 /* PickerButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PickerButton.png; sourceTree = "<group>"; };
+		13DABF8E179D017E0011CCC6 /* PickerButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PickerButton@2x.png"; sourceTree = "<group>"; };
+		13DABF91179D116C0011CCC6 /* TabBG_B@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBG_B@2x.png"; sourceTree = "<group>"; };
+		13DABF92179D116C0011CCC6 /* TabBG_B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBG_B.png; sourceTree = "<group>"; };
+		13DABF95179D13B70011CCC6 /* CustomImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CustomImage.png; sourceTree = "<group>"; };
+		13DABF96179D13B70011CCC6 /* CustomImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomImage@2x.png"; sourceTree = "<group>"; };
+		13DABF99179D19420011CCC6 /* SwitchButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitchButton@2x.png"; sourceTree = "<group>"; };
+		13DABF9A179D19420011CCC6 /* SwitchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitchButton.png; sourceTree = "<group>"; };
 		13E5B67C1797054D00B03787 /* LDCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,10 +319,10 @@
 				13613F76179BD2ED0082BD08 /* LDCTabBarViewController.h */,
 				13613F77179BD2ED0082BD08 /* LDCTabBarViewController.m */,
 				13613F78179BD2ED0082BD08 /* LDCTabBarViewController.xib */,
-				13613F7B179BD4750082BD08 /* LDCFirstTabViewController.h */,
-				13613F7C179BD4750082BD08 /* LDCFirstTabViewController.m */,
-				13613F7E179BD4870082BD08 /* LDCSecondTabViewController.h */,
-				13613F7F179BD4870082BD08 /* LDCSecondTabViewController.m */,
+				13613F7B179BD4750082BD08 /* LDCPickerTabViewController.h */,
+				13613F7C179BD4750082BD08 /* LDCPickerTabViewController.m */,
+				13613F7E179BD4870082BD08 /* LDCAnimationTabViewController.h */,
+				13613F7F179BD4870082BD08 /* LDCAnimationTabViewController.m */,
 				13613F81179BD7020082BD08 /* LDCThirdTabViewController.h */,
 				13613F82179BD7020082BD08 /* LDCThirdTabViewController.m */,
 			);
@@ -478,7 +498,17 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13DABF99179D19420011CCC6 /* SwitchButton@2x.png */,
+				13DABF9A179D19420011CCC6 /* SwitchButton.png */,
+				13DABF95179D13B70011CCC6 /* CustomImage.png */,
+				13DABF96179D13B70011CCC6 /* CustomImage@2x.png */,
+				13DABF91179D116C0011CCC6 /* TabBG_B@2x.png */,
+				13DABF92179D116C0011CCC6 /* TabBG_B.png */,
+				13DABF8D179D017E0011CCC6 /* PickerButton.png */,
+				13DABF8E179D017E0011CCC6 /* PickerButton@2x.png */,
 				13DABF60179CEDAC0011CCC6 /* TabButton */,
+				13DABF89179D00A70011CCC6 /* TabBG_A@2x.png */,
+				13DABF8A179D00A70011CCC6 /* TabBG_A.png */,
 				13613F6E179BCF340082BD08 /* Edit_button@2x.png */,
 				13613F6F179BCF340082BD08 /* Edit_button.png */,
 				13613F6A179BC4510082BD08 /* done_button.png */,
@@ -730,6 +760,16 @@
 				13DABF86179CEDAC0011CCC6 /* TabButtonE@2x.png in Resources */,
 				13DABF87179CEDAC0011CCC6 /* TabButtonE_HL.png in Resources */,
 				13DABF88179CEDAC0011CCC6 /* TabButtonE_HL@2x.png in Resources */,
+				13DABF8B179D00A70011CCC6 /* TabBG_A@2x.png in Resources */,
+				13DABF8C179D00A70011CCC6 /* TabBG_A.png in Resources */,
+				13DABF8F179D017E0011CCC6 /* PickerButton.png in Resources */,
+				13DABF90179D017E0011CCC6 /* PickerButton@2x.png in Resources */,
+				13DABF93179D116C0011CCC6 /* TabBG_B@2x.png in Resources */,
+				13DABF94179D116C0011CCC6 /* TabBG_B.png in Resources */,
+				13DABF97179D13B70011CCC6 /* CustomImage.png in Resources */,
+				13DABF98179D13B70011CCC6 /* CustomImage@2x.png in Resources */,
+				13DABF9B179D19420011CCC6 /* SwitchButton@2x.png in Resources */,
+				13DABF9C179D19420011CCC6 /* SwitchButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,8 +800,8 @@
 				13613F66179BA1200082BD08 /* LDCWebViewController.m in Sources */,
 				13613F69179BB2EC0082BD08 /* LDCTableViewCellControlViewController.m in Sources */,
 				13613F79179BD2ED0082BD08 /* LDCTabBarViewController.m in Sources */,
-				13613F7D179BD4750082BD08 /* LDCFirstTabViewController.m in Sources */,
-				13613F80179BD4870082BD08 /* LDCSecondTabViewController.m in Sources */,
+				13613F7D179BD4750082BD08 /* LDCPickerTabViewController.m in Sources */,
+				13613F80179BD4870082BD08 /* LDCAnimationTabViewController.m in Sources */,
 				13613F83179BD7020082BD08 /* LDCThirdTabViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
