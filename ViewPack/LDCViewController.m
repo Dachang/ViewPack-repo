@@ -148,6 +148,10 @@
         [tabViews addObject:secondTabView];
         LDCThirdTabViewController *thirdTabView = [[LDCThirdTabViewController alloc] init];
         [tabViews addObject:thirdTabView];
+        LDCThirdTabViewController *fourthTabView = [[LDCThirdTabViewController alloc] init];
+        [tabViews addObject:fourthTabView];
+        LDCThirdTabViewController *fifthTabView = [[LDCThirdTabViewController alloc] init];
+        [tabViews addObject:fifthTabView];
         
         LDCTabBarViewController *rootTabView = [[LDCTabBarViewController alloc] init];
         [rootTabView setTitle:@"TabBarController"];

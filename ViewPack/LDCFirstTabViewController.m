@@ -18,9 +18,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:1];
-        self.tabBarItem = item;
-        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",9];
+//        UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:0];
+//        self.tabBarItem = item;
+//        self.tabBarItem.badgeValue = [NSString stringWithFormat:@"%d",9];
     }
     return self;
 }

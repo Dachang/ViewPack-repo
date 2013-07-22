@@ -105,6 +105,26 @@
 		13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A41796D7AB00C6808A /* shelfBG@2x.png */; };
 		13B165A71796D7AC00C6808A /* shelfBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A51796D7AC00C6808A /* shelfBG.png */; };
 		13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */; };
+		13DABF75179CEDAC0011CCC6 /* TabButtonA.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF61179CEDAC0011CCC6 /* TabButtonA.png */; };
+		13DABF76179CEDAC0011CCC6 /* TabButtonA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */; };
+		13DABF77179CEDAC0011CCC6 /* TabButtonA_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */; };
+		13DABF78179CEDAC0011CCC6 /* TabButtonA_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF64179CEDAC0011CCC6 /* TabButtonA_HL@2x.png */; };
+		13DABF79179CEDAC0011CCC6 /* TabButtonB.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF65179CEDAC0011CCC6 /* TabButtonB.png */; };
+		13DABF7A179CEDAC0011CCC6 /* TabButtonB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF66179CEDAC0011CCC6 /* TabButtonB@2x.png */; };
+		13DABF7B179CEDAC0011CCC6 /* TabButtonB_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF67179CEDAC0011CCC6 /* TabButtonB_HL.png */; };
+		13DABF7C179CEDAC0011CCC6 /* TabButtonB_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF68179CEDAC0011CCC6 /* TabButtonB_HL@2x.png */; };
+		13DABF7D179CEDAC0011CCC6 /* TabButtonC.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF69179CEDAC0011CCC6 /* TabButtonC.png */; };
+		13DABF7E179CEDAC0011CCC6 /* TabButtonC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6A179CEDAC0011CCC6 /* TabButtonC@2x.png */; };
+		13DABF7F179CEDAC0011CCC6 /* TabButtonC_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6B179CEDAC0011CCC6 /* TabButtonC_HL.png */; };
+		13DABF80179CEDAC0011CCC6 /* TabButtonC_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6C179CEDAC0011CCC6 /* TabButtonC_HL@2x.png */; };
+		13DABF81179CEDAC0011CCC6 /* TabButtonD.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6D179CEDAC0011CCC6 /* TabButtonD.png */; };
+		13DABF82179CEDAC0011CCC6 /* TabButtonD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6E179CEDAC0011CCC6 /* TabButtonD@2x.png */; };
+		13DABF83179CEDAC0011CCC6 /* TabButtonD_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF6F179CEDAC0011CCC6 /* TabButtonD_HL.png */; };
+		13DABF84179CEDAC0011CCC6 /* TabButtonD_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF70179CEDAC0011CCC6 /* TabButtonD_HL@2x.png */; };
+		13DABF85179CEDAC0011CCC6 /* TabButtonE.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF71179CEDAC0011CCC6 /* TabButtonE.png */; };
+		13DABF86179CEDAC0011CCC6 /* TabButtonE@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF72179CEDAC0011CCC6 /* TabButtonE@2x.png */; };
+		13DABF87179CEDAC0011CCC6 /* TabButtonE_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF73179CEDAC0011CCC6 /* TabButtonE_HL.png */; };
+		13DABF88179CEDAC0011CCC6 /* TabButtonE_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF74179CEDAC0011CCC6 /* TabButtonE_HL@2x.png */; };
 		13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B67C1797054D00B03787 /* LDCViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +253,26 @@
 		13B165A41796D7AB00C6808A /* shelfBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shelfBG@2x.png"; sourceTree = "<group>"; };
 		13B165A51796D7AC00C6808A /* shelfBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelfBG.png; sourceTree = "<group>"; };
 		13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCShelfTableViewCell.xib; sourceTree = "<group>"; };
+		13DABF61179CEDAC0011CCC6 /* TabButtonA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA.png; sourceTree = "<group>"; };
+		13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonA@2x.png"; sourceTree = "<group>"; };
+		13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA_HL.png; sourceTree = "<group>"; };
+		13DABF64179CEDAC0011CCC6 /* TabButtonA_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonA_HL@2x.png"; sourceTree = "<group>"; };
+		13DABF65179CEDAC0011CCC6 /* TabButtonB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonB.png; sourceTree = "<group>"; };
+		13DABF66179CEDAC0011CCC6 /* TabButtonB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonB@2x.png"; sourceTree = "<group>"; };
+		13DABF67179CEDAC0011CCC6 /* TabButtonB_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonB_HL.png; sourceTree = "<group>"; };
+		13DABF68179CEDAC0011CCC6 /* TabButtonB_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonB_HL@2x.png"; sourceTree = "<group>"; };
+		13DABF69179CEDAC0011CCC6 /* TabButtonC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonC.png; sourceTree = "<group>"; };
+		13DABF6A179CEDAC0011CCC6 /* TabButtonC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonC@2x.png"; sourceTree = "<group>"; };
+		13DABF6B179CEDAC0011CCC6 /* TabButtonC_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonC_HL.png; sourceTree = "<group>"; };
+		13DABF6C179CEDAC0011CCC6 /* TabButtonC_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonC_HL@2x.png"; sourceTree = "<group>"; };
+		13DABF6D179CEDAC0011CCC6 /* TabButtonD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonD.png; sourceTree = "<group>"; };
+		13DABF6E179CEDAC0011CCC6 /* TabButtonD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonD@2x.png"; sourceTree = "<group>"; };
+		13DABF6F179CEDAC0011CCC6 /* TabButtonD_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonD_HL.png; sourceTree = "<group>"; };
+		13DABF70179CEDAC0011CCC6 /* TabButtonD_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonD_HL@2x.png"; sourceTree = "<group>"; };
+		13DABF71179CEDAC0011CCC6 /* TabButtonE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonE.png; sourceTree = "<group>"; };
+		13DABF72179CEDAC0011CCC6 /* TabButtonE@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonE@2x.png"; sourceTree = "<group>"; };
+		13DABF73179CEDAC0011CCC6 /* TabButtonE_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonE_HL.png; sourceTree = "<group>"; };
+		13DABF74179CEDAC0011CCC6 /* TabButtonE_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonE_HL@2x.png"; sourceTree = "<group>"; };
 		13E5B67C1797054D00B03787 /* LDCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -438,6 +478,7 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13DABF60179CEDAC0011CCC6 /* TabButton */,
 				13613F6E179BCF340082BD08 /* Edit_button@2x.png */,
 				13613F6F179BCF340082BD08 /* Edit_button.png */,
 				13613F6A179BC4510082BD08 /* done_button.png */,
@@ -518,6 +559,33 @@
 				13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		13DABF60179CEDAC0011CCC6 /* TabButton */ = {
+			isa = PBXGroup;
+			children = (
+				13DABF61179CEDAC0011CCC6 /* TabButtonA.png */,
+				13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */,
+				13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */,
+				13DABF64179CEDAC0011CCC6 /* TabButtonA_HL@2x.png */,
+				13DABF65179CEDAC0011CCC6 /* TabButtonB.png */,
+				13DABF66179CEDAC0011CCC6 /* TabButtonB@2x.png */,
+				13DABF67179CEDAC0011CCC6 /* TabButtonB_HL.png */,
+				13DABF68179CEDAC0011CCC6 /* TabButtonB_HL@2x.png */,
+				13DABF69179CEDAC0011CCC6 /* TabButtonC.png */,
+				13DABF6A179CEDAC0011CCC6 /* TabButtonC@2x.png */,
+				13DABF6B179CEDAC0011CCC6 /* TabButtonC_HL.png */,
+				13DABF6C179CEDAC0011CCC6 /* TabButtonC_HL@2x.png */,
+				13DABF6D179CEDAC0011CCC6 /* TabButtonD.png */,
+				13DABF6E179CEDAC0011CCC6 /* TabButtonD@2x.png */,
+				13DABF6F179CEDAC0011CCC6 /* TabButtonD_HL.png */,
+				13DABF70179CEDAC0011CCC6 /* TabButtonD_HL@2x.png */,
+				13DABF71179CEDAC0011CCC6 /* TabButtonE.png */,
+				13DABF72179CEDAC0011CCC6 /* TabButtonE@2x.png */,
+				13DABF73179CEDAC0011CCC6 /* TabButtonE_HL.png */,
+				13DABF74179CEDAC0011CCC6 /* TabButtonE_HL@2x.png */,
+			);
+			path = TabButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -642,6 +710,26 @@
 				13613F70179BCF340082BD08 /* Edit_button@2x.png in Resources */,
 				13613F71179BCF340082BD08 /* Edit_button.png in Resources */,
 				13613F7A179BD2ED0082BD08 /* LDCTabBarViewController.xib in Resources */,
+				13DABF75179CEDAC0011CCC6 /* TabButtonA.png in Resources */,
+				13DABF76179CEDAC0011CCC6 /* TabButtonA@2x.png in Resources */,
+				13DABF77179CEDAC0011CCC6 /* TabButtonA_HL.png in Resources */,
+				13DABF78179CEDAC0011CCC6 /* TabButtonA_HL@2x.png in Resources */,
+				13DABF79179CEDAC0011CCC6 /* TabButtonB.png in Resources */,
+				13DABF7A179CEDAC0011CCC6 /* TabButtonB@2x.png in Resources */,
+				13DABF7B179CEDAC0011CCC6 /* TabButtonB_HL.png in Resources */,
+				13DABF7C179CEDAC0011CCC6 /* TabButtonB_HL@2x.png in Resources */,
+				13DABF7D179CEDAC0011CCC6 /* TabButtonC.png in Resources */,
+				13DABF7E179CEDAC0011CCC6 /* TabButtonC@2x.png in Resources */,
+				13DABF7F179CEDAC0011CCC6 /* TabButtonC_HL.png in Resources */,
+				13DABF80179CEDAC0011CCC6 /* TabButtonC_HL@2x.png in Resources */,
+				13DABF81179CEDAC0011CCC6 /* TabButtonD.png in Resources */,
+				13DABF82179CEDAC0011CCC6 /* TabButtonD@2x.png in Resources */,
+				13DABF83179CEDAC0011CCC6 /* TabButtonD_HL.png in Resources */,
+				13DABF84179CEDAC0011CCC6 /* TabButtonD_HL@2x.png in Resources */,
+				13DABF85179CEDAC0011CCC6 /* TabButtonE.png in Resources */,
+				13DABF86179CEDAC0011CCC6 /* TabButtonE@2x.png in Resources */,
+				13DABF87179CEDAC0011CCC6 /* TabButtonE_HL.png in Resources */,
+				13DABF88179CEDAC0011CCC6 /* TabButtonE_HL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface LDCTabBarViewController : UITabBarController
+{
+    UIView *_tabBarView;
+}
 
 @property (strong, nonatomic) UINavigationBar *navBar;
 
