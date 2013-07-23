@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LDCCustomGesture;
+
 @interface LDCThirdTabViewController : UIViewController
+
+@property (strong, nonatomic) LDCCustomGesture *tickleGesture;
 
 @end

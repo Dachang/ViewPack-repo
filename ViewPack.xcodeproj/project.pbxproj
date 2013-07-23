@@ -62,6 +62,11 @@
 		13613F7D179BD4750082BD08 /* LDCPickerTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7C179BD4750082BD08 /* LDCPickerTabViewController.m */; };
 		13613F80179BD4870082BD08 /* LDCAnimationTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F7F179BD4870082BD08 /* LDCAnimationTabViewController.m */; };
 		13613F83179BD7020082BD08 /* LDCThirdTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F82179BD7020082BD08 /* LDCThirdTabViewController.m */; };
+		13635A0F179EC6DA00024F28 /* TabBG_C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13635A0D179EC6DA00024F28 /* TabBG_C@2x.png */; };
+		13635A10179EC6DA00024F28 /* TabBG_C.png in Resources */ = {isa = PBXBuildFile; fileRef = 13635A0E179EC6DA00024F28 /* TabBG_C.png */; };
+		13635A13179ECB2200024F28 /* TabBG_D@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13635A11179ECB2200024F28 /* TabBG_D@2x.png */; };
+		13635A14179ECB2200024F28 /* TabBG_D.png in Resources */ = {isa = PBXBuildFile; fileRef = 13635A12179ECB2200024F28 /* TabBG_D.png */; };
+		13635A16179ECB3900024F28 /* laugh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 13635A15179ECB3900024F28 /* laugh.wav */; };
 		1390D18C179A4BE700EF9537 /* LDCSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */; };
 		1390D18D179A4BE700EF9537 /* LDCSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */; };
 		1390D19D179A5CC500EF9537 /* AccelerationAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D190179A5CC500EF9537 /* AccelerationAnimation.m */; };
@@ -135,6 +140,7 @@
 		13DABF98179D13B70011CCC6 /* CustomImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF96179D13B70011CCC6 /* CustomImage@2x.png */; };
 		13DABF9B179D19420011CCC6 /* SwitchButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF99179D19420011CCC6 /* SwitchButton@2x.png */; };
 		13DABF9C179D19420011CCC6 /* SwitchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF9A179D19420011CCC6 /* SwitchButton.png */; };
+		13DABF9F179D1E3A0011CCC6 /* LDCCustomGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 13DABF9E179D1E390011CCC6 /* LDCCustomGesture.m */; };
 		13E5B67D1797054D00B03787 /* LDCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13E5B67C1797054D00B03787 /* LDCViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +207,11 @@
 		13613F7F179BD4870082BD08 /* LDCAnimationTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCAnimationTabViewController.m; sourceTree = "<group>"; };
 		13613F81179BD7020082BD08 /* LDCThirdTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCThirdTabViewController.h; sourceTree = "<group>"; };
 		13613F82179BD7020082BD08 /* LDCThirdTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCThirdTabViewController.m; sourceTree = "<group>"; };
+		13635A0D179EC6DA00024F28 /* TabBG_C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBG_C@2x.png"; sourceTree = "<group>"; };
+		13635A0E179EC6DA00024F28 /* TabBG_C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBG_C.png; sourceTree = "<group>"; };
+		13635A11179ECB2200024F28 /* TabBG_D@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBG_D@2x.png"; sourceTree = "<group>"; };
+		13635A12179ECB2200024F28 /* TabBG_D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabBG_D.png; sourceTree = "<group>"; };
+		13635A15179ECB3900024F28 /* laugh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = laugh.wav; sourceTree = "<group>"; };
 		1390D189179A4BE700EF9537 /* LDCSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCSideMenuViewController.h; sourceTree = "<group>"; };
 		1390D18A179A4BE700EF9537 /* LDCSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSideMenuViewController.m; sourceTree = "<group>"; };
 		1390D18B179A4BE700EF9537 /* LDCSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCSideMenuViewController.xib; sourceTree = "<group>"; };
@@ -293,6 +304,8 @@
 		13DABF96179D13B70011CCC6 /* CustomImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomImage@2x.png"; sourceTree = "<group>"; };
 		13DABF99179D19420011CCC6 /* SwitchButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwitchButton@2x.png"; sourceTree = "<group>"; };
 		13DABF9A179D19420011CCC6 /* SwitchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitchButton.png; sourceTree = "<group>"; };
+		13DABF9D179D1E390011CCC6 /* LDCCustomGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCCustomGesture.h; sourceTree = "<group>"; };
+		13DABF9E179D1E390011CCC6 /* LDCCustomGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCCustomGesture.m; sourceTree = "<group>"; };
 		13E5B67C1797054D00B03787 /* LDCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -405,6 +418,7 @@
 		1390D1B5179AD1A300EF9537 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				13635A15179ECB3900024F28 /* laugh.wav */,
 				1390D1B6179AD24900EF9537 /* Sound01.wav */,
 			);
 			name = Audio;
@@ -413,6 +427,8 @@
 		1390D1B8179ADA9400EF9537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13DABF9D179D1E390011CCC6 /* LDCCustomGesture.h */,
+				13DABF9E179D1E390011CCC6 /* LDCCustomGesture.m */,
 				1390D1BA179ADAF800EF9537 /* LDCSoundManager.h */,
 				1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */,
 				1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */,
@@ -498,6 +514,10 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13635A11179ECB2200024F28 /* TabBG_D@2x.png */,
+				13635A12179ECB2200024F28 /* TabBG_D.png */,
+				13635A0D179EC6DA00024F28 /* TabBG_C@2x.png */,
+				13635A0E179EC6DA00024F28 /* TabBG_C.png */,
 				13DABF99179D19420011CCC6 /* SwitchButton@2x.png */,
 				13DABF9A179D19420011CCC6 /* SwitchButton.png */,
 				13DABF95179D13B70011CCC6 /* CustomImage.png */,
@@ -770,6 +790,11 @@
 				13DABF98179D13B70011CCC6 /* CustomImage@2x.png in Resources */,
 				13DABF9B179D19420011CCC6 /* SwitchButton@2x.png in Resources */,
 				13DABF9C179D19420011CCC6 /* SwitchButton.png in Resources */,
+				13635A0F179EC6DA00024F28 /* TabBG_C@2x.png in Resources */,
+				13635A10179EC6DA00024F28 /* TabBG_C.png in Resources */,
+				13635A13179ECB2200024F28 /* TabBG_D@2x.png in Resources */,
+				13635A14179ECB2200024F28 /* TabBG_D.png in Resources */,
+				13635A16179ECB3900024F28 /* laugh.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +828,7 @@
 				13613F7D179BD4750082BD08 /* LDCPickerTabViewController.m in Sources */,
 				13613F80179BD4870082BD08 /* LDCAnimationTabViewController.m in Sources */,
 				13613F83179BD7020082BD08 /* LDCThirdTabViewController.m in Sources */,
+				13DABF9F179D1E3A0011CCC6 /* LDCCustomGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
