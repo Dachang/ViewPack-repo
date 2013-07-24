@@ -10,6 +10,8 @@
 #import "LDCCustomGesture.h"
 #import "LDCSoundManager.h"
 
+#define MAX_TIME_INTERVAL 10
+
 @interface LDCThirdTabViewController ()
 
 @end
@@ -29,6 +31,7 @@
 {
     [super viewDidLoad];
     [self initBackground];
+    [self timerStart];
     [self initGesture];
 }
 
@@ -51,13 +54,58 @@
 
 - (void)tickleGestureFired
 {
-    if(self.tickleGesture.state == UIGestureRecognizerStateEnded)
+    if(_timeCount < MAX_TIME_INTERVAL)
     {
-        [[LDCSoundManager sharedManager] playSoundEffectWithFileName:@"laugh"];
-        NSLog(@"laugh");
+        if(self.tickleGesture.state == UIGestureRecognizerStateEnded)
+        {
+            [[LDCSoundManager sharedManager] playSoundEffectWithFileName:@"laugh"];
+            NSLog(@"laugh");
+            _timeCount = 0;
+        }
     }
     else
-        NSLog(@"NULL");
+    {
+        if(self.tickleGesture.state == UIGestureRecognizerStateEnded)
+        {
+            _timeCount = 0;
+            NSLog(@"Reset");
+        }
+    }
 }
+
+- (void)timerStart
+{
+    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerAccumulate) userInfo:nil repeats:YES];
+}
+
+- (void)timerAccumulate
+{
+    _timeCount++;
+    NSLog(@"%d",_timeCount);
+    if(_timeCount >= MAX_TIME_INTERVAL + 20)
+    {
+        _timeCount = 0;
+    }
+}
+
+//- (void)timerAdvanced:(NSTimer *)timer
+//{
+//    int mTimer = 0;
+//    if(mTimer == 0)
+//    {
+//        [timer invalidate];
+//        [self timerStart];
+//    }
+//    mTimer++;
+//    if(mTimer >= MAX_TIME_INTERVAL)
+//    {
+//        NSLog(@"%d",mTimer);
+//        [self initGesture];
+//    }
+//    else
+//        mTimer = 0;
+//}
+
+
 
 @end

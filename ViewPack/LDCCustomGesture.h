@@ -18,6 +18,7 @@ typedef enum gestureDirection
 @interface LDCCustomGesture : UIGestureRecognizer
 
 @property (assign) int tickleCount;
+@property (assign) int timeCount;
 @property (assign) CGPoint curTickleStart;
 @property (assign) gestureDirection lastDirection;
 

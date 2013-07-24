@@ -43,7 +43,8 @@
         self.tickleCount++;
         self.curTickleStart = ticklePoint;
         self.lastDirection = currentDirection;
-        
+
+
         if(self.state == UIGestureRecognizerStatePossible && self.tickleCount > REQUIRED_TICKLES)
         {
             [self setState:UIGestureRecognizerStateEnded];

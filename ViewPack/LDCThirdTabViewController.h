@@ -11,7 +11,13 @@
 @class LDCCustomGesture;
 
 @interface LDCThirdTabViewController : UIViewController
+{
+    NSTimer *_timer;
+    NSInteger _timeCount;
+}
 
 @property (strong, nonatomic) LDCCustomGesture *tickleGesture;
+
+//- (void)timerAdvanced:(NSTimer *) timer;
 
 @end
