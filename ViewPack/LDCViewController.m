@@ -15,7 +15,8 @@
 #import "LDCTabBarViewController.h"
 #import "LDCPickerTabViewController.h"
 #import "LDCAnimationTabViewController.h"
-#import "LDCThirdTabViewController.h"
+#import "LDCGestureTabViewController.h"
+#import "LDCSliderTabViewController.h"
 
 @interface LDCViewController ()
 
@@ -146,11 +147,11 @@
         [tabViews addObject:firstTabView];
         LDCAnimationTabViewController *secondTabView =[[LDCAnimationTabViewController alloc] init];
         [tabViews addObject:secondTabView];
-        LDCThirdTabViewController *thirdTabView = [[LDCThirdTabViewController alloc] init];
+        LDCGestureTabViewController *thirdTabView = [[LDCGestureTabViewController alloc] init];
         [tabViews addObject:thirdTabView];
-        LDCThirdTabViewController *fourthTabView = [[LDCThirdTabViewController alloc] init];
+        LDCSliderTabViewController *fourthTabView = [[LDCSliderTabViewController alloc] init];
         [tabViews addObject:fourthTabView];
-        LDCThirdTabViewController *fifthTabView = [[LDCThirdTabViewController alloc] init];
+        LDCGestureTabViewController *fifthTabView = [[LDCGestureTabViewController alloc] init];
         [tabViews addObject:fifthTabView];
         
         LDCTabBarViewController *rootTabView = [[LDCTabBarViewController alloc] init];

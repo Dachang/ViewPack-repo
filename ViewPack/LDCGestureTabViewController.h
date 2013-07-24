@@ -10,7 +10,7 @@
 
 @class LDCCustomGesture;
 
-@interface LDCThirdTabViewController : UIViewController
+@interface LDCGestureTabViewController : UIViewController
 {
     NSTimer *_timer;
     NSInteger _timeCount;

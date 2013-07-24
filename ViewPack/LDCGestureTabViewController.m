@@ -6,17 +6,17 @@
 //  Copyright (c) 2013年 大畅. All rights reserved.
 //
 
-#import "LDCThirdTabViewController.h"
+#import "LDCGestureTabViewController.h"
 #import "LDCCustomGesture.h"
 #import "LDCSoundManager.h"
 
 #define MAX_TIME_INTERVAL 10
 
-@interface LDCThirdTabViewController ()
+@interface LDCGestureTabViewController ()
 
 @end
 
-@implementation LDCThirdTabViewController
+@implementation LDCGestureTabViewController
 @synthesize tickleGesture;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -75,15 +75,16 @@
 
 - (void)timerStart
 {
-    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerAccumulate) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(timerAccumulate:) userInfo:nil repeats:YES];
 }
 
-- (void)timerAccumulate
+- (void)timerAccumulate:(NSTimer*) timer
 {
     _timeCount++;
     NSLog(@"%d",_timeCount);
     if(_timeCount >= MAX_TIME_INTERVAL + 20)
     {
+        //[timer invalidate];
         _timeCount = 0;
     }
 }
