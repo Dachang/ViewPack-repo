@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LDCCustomGesture.h"
 
 @class LDCCustomGesture;
 
-@interface LDCGestureTabViewController : UIViewController
+@interface LDCGestureTabViewController : UIViewController <LDCTickleGestureDelegate>
 {
     NSTimer *_timer;
     NSInteger _timeCount;

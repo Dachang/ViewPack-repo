@@ -88,6 +88,7 @@
 		1390D1B7179AD24900EF9537 /* Sound01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1390D1B6179AD24900EF9537 /* Sound01.wav */; };
 		1390D1BC179ADAF800EF9537 /* LDCSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */; };
 		1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */; };
+		139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -250,6 +251,8 @@
 		1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCSoundManager.m; sourceTree = "<group>"; };
 		1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCGraphicName.h; sourceTree = "<group>"; };
+		139BF3C717A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LDCCustomGesture+ExtraMethods.h"; sourceTree = "<group>"; };
+		139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LDCCustomGesture+ExtraMethods.m"; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -448,6 +451,8 @@
 		1390D1B8179ADA9400EF9537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				139BF3C717A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.h */,
+				139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */,
 				13DABF9D179D1E390011CCC6 /* LDCCustomGesture.h */,
 				13DABF9E179D1E390011CCC6 /* LDCCustomGesture.m */,
 				1390D1BA179ADAF800EF9537 /* LDCSoundManager.h */,
@@ -853,6 +858,7 @@
 				13DABF9F179D1E3A0011CCC6 /* LDCCustomGesture.m in Sources */,
 				13417CB2179FB0BC0015E954 /* LDCSliderTabViewController.m in Sources */,
 				13417CB8179FB4C20015E954 /* VolumeBar.m in Sources */,
+				139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

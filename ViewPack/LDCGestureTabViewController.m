@@ -7,7 +7,6 @@
 //
 
 #import "LDCGestureTabViewController.h"
-#import "LDCCustomGesture.h"
 #import "LDCSoundManager.h"
 
 #define MAX_TIME_INTERVAL 10
@@ -49,6 +48,12 @@
 - (void)initGesture
 {
     self.tickleGesture = [[LDCCustomGesture alloc] initWithTarget:self action:@selector(tickleGestureFired)];
+    self.tickleGesture.tickleDelegate = self;
+    [self.tickleGesture changeStringForKVO:@"TestValueA"];
+    NSLog(@"The Original Value is %@",[self.tickleGesture valueForKey:@"testForKVO"]);
+    [self.tickleGesture setValue:@"TestValueB" forKey:@"testForKVO"];
+    [self testKVO];
+    [self testKVC];
     [self.view addGestureRecognizer:self.tickleGesture];
 }
 
@@ -81,12 +86,20 @@
 - (void)timerAccumulate:(NSTimer*) timer
 {
     _timeCount++;
-    NSLog(@"%d",_timeCount);
+//    NSLog(@"%d",_timeCount);
     if(_timeCount >= MAX_TIME_INTERVAL + 20)
     {
         //[timer invalidate];
         _timeCount = 0;
     }
+}
+
+#pragma mark
+#pragma mark tickle delegate
+
+- (void)testMethod
+{
+    NSLog(@"Custom tickle Gesture Delegate");
 }
 
 //- (void)timerAdvanced:(NSTimer *)timer
@@ -107,6 +120,33 @@
 //        mTimer = 0;
 //}
 
+#pragma mark
+#pragma mark Test KVC
+
+- (void) testKVC
+{
+    [self.tickleGesture setValue:@"Success" forKey:@"testForKVC"];
+    NSString *name = [self.tickleGesture valueForKey:@"testForKVC"];
+    NSLog(@"Test For KVC: %@",name);
+}
+
+#pragma mark
+#pragma mark Test KVO
+
+- (void) testKVO
+{
+    [self.tickleGesture addObserver:self forKeyPath:@"testForKVO" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+}
+
+//只有通过键值编码(KVC)改变的值，才会回调观察者注册的方法
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if([keyPath isEqual:@"testForKVO"])
+    {
+        NSLog(@"Test String for KVO has been changed:");
+        NSLog(@"The New Value is:%@ The Old Value is:%@", [change objectForKey:@"new"],[change objectForKey:@"old"]);
+    }
+}
 
 
 @end

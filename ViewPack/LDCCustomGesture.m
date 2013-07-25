@@ -8,11 +8,13 @@
 
 #import "LDCCustomGesture.h"
 #import <UIKit/UIGestureRecognizerSubclass.h>
+#import "LDCCustomGesture+ExtraMethods.h"
 
 #define REQUIRED_TICKLES 2
 #define MOVE_AMT_PER_TICKLE 25
 
 @implementation LDCCustomGesture
+@synthesize tickleDelegate;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -48,6 +50,8 @@
         if(self.state == UIGestureRecognizerStatePossible && self.tickleCount > REQUIRED_TICKLES)
         {
             [self setState:UIGestureRecognizerStateEnded];
+            [tickleDelegate testMethod];
+            [self testMethodOne];
         }
     }
 }
@@ -72,5 +76,14 @@
 {
     [self reset];
 }
+
+#pragma mark
+#pragma mark Test For KVO
+
+-(void)changeStringForKVO:(NSString *)newString
+{
+    testForKVO = newString;
+}
+
 
 @end

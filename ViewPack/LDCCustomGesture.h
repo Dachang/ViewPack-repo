@@ -15,11 +15,26 @@ typedef enum gestureDirection
     DIRECTION_RIGHT,
 } gestureDirection;
 
-@interface LDCCustomGesture : UIGestureRecognizer
+@protocol LDCTickleGestureDelegate <NSObject>
 
+- (void)testMethod;
+
+@end
+
+@interface LDCCustomGesture : UIGestureRecognizer
+{
+    id<LDCTickleGestureDelegate> tickleDelegate;
+    NSString *testForKVC;
+    NSString *testForKVO;
+//    NSArray *testForKVCArray;
+}
 @property (assign) int tickleCount;
 @property (assign) int timeCount;
 @property (assign) CGPoint curTickleStart;
 @property (assign) gestureDirection lastDirection;
+
+@property (nonatomic,retain) id <LDCTickleGestureDelegate> tickleDelegate;
+
+-(void)changeStringForKVO:(NSString*) newString;
 
 @end

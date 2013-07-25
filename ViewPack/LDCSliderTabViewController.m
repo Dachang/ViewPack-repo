@@ -32,6 +32,7 @@
     [super viewDidLoad];
 	[self initBackground];
     [self initVolumnBar];
+    [self testBlock];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +73,18 @@
 {
     VolumeBar *bar = sender;
     [_label setText:[NSString stringWithFormat:@"Volumn: %d", bar.currentVolume]];
+}
+
+#pragma mark
+#pragma mark Block
+
+- (void)testBlock
+{
+    void (^customBlock)(int,int);
+    customBlock = ^(int _numA, int _numB){
+        NSLog(@"%d", _numB+_numA);
+    };
+    customBlock(10,10);
 }
 
 @end
