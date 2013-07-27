@@ -89,6 +89,9 @@
 		1390D1BC179ADAF800EF9537 /* LDCSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */; };
 		1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */; };
 		139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */; };
+		13A9C0FA17A3B54F003CA407 /* LDCPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */; };
+		13A9C0FD17A3B942003CA407 /* push_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A9C0FB17A3B942003CA407 /* push_button.png */; };
+		13A9C0FE17A3B942003CA407 /* push_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A9C0FC17A3B942003CA407 /* push_button@2x.png */; };
 		13B16558179592B400C6808A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16557179592B400C6808A /* UIKit.framework */; };
 		13B1655A179592B400C6808A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B16559179592B400C6808A /* Foundation.framework */; };
 		13B1655C179592B400C6808A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B1655B179592B400C6808A /* CoreGraphics.framework */; };
@@ -253,6 +256,10 @@
 		1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCGraphicName.h; sourceTree = "<group>"; };
 		139BF3C717A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LDCCustomGesture+ExtraMethods.h"; sourceTree = "<group>"; };
 		139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LDCCustomGesture+ExtraMethods.m"; sourceTree = "<group>"; };
+		13A9C0F817A3B54F003CA407 /* LDCPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCPushViewController.h; sourceTree = "<group>"; };
+		13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCPushViewController.m; sourceTree = "<group>"; };
+		13A9C0FB17A3B942003CA407 /* push_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push_button.png; sourceTree = "<group>"; };
+		13A9C0FC17A3B942003CA407 /* push_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push_button@2x.png"; sourceTree = "<group>"; };
 		13B16554179592B400C6808A /* ViewPack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewPack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B16557179592B400C6808A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13B16559179592B400C6808A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -540,6 +547,8 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				13A9C0FB17A3B942003CA407 /* push_button.png */,
+				13A9C0FC17A3B942003CA407 /* push_button@2x.png */,
 				13635A11179ECB2200024F28 /* TabBG_D@2x.png */,
 				13635A12179ECB2200024F28 /* TabBG_D.png */,
 				13635A0D179EC6DA00024F28 /* TabBG_C@2x.png */,
@@ -618,6 +627,8 @@
 		13B1658717963DBE00C6808A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13A9C0F817A3B54F003CA407 /* LDCPushViewController.h */,
+				13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */,
 				13613F73179BD22B0082BD08 /* TableViewController */,
 				13613F74179BD24B0082BD08 /* ScrollViewController */,
 				13613F72179BD2040082BD08 /* TabBarViewController */,
@@ -822,6 +833,8 @@
 				13635A14179ECB2200024F28 /* TabBG_D.png in Resources */,
 				13635A16179ECB3900024F28 /* laugh.wav in Resources */,
 				13417CB7179FB4C20015E954 /* volumeBar.bundle in Resources */,
+				13A9C0FD17A3B942003CA407 /* push_button.png in Resources */,
+				13A9C0FE17A3B942003CA407 /* push_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +872,7 @@
 				13417CB2179FB0BC0015E954 /* LDCSliderTabViewController.m in Sources */,
 				13417CB8179FB4C20015E954 /* VolumeBar.m in Sources */,
 				139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */,
+				13A9C0FA17A3B54F003CA407 /* LDCPushViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

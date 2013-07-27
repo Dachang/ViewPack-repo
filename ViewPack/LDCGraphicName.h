@@ -25,4 +25,6 @@
 #define DONE_BUTTON @"done_button.png"
 #define EDIT_BUTTON @"Edit_button.png"
 
+#define PUSH_BUTTON @"push_button.png" 
+
 #endif

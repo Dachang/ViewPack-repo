@@ -17,6 +17,7 @@
 #import "LDCAnimationTabViewController.h"
 #import "LDCGestureTabViewController.h"
 #import "LDCSliderTabViewController.h"
+#import "LDCPushViewController.h"
 
 @interface LDCViewController ()
 
@@ -159,6 +160,12 @@
         [rootTabView setViewControllers:tabViews];
         
         [self presentViewController:rootTabView animated:YES completion:NULL];
+    }
+    else if (row == 1 && section == 1)
+    {
+        UIViewController *vc = [[LDCPushViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
     }
     else if(row == 1 && section == 2)
     {
