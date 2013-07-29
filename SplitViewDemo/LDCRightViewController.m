@@ -47,14 +47,14 @@
 
 - (void)initModalView
 {
-    _iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 95, 95)];
-    _modalName = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10, 250, 45)];
+    _iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 50, 95, 95)];
+    _modalName = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 50, 250, 45)];
     _modalName.font = [UIFont fontWithName:@"Helvetica Bold" size:36];
-    _modalDescription = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10+45, 200, 31)];
+    _modalDescription = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10+45+40, 200, 31)];
     _modalDescription.font = [UIFont fontWithName:@"Helvetica" size:24];
-    UILabel *weaponIntro = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10+45+50-31+20, 200, 31)];
+    UILabel *weaponIntro = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10+45+50-31+20+40, 200, 31)];
     weaponIntro.text = @"Prefered Way To Kill:";
-    _weaponImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10+95+5+200+10, 10+45+50-31+20, 70, 70)];
+    _weaponImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10+95+5+200+10, 10+45+50-31+20+40, 70, 70)];
     
     _modalName.text = _modal.name;
     _iconImageView.image = [UIImage imageNamed:_modal.iconName];
@@ -74,6 +74,31 @@
 - (void)selectedModal:(LDCViewModal *)newModal
 {
     [self setModal:newModal];
+    if(_popover != nil)
+    {
+        [_popover dismissPopoverAnimated:YES];
+    }
+}
+
+#pragma mark
+#pragma marl split view delegate
+
+- (void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
+{
+    NSLog(@"Will hide left side");
+    self.popover = pc;
+    barButtonItem.title = @"Modal";
+    //UINavigationItem *navItem = [self navigationItem];
+    [_navBarItem setLeftBarButtonItem:barButtonItem animated:YES];
+    
+}
+
+- (void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    NSLog(@"Will show left side");
+    //UINavigationItem *navItem = [self navigationItem];
+    [_navBarItem setLeftBarButtonItem:nil animated:YES];
+    _popover = nil;
 }
 
 @end

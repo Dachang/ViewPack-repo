@@ -10,12 +10,15 @@
 #import "LDCModalSelectionDelegate.h"
 @class LDCViewModal;
 
-@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate>
+@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate, UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) LDCViewModal *modal;
 @property (nonatomic, strong) UILabel *modalName;
 @property (nonatomic, strong) UILabel *modalDescription;
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) UIImageView *weaponImageView;
+
+@property (nonatomic, strong) UIPopoverController *popover;
+@property (nonatomic, strong) IBOutlet UINavigationItem *navBarItem;
 
 @end

@@ -23,6 +23,7 @@
     [rightViewController setModal:firstModal];
     
     leftViewController.delegate = rightViewController;
+    splitViewController.delegate = rightViewController;
     
     return YES;
 }
