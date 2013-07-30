@@ -21,6 +21,7 @@
 		1313D86A17A6ACAC000FEC5E /* ninjastar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D85F17A6ACAC000FEC5E /* ninjastar.png */; };
 		1313D86B17A6ACAC000FEC5E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86017A6ACAC000FEC5E /* smoke.png */; };
 		1313D86C17A6ACAC000FEC5E /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86117A6ACAC000FEC5E /* sword.png */; };
+		134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */; };
 		1361399517A6A0B400C8316D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399417A6A0B400C8316D /* UIKit.framework */; };
 		1361399717A6A0B400C8316D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399617A6A0B400C8316D /* Foundation.framework */; };
 		1361399917A6A0B400C8316D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399817A6A0B400C8316D /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 		1313D86017A6ACAC000FEC5E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
 		1313D86117A6ACAC000FEC5E /* sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword.png; sourceTree = "<group>"; };
 		1313D86D17A6B8B9000FEC5E /* LDCModalSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDCModalSelectionDelegate.h; sourceTree = "<group>"; };
+		134D1EBD17A8101A00E39619 /* LDCColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCColorPickerViewController.h; sourceTree = "<group>"; };
+		134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCColorPickerViewController.m; sourceTree = "<group>"; };
 		1361399117A6A0B400C8316D /* SplitViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1361399417A6A0B400C8316D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1361399617A6A0B400C8316D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,46 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		134D1EB917A80FB900E39619 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1313D84A17A6A40A000FEC5E /* LDCLeftViewController.h */,
+				1313D84B17A6A40A000FEC5E /* LDCLeftViewController.m */,
+				1313D85017A6A5C0000FEC5E /* LDCRightViewController.h */,
+				1313D85117A6A5C0000FEC5E /* LDCRightViewController.m */,
+				134D1EBD17A8101A00E39619 /* LDCColorPickerViewController.h */,
+				134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		134D1EBA17A80FCA00E39619 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				1313D85317A6A7E0000FEC5E /* LDCViewModal.h */,
+				1313D85417A6A7E0000FEC5E /* LDCViewModal.m */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		134D1EBB17A80FD800E39619 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1313D86D17A6B8B9000FEC5E /* LDCModalSelectionDelegate.h */,
+				136139A317A6A0B400C8316D /* LDCAppDelegate.h */,
+				136139A417A6A0B400C8316D /* LDCAppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		134D1EBC17A80FE400E39619 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				136139B117A6A10B00C8316D /* mainStoryboard_iPad.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		1361398817A6A0B400C8316D = {
 			isa = PBXGroup;
 			children = (
@@ -130,16 +173,10 @@
 		1361399A17A6A0B400C8316D /* SplitViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				136139B117A6A10B00C8316D /* mainStoryboard_iPad.storyboard */,
-				1313D86D17A6B8B9000FEC5E /* LDCModalSelectionDelegate.h */,
-				136139A317A6A0B400C8316D /* LDCAppDelegate.h */,
-				136139A417A6A0B400C8316D /* LDCAppDelegate.m */,
-				1313D84A17A6A40A000FEC5E /* LDCLeftViewController.h */,
-				1313D84B17A6A40A000FEC5E /* LDCLeftViewController.m */,
-				1313D85017A6A5C0000FEC5E /* LDCRightViewController.h */,
-				1313D85117A6A5C0000FEC5E /* LDCRightViewController.m */,
-				1313D85317A6A7E0000FEC5E /* LDCViewModal.h */,
-				1313D85417A6A7E0000FEC5E /* LDCViewModal.m */,
+				134D1EBC17A80FE400E39619 /* View */,
+				134D1EBB17A80FD800E39619 /* Delegate */,
+				134D1EBA17A80FCA00E39619 /* Modals */,
+				134D1EB917A80FB900E39619 /* Controllers */,
 				1313D85617A6ACAC000FEC5E /* images */,
 				1361399B17A6A0B400C8316D /* Supporting Files */,
 			);
@@ -243,6 +280,7 @@
 				1313D84C17A6A40A000FEC5E /* LDCLeftViewController.m in Sources */,
 				1313D85217A6A5C0000FEC5E /* LDCRightViewController.m in Sources */,
 				1313D85517A6A7E0000FEC5E /* LDCViewModal.m in Sources */,
+				134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

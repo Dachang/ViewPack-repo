@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "LDCModalSelectionDelegate.h"
+#import "LDCColorPickerViewController.h"
 @class LDCViewModal;
 
-@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate, UISplitViewControllerDelegate>
+@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate, UISplitViewControllerDelegate, LDCColorPickerDelegate>
 
 @property (nonatomic, strong) LDCViewModal *modal;
 @property (nonatomic, strong) UILabel *modalName;
@@ -20,5 +21,10 @@
 
 @property (nonatomic, strong) UIPopoverController *popover;
 @property (nonatomic, strong) IBOutlet UINavigationItem *navBarItem;
+
+@property (nonatomic, strong) LDCColorPickerViewController *colorPicker;
+@property (nonatomic, strong) UIPopoverController *colorPickerPopover;
+
+-(IBAction)chooseColorButtonTapped:(id)sender;
 
 @end

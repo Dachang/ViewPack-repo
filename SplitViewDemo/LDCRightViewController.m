@@ -69,7 +69,7 @@
 }
 
 #pragma mark
-#pragma mark delegate
+#pragma mark leftView delegate
 
 - (void)selectedModal:(LDCViewModal *)newModal
 {
@@ -77,6 +77,44 @@
     if(_popover != nil)
     {
         [_popover dismissPopoverAnimated:YES];
+    }
+}
+
+#pragma mark
+#pragma mark IBAction
+
+- (IBAction)chooseColorButtonTapped:(id)sender
+{
+    if(_colorPicker ==  nil)
+    {
+        _colorPicker = [[LDCColorPickerViewController alloc] initWithStyle:UITableViewStylePlain];
+        //Set this very VC as the delegate
+        _colorPicker.delegate = self;
+    }
+    if(_colorPickerPopover == nil)
+    {
+        _colorPickerPopover = [[UIPopoverController alloc] initWithContentViewController:_colorPicker];
+        [_colorPickerPopover presentPopoverFromBarButtonItem:(UIBarButtonItem*)sender permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    }
+    //实现再点击一下视图收回的效果（用于NavBarButton）
+    else
+    {
+        [_colorPickerPopover dismissPopoverAnimated:YES];
+        _colorPickerPopover = nil;
+    }
+}
+
+#pragma mark
+#pragma mark colorPicker delegate
+
+- (void)selectedColor:(UIColor *)newColor
+{
+    _modalName.textColor = newColor;
+    
+    if(_colorPickerPopover)
+    {
+        [_colorPickerPopover dismissPopoverAnimated:YES];
+        _colorPickerPopover = nil;
     }
 }
 

@@ -14,7 +14,13 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCL-YO-4Z8">
                                 <items>
-                                    <navigationItem id="7IW-Ur-bb5"/>
+                                    <navigationItem id="7cd-ok-MDq">
+                                        <barButtonItem key="rightBarButtonItem" title="Choose Color" id="3gk-AM-W60">
+                                            <connections>
+                                                <action selector="chooseColorButtonTapped:" destination="tfT-72-Qjo" id="bYp-P2-9ig"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -27,9 +33,6 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <connections>
-                        <outlet property="navBarItem" destination="7IW-Ur-bb5" id="vp5-RA-YIo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kh8-g7-1vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +114,7 @@
         <class className="LDCRightViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LDCRightViewController.h"/>
             <relationships>
+                <relationship kind="action" name="chooseColorButtonTapped:"/>
                 <relationship kind="outlet" name="navBarItem" candidateClass="UINavigationItem"/>
             </relationships>
         </class>
