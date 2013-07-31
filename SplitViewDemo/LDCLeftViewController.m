@@ -8,6 +8,7 @@
 
 #import "LDCLeftViewController.h"
 #import "LDCViewModal.h"
+#import "LDCWeapon.h"
 
 @interface LDCLeftViewController ()
 
@@ -20,13 +21,13 @@
     if(self = [super initWithCoder:aDecoder])
     {
         _modals = [NSMutableArray array];
-        
-        [_modals addObject:[LDCViewModal newModalWithName:@"Cat-Bot" description:@"MEE-OW" iconName:@"meetcatbot.png" weapon:Sword]];
-        [_modals addObject:[LDCViewModal newModalWithName:@"Dog-Bot" description:@"BOW-WOW" iconName:@"meetdogbot.png" weapon:Blowgun]];
-        [_modals addObject:[LDCViewModal newModalWithName:@"Explode-Bot" description:@"Tick, tick, BOOM" iconName:@"meetexplodebot.png" weapon:Smoke]];
-        [_modals addObject:[LDCViewModal newModalWithName:@"Fire-Bot" description:@"Will Make Your Steamed" iconName:@"meetfirebot.png" weapon:NinjaStar]];
-        [_modals addObject:[LDCViewModal newModalWithName:@"Ice-Bot" description:@"Have a Chilling Effect" iconName:@"meeticebot.png" weapon:Fire]];
-        [_modals addObject:[LDCViewModal newModalWithName:@"Mini-Tomato-Bot" description:@"Exteremely Handsome" iconName:@"meetminitomatobot.png" weapon:NinjaStar]];
+    
+        [_modals addObject:[LDCViewModal newModalWithName:@"Cat-Bot" description:@"MEE-OW" iconName:@"meetcatbot.png" weapon:[LDCWeapon newWeaponOfType:Sword]]];
+        [_modals addObject:[LDCViewModal newModalWithName:@"Dog-Bot" description:@"BOW-WOW" iconName:@"meetdogbot.png" weapon:[LDCWeapon newWeaponOfType:Blowgun]]];
+        [_modals addObject:[LDCViewModal newModalWithName:@"Explode-Bot" description:@"Tick, tick, BOOM" iconName:@"meetexplodebot.png" weapon:[LDCWeapon newWeaponOfType:Smoke]]];
+        [_modals addObject:[LDCViewModal newModalWithName:@"Fire-Bot" description:@"Will Make Your Steamed" iconName:@"meetfirebot.png" weapon:[LDCWeapon newWeaponOfType:NinjaStar]]];
+        [_modals addObject:[LDCViewModal newModalWithName:@"Ice-Bot" description:@"Have a Chilling Effect" iconName:@"meeticebot.png" weapon:[LDCWeapon newWeaponOfType:Fire]]];
+        [_modals addObject:[LDCViewModal newModalWithName:@"Mini-Tomato-Bot" description:@"Exteremely Handsome" iconName:@"meetminitomatobot.png" weapon:[LDCWeapon newWeaponOfType:NinjaStar]]];
     }
     return self;
 }

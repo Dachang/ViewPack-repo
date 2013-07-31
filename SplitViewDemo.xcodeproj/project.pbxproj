@@ -21,6 +21,7 @@
 		1313D86A17A6ACAC000FEC5E /* ninjastar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D85F17A6ACAC000FEC5E /* ninjastar.png */; };
 		1313D86B17A6ACAC000FEC5E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86017A6ACAC000FEC5E /* smoke.png */; };
 		1313D86C17A6ACAC000FEC5E /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86117A6ACAC000FEC5E /* sword.png */; };
+		1343832F17A88FC50081490C /* LDCWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343832E17A88FC50081490C /* LDCWeapon.m */; };
 		134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */; };
 		1361399517A6A0B400C8316D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399417A6A0B400C8316D /* UIKit.framework */; };
 		1361399717A6A0B400C8316D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399617A6A0B400C8316D /* Foundation.framework */; };
@@ -53,6 +54,8 @@
 		1313D86017A6ACAC000FEC5E /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
 		1313D86117A6ACAC000FEC5E /* sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sword.png; sourceTree = "<group>"; };
 		1313D86D17A6B8B9000FEC5E /* LDCModalSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDCModalSelectionDelegate.h; sourceTree = "<group>"; };
+		1343832D17A88FC50081490C /* LDCWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWeapon.h; sourceTree = "<group>"; };
+		1343832E17A88FC50081490C /* LDCWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWeapon.m; sourceTree = "<group>"; };
 		134D1EBD17A8101A00E39619 /* LDCColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCColorPickerViewController.h; sourceTree = "<group>"; };
 		134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCColorPickerViewController.m; sourceTree = "<group>"; };
 		1361399117A6A0B400C8316D /* SplitViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +124,8 @@
 			children = (
 				1313D85317A6A7E0000FEC5E /* LDCViewModal.h */,
 				1313D85417A6A7E0000FEC5E /* LDCViewModal.m */,
+				1343832D17A88FC50081490C /* LDCWeapon.h */,
+				1343832E17A88FC50081490C /* LDCWeapon.m */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				1313D85217A6A5C0000FEC5E /* LDCRightViewController.m in Sources */,
 				1313D85517A6A7E0000FEC5E /* LDCViewModal.m in Sources */,
 				134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */,
+				1343832F17A88FC50081490C /* LDCWeapon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

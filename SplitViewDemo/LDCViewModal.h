@@ -7,25 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef enum
-{
-    Blowgun = 0,
-    NinjaStar,
-    Fire,
-    Sword,
-    Smoke,
-}Weapon;
-
+@class LDCWeapon;
 @interface LDCViewModal : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *iconName;
-@property (nonatomic, assign) Weapon weapon;
+@property (nonatomic, strong) LDCWeapon *weapon;
 
-+(LDCViewModal *)newModalWithName:(NSString*)name description:(NSString*)description iconName:(NSString*)iconName weapon:(Weapon)weapon;
-
--(UIImage *)getWeaponImage;
++(LDCViewModal *)newModalWithName:(NSString*)name description:(NSString*)description iconName:(NSString*)iconName weapon:(LDCWeapon *)weapon;
 
 @end

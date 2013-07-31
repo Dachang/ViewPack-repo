@@ -8,6 +8,7 @@
 
 #import "LDCRightViewController.h"
 #import "LDCViewModal.h"
+#import "LDCWeapon.h"
 
 @interface LDCRightViewController ()
 
@@ -59,7 +60,7 @@
     _modalName.text = _modal.name;
     _iconImageView.image = [UIImage imageNamed:_modal.iconName];
     _modalDescription.text = _modal.description;
-    _weaponImageView.image = [_modal getWeaponImage];
+    _weaponImageView.image = [_modal.weapon getWeaponImage];
     
     [self.view addSubview:_iconImageView];
     [self.view addSubview:_modalName];
