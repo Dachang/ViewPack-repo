@@ -18,6 +18,7 @@
 #import "LDCGestureTabViewController.h"
 #import "LDCSliderTabViewController.h"
 #import "LDCPushViewController.h"
+#import "LDCPageControlViewController.h"
 
 @interface LDCViewController ()
 
@@ -38,7 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"RootVCTableViewASource" ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -120,6 +120,11 @@
     if(row == 0 && section == 0)
     {
         UIViewController *vc = [[LDCShelfViewController alloc] init];
+        
+//        [UIView transitionWithView:self.view duration:0.5f options: UIViewAnimationOptionTransitionCrossDissolve animations:^{
+//            [self.view addSubview:vc.view];
+//        } completion:NULL];
+        
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
@@ -143,6 +148,10 @@
     }
     else if(row == 0 && section == 1)
     {
+        //add
+    }
+    else if(row == 1 && section == 1)
+    {
         NSMutableArray *tabViews = [[NSMutableArray alloc] init];
         LDCPickerTabViewController *firstTabView = [[LDCPickerTabViewController alloc] init];
         [tabViews addObject:firstTabView];
@@ -161,9 +170,15 @@
         
         [self presentViewController:rootTabView animated:YES completion:NULL];
     }
-    else if (row == 1 && section == 1)
+    else if (row == 2 && section == 1)
     {
         UIViewController *vc = [[LDCPushViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
+    else if(row == 0 && section == 2)
+    {
+        UIViewController *vc = [[LDCPageControlViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }

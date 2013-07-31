@@ -11,12 +11,13 @@
 	</array>
 	<key>1</key>
 	<array>
+		<string>Split &amp; Popover View</string>
 		<string>TabBar View</string>
-		<string>Rate Us</string>
+		<string>Push View</string>
 	</array>
 	<key>2</key>
 	<array>
-		<string>CopyRight</string>
+		<string>Page View</string>
 		<string>About</string>
 	</array>
 </dict>

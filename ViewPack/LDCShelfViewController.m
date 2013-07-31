@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"shelfBG.png"]];
     
     //Navigation Bar
@@ -77,6 +76,9 @@
 
 - (void) backButtonPressed
 {
+//    [UIView transitionWithView:self.view duration:0.5f options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+//        [self.view removeFromSuperview];
+//    } completion:NULL];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

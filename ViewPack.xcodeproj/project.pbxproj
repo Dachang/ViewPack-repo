@@ -54,6 +54,7 @@
 		13433A6B1797AC45008FD042 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A671797AC45008FD042 /* 1.png */; };
 		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
 		13433A6D1797AC45008FD042 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A691797AC45008FD042 /* 3.png */; };
+		135F67BF17A91E3800DF14EE /* LDCPageControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */; };
 		13613F66179BA1200082BD08 /* LDCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F65179BA1200082BD08 /* LDCWebViewController.m */; };
 		13613F69179BB2EC0082BD08 /* LDCTableViewCellControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F68179BB2EC0082BD08 /* LDCTableViewCellControlViewController.m */; };
 		13613F6C179BC4510082BD08 /* done_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13613F6A179BC4510082BD08 /* done_button.png */; };
@@ -202,6 +203,8 @@
 		13433A671797AC45008FD042 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		13433A681797AC45008FD042 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		13433A691797AC45008FD042 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		135F67BD17A91E3700DF14EE /* LDCPageControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCPageControlViewController.h; sourceTree = "<group>"; };
+		135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCPageControlViewController.m; sourceTree = "<group>"; };
 		13613F64179BA1200082BD08 /* LDCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWebViewController.h; sourceTree = "<group>"; };
 		13613F65179BA1200082BD08 /* LDCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWebViewController.m; sourceTree = "<group>"; };
 		13613F67179BB2EC0082BD08 /* LDCTableViewCellControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCTableViewCellControlViewController.h; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 		13613F75179BD2690082BD08 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				13A9C0F817A3B54F003CA407 /* LDCPushViewController.h */,
+				13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */,
 				13613F64179BA1200082BD08 /* LDCWebViewController.h */,
 				13613F65179BA1200082BD08 /* LDCWebViewController.m */,
 			);
@@ -477,6 +482,7 @@
 				13B1656F179592B400C6808A /* MainStoryboard.storyboard */,
 				13B16572179592B400C6808A /* LDCViewController.h */,
 				13B16573179592B400C6808A /* LDCViewController.m */,
+				13B1659B1796CB9200C6808A /* View */,
 				13E5B67C1797054D00B03787 /* LDCViewController.xib */,
 			);
 			name = Basic;
@@ -522,7 +528,6 @@
 				1390D1A4179A5CCF00EF9537 /* Library */,
 				1390D1B9179ADABE00EF9537 /* Basic */,
 				1390D1B8179ADA9400EF9537 /* Model */,
-				13B1659B1796CB9200C6808A /* View */,
 				13B1658717963DBE00C6808A /* Controller */,
 				13B1655E179592B400C6808A /* Supporting Files */,
 			);
@@ -627,8 +632,8 @@
 		13B1658717963DBE00C6808A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				13A9C0F817A3B54F003CA407 /* LDCPushViewController.h */,
-				13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */,
+				135F67BD17A91E3700DF14EE /* LDCPageControlViewController.h */,
+				135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */,
 				13613F73179BD22B0082BD08 /* TableViewController */,
 				13613F74179BD24B0082BD08 /* ScrollViewController */,
 				13613F72179BD2040082BD08 /* TabBarViewController */,
@@ -873,6 +878,7 @@
 				13417CB8179FB4C20015E954 /* VolumeBar.m in Sources */,
 				139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */,
 				13A9C0FA17A3B54F003CA407 /* LDCPushViewController.m in Sources */,
+				135F67BF17A91E3800DF14EE /* LDCPageControlViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
