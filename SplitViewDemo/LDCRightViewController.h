@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "LDCModalSelectionDelegate.h"
 #import "LDCColorPickerViewController.h"
+#import "LDCWeaponSelectorImageView.h"
 @class LDCViewModal;
 
-@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate, UISplitViewControllerDelegate, LDCColorPickerDelegate>
+@interface LDCRightViewController : UIViewController<LDCModalSelectionDelegate, UISplitViewControllerDelegate, LDCColorPickerDelegate,LDCWeaponSelectorDelegate>
 
 @property (nonatomic, strong) LDCViewModal *modal;
 @property (nonatomic, strong) UILabel *modalName;
 @property (nonatomic, strong) UILabel *modalDescription;
 @property (nonatomic, strong) UIImageView *iconImageView;
-@property (nonatomic, strong) UIImageView *weaponImageView;
+@property (nonatomic, strong) LDCWeaponSelectorImageView *weaponImageView;
 
 @property (nonatomic, strong) UIPopoverController *popover;
 @property (nonatomic, strong) IBOutlet UINavigationItem *navBarItem;

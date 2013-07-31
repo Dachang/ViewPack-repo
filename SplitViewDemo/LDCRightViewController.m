@@ -55,12 +55,14 @@
     _modalDescription.font = [UIFont fontWithName:@"Helvetica" size:24];
     UILabel *weaponIntro = [[UILabel alloc] initWithFrame:CGRectMake(10+95+5, 10+45+50-31+20+40, 200, 31)];
     weaponIntro.text = @"Prefered Way To Kill:";
-    _weaponImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10+95+5+200+10, 10+45+50-31+20+40, 70, 70)];
+    _weaponImageView = [[LDCWeaponSelectorImageView alloc] initWithFrame:CGRectMake(10+95+5+200+10, 10+45+50-31+20+40, 70, 70)];
+    _weaponImageView.userInteractionEnabled = YES;
+    _weaponImageView.delegate = self;
     
     _modalName.text = _modal.name;
     _iconImageView.image = [UIImage imageNamed:_modal.iconName];
     _modalDescription.text = _modal.description;
-    _weaponImageView.image = [_modal.weapon getWeaponImage];
+    _weaponImageView.weapon = _modal.weapon;
     
     [self.view addSubview:_iconImageView];
     [self.view addSubview:_modalName];
@@ -138,6 +140,18 @@
     //UINavigationItem *navItem = [self navigationItem];
     [_navBarItem setLeftBarButtonItem:nil animated:YES];
     _popover = nil;
+}
+
+#pragma mark
+#pragma mark weaponSelector delegate
+
+//用于保存已经改变过的weapon
+- (void)selectedWeapon:(LDCWeapon *)weapon
+{
+    if(_modal.weapon != weapon)
+    {
+        _modal.weapon = weapon;
+    }
 }
 
 @end

@@ -22,6 +22,9 @@
 		1313D86B17A6ACAC000FEC5E /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86017A6ACAC000FEC5E /* smoke.png */; };
 		1313D86C17A6ACAC000FEC5E /* sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 1313D86117A6ACAC000FEC5E /* sword.png */; };
 		1343832F17A88FC50081490C /* LDCWeapon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343832E17A88FC50081490C /* LDCWeapon.m */; };
+		1343833317A8985F0081490C /* LDCWeaponInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343833117A8985F0081490C /* LDCWeaponInputViewController.m */; };
+		1343833417A8985F0081490C /* LDCWeaponInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1343833217A8985F0081490C /* LDCWeaponInputViewController.xib */; };
+		1343833717A8C3EB0081490C /* LDCWeaponSelectorImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1343833617A8C3EB0081490C /* LDCWeaponSelectorImageView.m */; };
 		134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */; };
 		1361399517A6A0B400C8316D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399417A6A0B400C8316D /* UIKit.framework */; };
 		1361399717A6A0B400C8316D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1361399617A6A0B400C8316D /* Foundation.framework */; };
@@ -56,6 +59,11 @@
 		1313D86D17A6B8B9000FEC5E /* LDCModalSelectionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDCModalSelectionDelegate.h; sourceTree = "<group>"; };
 		1343832D17A88FC50081490C /* LDCWeapon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWeapon.h; sourceTree = "<group>"; };
 		1343832E17A88FC50081490C /* LDCWeapon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWeapon.m; sourceTree = "<group>"; };
+		1343833017A8985F0081490C /* LDCWeaponInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWeaponInputViewController.h; sourceTree = "<group>"; };
+		1343833117A8985F0081490C /* LDCWeaponInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWeaponInputViewController.m; sourceTree = "<group>"; };
+		1343833217A8985F0081490C /* LDCWeaponInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCWeaponInputViewController.xib; sourceTree = "<group>"; };
+		1343833517A8C3EB0081490C /* LDCWeaponSelectorImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWeaponSelectorImageView.h; sourceTree = "<group>"; };
+		1343833617A8C3EB0081490C /* LDCWeaponSelectorImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWeaponSelectorImageView.m; sourceTree = "<group>"; };
 		134D1EBD17A8101A00E39619 /* LDCColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCColorPickerViewController.h; sourceTree = "<group>"; };
 		134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCColorPickerViewController.m; sourceTree = "<group>"; };
 		1361399117A6A0B400C8316D /* SplitViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +123,9 @@
 				1313D85117A6A5C0000FEC5E /* LDCRightViewController.m */,
 				134D1EBD17A8101A00E39619 /* LDCColorPickerViewController.h */,
 				134D1EBE17A8101A00E39619 /* LDCColorPickerViewController.m */,
+				1343833017A8985F0081490C /* LDCWeaponInputViewController.h */,
+				1343833117A8985F0081490C /* LDCWeaponInputViewController.m */,
+				1343833217A8985F0081490C /* LDCWeaponInputViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				136139B117A6A10B00C8316D /* mainStoryboard_iPad.storyboard */,
+				1343833517A8C3EB0081490C /* LDCWeaponSelectorImageView.h */,
+				1343833617A8C3EB0081490C /* LDCWeaponSelectorImageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -270,6 +283,7 @@
 				1313D86A17A6ACAC000FEC5E /* ninjastar.png in Resources */,
 				1313D86B17A6ACAC000FEC5E /* smoke.png in Resources */,
 				1313D86C17A6ACAC000FEC5E /* sword.png in Resources */,
+				1343833417A8985F0081490C /* LDCWeaponInputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +301,8 @@
 				1313D85517A6A7E0000FEC5E /* LDCViewModal.m in Sources */,
 				134D1EBF17A8101A00E39619 /* LDCColorPickerViewController.m in Sources */,
 				1343832F17A88FC50081490C /* LDCWeapon.m in Sources */,
+				1343833317A8985F0081490C /* LDCWeaponInputViewController.m in Sources */,
+				1343833717A8C3EB0081490C /* LDCWeaponSelectorImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
