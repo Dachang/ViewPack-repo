@@ -28,8 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     [self initScrollView];
+    [self initTimer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,11 +56,11 @@
     
     //create pages
     UIView *page1 = [[UIView alloc] initWithFrame:pageRect];
-    page1.backgroundColor = [UIColor blueColor];
+    page1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PageControlA.png"]];
     UIView *page2 = [[UIView alloc] initWithFrame:pageRect];
-    page2.backgroundColor = [UIColor redColor];
+    page2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PageControlB.png"]];
     UIView *page3 = [[UIView alloc] initWithFrame:pageRect];
-    page3.backgroundColor = [UIColor greenColor];
+    page3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"PageControlC.png"]];
     
     //add to scrollView
     [self loadScrollViewWithPage:page1];
@@ -95,7 +96,8 @@
     _myPageControl.numberOfPages = pageCount;
     _myPageControl.currentPage = 0;
     [_myPageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventValueChanged];
-    
+    _myPageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    _myPageControl.currentPageIndicatorTintColor = [UIColor darkGrayColor];
     [self createPages];
     
     [self.view addSubview:_myScrollView];
@@ -124,7 +126,28 @@
     [_myScrollView scrollRectToVisible:frame animated:YES];
 }
 
+#pragma mark
+#pragma mark auto page control
 
+- (void)initTimer
+{
+    _timeCount = 0;
+    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+}
+
+- (void)autoScroll
+{
+    _timeCount++;
+    _pageCount = 3;
+    
+    CGRect scrollViewRect = [self.view bounds];
+    
+    if(_timeCount == _pageCount)
+    {
+        _timeCount = 0;
+    }
+    [_myScrollView scrollRectToVisible:CGRectMake(_timeCount * scrollViewRect.size.width, 0, 768, 1024) animated:YES];
+}
 
 
 @end

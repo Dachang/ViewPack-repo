@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LDCPageControlViewController : UIViewController<UIScrollViewDelegate,UIPageViewControllerDelegate,UIPageViewControllerDataSource>
+@interface LDCPageControlViewController : UIViewController<UIScrollViewDelegate>
+{
+    int _timeCount;
+    int _pageCount;
+}
 
 @property (nonatomic, strong) UIScrollView *myScrollView;
 @property (nonatomic, strong) UIPageControl *myPageControl;

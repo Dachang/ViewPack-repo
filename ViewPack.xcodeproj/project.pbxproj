@@ -55,6 +55,12 @@
 		13433A6C1797AC45008FD042 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A681797AC45008FD042 /* 2.png */; };
 		13433A6D1797AC45008FD042 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 13433A691797AC45008FD042 /* 3.png */; };
 		135F67BF17A91E3800DF14EE /* LDCPageControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */; };
+		135F67C617A9396800DF14EE /* PageControlA.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C017A9396800DF14EE /* PageControlA.png */; };
+		135F67C717A9396800DF14EE /* PageControlA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C117A9396800DF14EE /* PageControlA@2x.png */; };
+		135F67C817A9396800DF14EE /* PageControlB@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C217A9396800DF14EE /* PageControlB@2x.png */; };
+		135F67C917A9396800DF14EE /* PageControlB.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C317A9396800DF14EE /* PageControlB.png */; };
+		135F67CA17A9396800DF14EE /* PageControlC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C417A9396800DF14EE /* PageControlC@2x.png */; };
+		135F67CB17A9396800DF14EE /* PageControlC.png in Resources */ = {isa = PBXBuildFile; fileRef = 135F67C517A9396800DF14EE /* PageControlC.png */; };
 		13613F66179BA1200082BD08 /* LDCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F65179BA1200082BD08 /* LDCWebViewController.m */; };
 		13613F69179BB2EC0082BD08 /* LDCTableViewCellControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13613F68179BB2EC0082BD08 /* LDCTableViewCellControlViewController.m */; };
 		13613F6C179BC4510082BD08 /* done_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13613F6A179BC4510082BD08 /* done_button.png */; };
@@ -205,6 +211,12 @@
 		13433A691797AC45008FD042 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		135F67BD17A91E3700DF14EE /* LDCPageControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCPageControlViewController.h; sourceTree = "<group>"; };
 		135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCPageControlViewController.m; sourceTree = "<group>"; };
+		135F67C017A9396800DF14EE /* PageControlA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PageControlA.png; sourceTree = "<group>"; };
+		135F67C117A9396800DF14EE /* PageControlA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PageControlA@2x.png"; sourceTree = "<group>"; };
+		135F67C217A9396800DF14EE /* PageControlB@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PageControlB@2x.png"; sourceTree = "<group>"; };
+		135F67C317A9396800DF14EE /* PageControlB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PageControlB.png; sourceTree = "<group>"; };
+		135F67C417A9396800DF14EE /* PageControlC@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PageControlC@2x.png"; sourceTree = "<group>"; };
+		135F67C517A9396800DF14EE /* PageControlC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PageControlC.png; sourceTree = "<group>"; };
 		13613F64179BA1200082BD08 /* LDCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCWebViewController.h; sourceTree = "<group>"; };
 		13613F65179BA1200082BD08 /* LDCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCWebViewController.m; sourceTree = "<group>"; };
 		13613F67179BB2EC0082BD08 /* LDCTableViewCellControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCTableViewCellControlViewController.h; sourceTree = "<group>"; };
@@ -552,6 +564,12 @@
 		13B1657C1795B08F00C6808A /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				135F67C017A9396800DF14EE /* PageControlA.png */,
+				135F67C117A9396800DF14EE /* PageControlA@2x.png */,
+				135F67C217A9396800DF14EE /* PageControlB@2x.png */,
+				135F67C317A9396800DF14EE /* PageControlB.png */,
+				135F67C417A9396800DF14EE /* PageControlC@2x.png */,
+				135F67C517A9396800DF14EE /* PageControlC.png */,
 				13A9C0FB17A3B942003CA407 /* push_button.png */,
 				13A9C0FC17A3B942003CA407 /* push_button@2x.png */,
 				13635A11179ECB2200024F28 /* TabBG_D@2x.png */,
@@ -632,8 +650,7 @@
 		13B1658717963DBE00C6808A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				135F67BD17A91E3700DF14EE /* LDCPageControlViewController.h */,
-				135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */,
+				13C86DAD17AA43E9006DAE19 /* PageViewController */,
 				13613F73179BD22B0082BD08 /* TableViewController */,
 				13613F74179BD24B0082BD08 /* ScrollViewController */,
 				13613F72179BD2040082BD08 /* TabBarViewController */,
@@ -651,6 +668,15 @@
 				13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		13C86DAD17AA43E9006DAE19 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				135F67BD17A91E3700DF14EE /* LDCPageControlViewController.h */,
+				135F67BE17A91E3700DF14EE /* LDCPageControlViewController.m */,
+			);
+			name = PageViewController;
 			sourceTree = "<group>";
 		};
 		13DABF60179CEDAC0011CCC6 /* TabButton */ = {
@@ -840,6 +866,12 @@
 				13417CB7179FB4C20015E954 /* volumeBar.bundle in Resources */,
 				13A9C0FD17A3B942003CA407 /* push_button.png in Resources */,
 				13A9C0FE17A3B942003CA407 /* push_button@2x.png in Resources */,
+				135F67C617A9396800DF14EE /* PageControlA.png in Resources */,
+				135F67C717A9396800DF14EE /* PageControlA@2x.png in Resources */,
+				135F67C817A9396800DF14EE /* PageControlB@2x.png in Resources */,
+				135F67C917A9396800DF14EE /* PageControlB.png in Resources */,
+				135F67CA17A9396800DF14EE /* PageControlC@2x.png in Resources */,
+				135F67CB17A9396800DF14EE /* PageControlC.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
