@@ -18,7 +18,12 @@
 	<key>2</key>
 	<array>
 		<string>Page View</string>
-		<string>About</string>
+		<string>Web View</string>
+	</array>
+	<key>3</key>
+	<array>
+		<string>Map View</string>
+		<string>Weather View</string>
 	</array>
 </dict>
 </plist>

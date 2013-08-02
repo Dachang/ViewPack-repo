@@ -19,6 +19,7 @@
 #import "LDCSliderTabViewController.h"
 #import "LDCPushViewController.h"
 #import "LDCPageControlViewController.h"
+#import "LDCMapViewController.h"
 
 @interface LDCViewController ()
 
@@ -185,6 +186,12 @@
     else if(row == 1 && section == 2)
     {
         UIViewController *vc = [[LDCWebViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
+    else if (row == 0 && section == 3)
+    {
+        UIViewController *vc = [[LDCMapViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }

@@ -7,9 +7,12 @@
 //
 
 #import "LDCPageControlViewController.h"
+#import "LDCGraphicName.h"
 
 @interface LDCPageControlViewController ()
-
+{
+    BOOL _isScrollViewScrolling;
+}
 @end
 
 @implementation LDCPageControlViewController
@@ -28,9 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor whiteColor];
     [self initScrollView];
     [self initTimer];
+    [self initButton];
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,6 +77,8 @@
 
 - (void)initScrollView
 {
+    _isScrollViewScrolling = NO;
+    
     float pageControlHeight = 18.0;
     int pageCount = 3;
     
@@ -108,11 +113,17 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
+    _isScrollViewScrolling = YES;
     CGFloat pageWidth = sender.frame.size.width;
     //计算距离以返回current page index （向下取整）
     int page = floor((sender.contentOffset.x - pageWidth/2)/pageWidth) + 1;
     _myPageControl.currentPage = page;
 }
+
+//- (void)scrollViewDidEndDecelerating:(UIScrollView *)sender
+//{
+//    _isScrollViewScrolling = NO;
+//}
 
 - (void)changePage:(id)sender
 {
@@ -132,22 +143,37 @@
 - (void)initTimer
 {
     _timeCount = 0;
-    [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
+    _myTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(autoScroll) userInfo:nil repeats:YES];
 }
 
 - (void)autoScroll
 {
-    _timeCount++;
     _pageCount = 3;
-    
     CGRect scrollViewRect = [self.view bounds];
-    
+    _timeCount++;
+        
     if(_timeCount == _pageCount)
     {
         _timeCount = 0;
     }
+        
     [_myScrollView scrollRectToVisible:CGRectMake(_timeCount * scrollViewRect.size.width, 0, 768, 1024) animated:YES];
 }
 
+#pragma mark
+#pragma mark back button
+
+- (void)initButton
+{
+    UIButton *BackButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 51, 30)];
+    [BackButton setImage:[UIImage imageNamed:BACK_BUTTON] forState:UIControlStateNormal];
+    [BackButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:BackButton];
+}
+
+- (void)backButtonPressed
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 @end

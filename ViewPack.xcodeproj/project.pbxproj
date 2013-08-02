@@ -96,6 +96,9 @@
 		1390D1BC179ADAF800EF9537 /* LDCSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1390D1BB179ADAF800EF9537 /* LDCSoundManager.m */; };
 		1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */; };
 		139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */; };
+		13A7B16A17ABC5ED0095BF6E /* LDCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7B16917ABC5ED0095BF6E /* LDCMapViewController.m */; };
+		13A7B16E17ABCCDF0095BF6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A7B16D17ABCCDF0095BF6E /* MapKit.framework */; };
+		13A7B17017ABCD590095BF6E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A7B16F17ABCD590095BF6E /* CoreLocation.framework */; };
 		13A9C0FA17A3B54F003CA407 /* LDCPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */; };
 		13A9C0FD17A3B942003CA407 /* push_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A9C0FB17A3B942003CA407 /* push_button.png */; };
 		13A9C0FE17A3B942003CA407 /* push_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A9C0FC17A3B942003CA407 /* push_button@2x.png */; };
@@ -271,6 +274,10 @@
 		1390D1BF179ADECE00EF9537 /* LDCGraphicName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCGraphicName.h; sourceTree = "<group>"; };
 		139BF3C717A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LDCCustomGesture+ExtraMethods.h"; sourceTree = "<group>"; };
 		139BF3C817A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LDCCustomGesture+ExtraMethods.m"; sourceTree = "<group>"; };
+		13A7B16817ABC5ED0095BF6E /* LDCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCMapViewController.h; sourceTree = "<group>"; };
+		13A7B16917ABC5ED0095BF6E /* LDCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCMapViewController.m; sourceTree = "<group>"; };
+		13A7B16D17ABCCDF0095BF6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		13A7B16F17ABCD590095BF6E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		13A9C0F817A3B54F003CA407 /* LDCPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCPushViewController.h; sourceTree = "<group>"; };
 		13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCPushViewController.m; sourceTree = "<group>"; };
 		13A9C0FB17A3B942003CA407 /* push_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = push_button.png; sourceTree = "<group>"; };
@@ -347,6 +354,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A7B17017ABCD590095BF6E /* CoreLocation.framework in Frameworks */,
+				13A7B16E17ABCCDF0095BF6E /* MapKit.framework in Frameworks */,
 				1390D1BE179ADB6000EF9537 /* AudioToolbox.framework in Frameworks */,
 				1390D1B4179AD10100EF9537 /* AVFoundation.framework in Frameworks */,
 				1390D1A7179A618E00EF9537 /* QuartzCore.framework in Frameworks */,
@@ -415,6 +424,8 @@
 				13A9C0F917A3B54F003CA407 /* LDCPushViewController.m */,
 				13613F64179BA1200082BD08 /* LDCWebViewController.h */,
 				13613F65179BA1200082BD08 /* LDCWebViewController.m */,
+				13A7B16817ABC5ED0095BF6E /* LDCMapViewController.h */,
+				13A7B16917ABC5ED0095BF6E /* LDCMapViewController.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -522,6 +533,8 @@
 		13B16556179592B400C6808A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13A7B16F17ABCD590095BF6E /* CoreLocation.framework */,
+				13A7B16D17ABCCDF0095BF6E /* MapKit.framework */,
 				1390D1BD179ADB6000EF9537 /* AudioToolbox.framework */,
 				1390D1B3179AD10100EF9537 /* AVFoundation.framework */,
 				1390D1A6179A618E00EF9537 /* QuartzCore.framework */,
@@ -911,6 +924,7 @@
 				139BF3C917A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.m in Sources */,
 				13A9C0FA17A3B54F003CA407 /* LDCPushViewController.m in Sources */,
 				135F67BF17A91E3800DF14EE /* LDCPageControlViewController.m in Sources */,
+				13A7B16A17ABC5ED0095BF6E /* LDCMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

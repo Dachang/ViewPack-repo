@@ -16,5 +16,6 @@
 
 @property (nonatomic, strong) UIScrollView *myScrollView;
 @property (nonatomic, strong) UIPageControl *myPageControl;
+@property (nonatomic, strong) NSTimer *myTimer;
 
 @end
