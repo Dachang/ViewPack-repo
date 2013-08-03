@@ -112,10 +112,40 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
 
 - (IBAction)plistTapped:(id)sender
 {
+    NSString *weatherUrl = [NSString stringWithFormat:@"%@weather.php?format=plist",BaseURLString];
+    NSURL *url = [NSURL URLWithString:weatherUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFPropertyListRequestOperation *operation = [AFPropertyListRequestOperation propertyListRequestOperationWithRequest:request
+        success:^(NSURLRequest *request, NSHTTPURLResponse *response, id propertyList){
+        self.weather = (NSDictionary *)propertyList;
+        self.title = @"Plist Retrieved";
+        [self.tableView reloadData];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id propertyList){
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather" message:[NSString stringWithFormat:@"%@",error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
+    
+    [operation start];
 }
 
 - (IBAction)xmlTapped:(id)sender
 {
+    NSString *weatherUrl = [NSString stringWithFormat:@"%@weather.php?format=xml",BaseURLString];
+    NSURL *url = [NSURL URLWithString:weatherUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    AFXMLRequestOperation *operation = [AFXMLRequestOperation XMLParserRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, NSXMLParser *XMLParser){
+        self.xmlWeather = [NSMutableDictionary dictionary];
+        XMLParser.delegate = self;
+        [XMLParser setShouldProcessNamespaces:YES];
+        [XMLParser parse];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, NSXMLParser *XMLParser){
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Error Retrieving weather" message:[NSString stringWithFormat:@"%@",error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
+    
+    [operation start];
 }
 
 - (IBAction)httpClientTapped:(id)sender
@@ -177,7 +207,6 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
     return cell;
 }
 
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -185,4 +214,124 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
     // Navigation logic may go here. Create and push another view controller.
 }
 
+#pragma mark - NSXMLParser delegate
+
+//当NSXMLParser发现了新的元素开始标签时，会调用如下方法。在构造一个新字典用来存储赋值给currentDictionary属性之前，首先保存住上一个元素名称。还要将outstring重置一下，这个字符串用来构造XML标签中的数据。
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    self.previousElementName = self.elementName;
+    
+    if(qName)
+    {
+        self.elementName = qName;
+    }
+    
+    if([qName isEqualToString:@"current_condition"])
+    {
+        self.currentDictionary = [NSMutableDictionary dictionary];
+    }
+    
+    else if([qName isEqualToString:@"weather"])
+    {
+        self.currentDictionary = [NSMutableDictionary dictionary];
+    }
+    else if([qName isEqualToString:@"request"])
+    {
+        self.currentDictionary = [NSMutableDictionary dictionary];
+    }
+    
+    self.outstring = [NSMutableString string];
+}
+
+//在NSXMLParser在一个XML标签中发现了字符数据，会调用这个方法。该方法将字符数据追加到outstring属性中，当XML标签结束的时候，这个outstring会被处理
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    if(!self.elementName)
+    {
+        return;
+    }
+    
+    [self.outstring appendFormat:@"%@",string];
+}
+
+//当检测到元素的结束标签时，会调用下面这个方法。在该方法中查找一些标签：
+// 1 current_condition 元素表示获得了一个今天的天气。会把今天的天气直接添加到xmlWeather字典中
+// 2 weather元素表示获得了随后一天的天气。由于后续的天气有多个，所以将其放入一个数组中
+// 3 value标签出现在别的标签中，所以这里可以忽略
+// 4 weatherDesc和weatherIconUrl元素的值在存储之前，需要被放入一个数组中，这里的结构时为了与JSON和plist版本天气咨询格式相匹配
+// 5 所有其他元素按照原样存储
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    if([qName isEqualToString:@"current_condition"] || [qName isEqualToString:@"request"])
+    {
+        [self.xmlWeather setObject:[NSArray arrayWithObject:self.currentDictionary] forKey:qName];
+        self.currentDictionary = nil;
+    }
+    else if ([qName isEqualToString:@"weather"])
+    {
+        NSMutableArray *array = [self.xmlWeather objectForKey:@"weather"];
+        if(!array)
+        {
+            array = [NSMutableArray array];
+        }
+        [array addObject:self.currentDictionary];
+        [self.xmlWeather setObject:array forKey:@"weather"];
+        
+        self.currentDictionary = nil;
+    }
+    
+    else if([qName isEqualToString:@"value"])
+    {
+        //ignore value tags they only appear in the two conditions below
+    }
+    
+    else if([qName isEqualToString:@"weatherDesc"] || [qName isEqualToString:@"weatherIconUrl"])
+    {
+        [self.currentDictionary setObject:[NSArray arrayWithObject:[NSDictionary dictionaryWithObject:self.outstring forKey:@"value"]] forKey:qName];
+    }
+    else
+    {
+        [self.currentDictionary setObject:self.outstring forKey:qName];
+    }
+    
+    self.elementName = nil;
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser
+{
+    self.weather = [NSDictionary dictionaryWithObject:self.xmlWeather forKey:@"data"];
+    self.title = @"XML Retrieved";
+    [self.tableView reloadData];
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
