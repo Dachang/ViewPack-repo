@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WTWeatherHTTPClient.h"
 
-@interface WTTableViewController : UITableViewController<NSXMLParserDelegate>
+@interface WTTableViewController : UITableViewController<NSXMLParserDelegate,UIActionSheetDelegate,WeatherHttpClientDelegate,CLLocationManagerDelegate>
 
 - (IBAction)clear:(id)sender;
 
@@ -28,5 +29,7 @@
 @property(strong) NSString *previousElementName;
 @property(strong) NSString *elementName;
 @property(strong) NSMutableString *outstring;
+
+@property(strong) CLLocationManager *manager;
 
 @end

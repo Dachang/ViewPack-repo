@@ -35,6 +35,9 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
 {
     [super viewDidLoad];
     self.navigationController.toolbarHidden = NO;
+    
+    self.manager = [[CLLocationManager alloc] init];
+    self.manager.delegate = self;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -150,10 +153,13 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
 
 - (IBAction)httpClientTapped:(id)sender
 {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"AFHTTPClient" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"HTTP POST", @"HTTP GET", nil];
+    [actionSheet showFromBarButtonItem:sender animated:YES];
 }
 
 - (IBAction)apiTapped:(id)sender
 {
+    [self.manager startUpdatingLocation];
 }
 
 #pragma mark - Table view data source
@@ -202,7 +208,14 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
     
     cell.textLabel.text = [daysWeather weatherDescription];
     
-    // maybe some code will be added here later...
+    //AFNetworking给UIimageView添加了一个分类，让图片能够异步加载（图片在后台下载的时候，程序的UI界面仍然能够响应）
+    __weak UITableViewCell *weakCell = cell;
+    [cell.imageView setImageWithURLRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:daysWeather.weatherIconURL]] placeholderImage:[UIImage imageNamed:@"placeholder.png"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image){
+        weakCell.imageView.image = image;
+        [weakCell setNeedsDisplay];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
+        //add
+    }];
     
     return cell;
 }
@@ -305,6 +318,86 @@ static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/
     self.weather = [NSDictionary dictionaryWithObject:self.xmlWeather forKey:@"data"];
     self.title = @"XML Retrieved";
     [self.tableView reloadData];
+}
+
+#pragma mark - UIActionSheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    // 1
+    NSURL *baseURL = [NSURL URLWithString:[NSString stringWithFormat:BaseURLString]];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObject:@"json" forKey:@"format"];
+    
+    // 2
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    [client registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [client setDefaultHeader:@"Accept" value:@"application/json"];
+    
+    // 3
+    if (buttonIndex==0) {
+        [client postPath:@"weather.php"
+              parameters:parameters
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     self.weather = responseObject;
+                     self.title = @"HTTP POST";
+                     [self.tableView reloadData];
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                                  message:[NSString stringWithFormat:@"%@",error]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                     [av show];
+                     
+                 }
+         ];
+    }
+    // 4
+    else if (buttonIndex==1) {
+        [client getPath:@"weather.php"
+             parameters:parameters
+                success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                    self.weather = responseObject;
+                    self.title = @"HTTP GET";
+                    [self.tableView reloadData];
+                }
+                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                                 message:[NSString stringWithFormat:@"%@",error]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [av show];
+                    
+                }
+         ];
+    }
+}
+
+#pragma mark CLLocationManager delegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
+    
+    //if the location is more than 5 minutes old ignore
+    if([newLocation.timestamp timeIntervalSinceNow]< 300){
+        [self.manager stopUpdatingLocation];
+        
+        WTWeatherHTTPClient *client = [WTWeatherHTTPClient sharedWeatherHTTPClient];
+        client.delegate = self;
+        [client updateWeatherAtLocation:newLocation forNumberOfDays:5];
+    }
+}
+
+#pragma mark - WeatherHTTPClient delegate
+- (void)weatherHTTPClient:(WTWeatherHTTPClient *)client didUpdateWithWeather:(id)weather
+{
+    self.weather = weather;
+    self.title = @"API Updated";
+    [self.tableView reloadData];
+}
+
+- (void)weatherHTTPClient:(WTWeatherHTTPClient *)client didFailWithError:(NSError *)error
+{
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error retrieving Weather" message:[NSString stringWithFormat:@"%@",error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [av show];
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		133FF5C417ACE28E0063780D /* WTWeatherHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 133FF5C317ACE28E0063780D /* WTWeatherHTTPClient.m */; };
 		13A7B30217AC1AB40095BF6E /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7B2F017AC1AB40095BF6E /* AFHTTPClient.m */; };
 		13A7B30317AC1AB40095BF6E /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7B2F217AC1AB40095BF6E /* AFHTTPRequestOperation.m */; };
 		13A7B30417AC1AB40095BF6E /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A7B2F417AC1AB40095BF6E /* AFImageRequestOperation.m */; };
@@ -58,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		133FF5C217ACE28E0063780D /* WTWeatherHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWeatherHTTPClient.h; sourceTree = "<group>"; };
+		133FF5C317ACE28E0063780D /* WTWeatherHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWeatherHTTPClient.m; sourceTree = "<group>"; };
 		13A7B2EF17AC1AB40095BF6E /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		13A7B2F017AC1AB40095BF6E /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		13A7B2F117AC1AB40095BF6E /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				D233D0CA16B405C3005212DE /* WeatherAnimationViewController.h */,
 				D233D0CB16B405C3005212DE /* WeatherAnimationViewController.m */,
 				D233D07616B400EF005212DE /* Supporting Files */,
+				133FF5C217ACE28E0063780D /* WTWeatherHTTPClient.h */,
+				133FF5C317ACE28E0063780D /* WTWeatherHTTPClient.m */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				13A7B30817AC1AB40095BF6E /* AFURLConnectionOperation.m in Sources */,
 				13A7B30917AC1AB40095BF6E /* AFXMLRequestOperation.m in Sources */,
 				13A7B30A17AC1AB40095BF6E /* UIImageView+AFNetworking.m in Sources */,
+				133FF5C417ACE28E0063780D /* WTWeatherHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
