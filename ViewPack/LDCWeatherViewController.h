@@ -10,4 +10,8 @@
 
 @interface LDCWeatherViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *tempLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *weatherImage;
+
 @end

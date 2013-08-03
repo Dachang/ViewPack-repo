@@ -32,6 +32,14 @@
             <point key="canvasLocation" x="879" y="-185"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LDCShelfViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LDCShelfViewController.h"/>
+        </class>
+        <class className="LDCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LDCViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
