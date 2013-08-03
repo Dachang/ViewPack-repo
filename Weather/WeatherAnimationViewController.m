@@ -7,6 +7,7 @@
 //
 
 #import "WeatherAnimationViewController.h"
+#import "AFNetworking.h"
 
 @interface WeatherAnimationViewController ()
 
@@ -57,14 +58,29 @@
 #pragma mark - Actions
 
 
--(IBAction)deleteBackgroundImage:(id)sender{
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Delete Image Section Incomplete" message:@"You have not completed this section of the tutorial" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [av show];
+-(IBAction)deleteBackgroundImage:(id)sender
+{
+    NSString *path;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    path = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"WeatherHTTPClientImages/"];
+    
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+    
+    NSString *desc = [self.weatherDictionary weatherDescription];
+    [self start:desc];
 }
 
--(IBAction)updateBackgroundImage:(id)sender{
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Update Image Section Incomplete" message:@"You have not completed this section of the tutorial" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [av show];
+-(IBAction)updateBackgroundImage:(id)sender
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.scott-sherwood.com/wp-content/uploads/2013/01/scene.png"]];
+    AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:request imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image){
+        self.backgroundImageView.image = image;
+        [self saveImage:image withFilename:@"background.png"];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
+        NSLog(@"Error %@",error);
+    }];
+    [operation start];
 }
 
 -(void)saveImage:(UIImage *)image withFilename:(NSString *)filename{

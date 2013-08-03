@@ -20,6 +20,7 @@
 #import "LDCPushViewController.h"
 #import "LDCPageControlViewController.h"
 #import "LDCMapViewController.h"
+#import "LDCWeatherViewController.h"
 
 @interface LDCViewController ()
 
@@ -192,6 +193,12 @@
     else if (row == 0 && section == 3)
     {
         UIViewController *vc = [[LDCMapViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
+    else if (row == 1 && section == 3)
+    {
+        UIViewController *vc = [[LDCWeatherViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
