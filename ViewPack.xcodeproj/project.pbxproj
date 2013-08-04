@@ -147,6 +147,12 @@
 		13B165A61796D7AC00C6808A /* shelfBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A41796D7AB00C6808A /* shelfBG@2x.png */; };
 		13B165A71796D7AC00C6808A /* shelfBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 13B165A51796D7AC00C6808A /* shelfBG.png */; };
 		13B165AB1796E35700C6808A /* LDCShelfTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */; };
+		13B431B617AE281C0076BEA6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B431B517AE281C0076BEA6 /* CoreMedia.framework */; };
+		13B431B817AE28260076BEA6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B431B717AE28260076BEA6 /* CoreVideo.framework */; };
+		13B431BD17AE3D150076BEA6 /* LDCCameraFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B431BC17AE3D150076BEA6 /* LDCCameraFilterViewController.m */; };
+		13B431C317AE4C750076BEA6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B431C217AE4C750076BEA6 /* SenTestingKit.framework */; };
+		13B431C517AE4D320076BEA6 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B431C417AE4D320076BEA6 /* libGPUImage.a */; };
+		13B431C617AE4F1D0076BEA6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B431B917AE284A0076BEA6 /* OpenGLES.framework */; };
 		13DABF75179CEDAC0011CCC6 /* TabButtonA.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF61179CEDAC0011CCC6 /* TabButtonA.png */; };
 		13DABF76179CEDAC0011CCC6 /* TabButtonA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */; };
 		13DABF77179CEDAC0011CCC6 /* TabButtonA_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */; };
@@ -366,6 +372,14 @@
 		13B165A41796D7AB00C6808A /* shelfBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shelfBG@2x.png"; sourceTree = "<group>"; };
 		13B165A51796D7AC00C6808A /* shelfBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelfBG.png; sourceTree = "<group>"; };
 		13B165AA1796E35700C6808A /* LDCShelfTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCShelfTableViewCell.xib; sourceTree = "<group>"; };
+		13B431A817AE26C60076BEA6 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../Libs/GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		13B431B517AE281C0076BEA6 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		13B431B717AE28260076BEA6 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		13B431B917AE284A0076BEA6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		13B431BB17AE3D150076BEA6 /* LDCCameraFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCCameraFilterViewController.h; sourceTree = "<group>"; };
+		13B431BC17AE3D150076BEA6 /* LDCCameraFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCCameraFilterViewController.m; sourceTree = "<group>"; };
+		13B431C217AE4C750076BEA6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		13B431C417AE4D320076BEA6 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../../../Library/Developer/Xcode/DerivedData/ViewPack-eakmabpfjhqhgcgujrrsylpuxvyr/Build/Products/Debug-iphoneos/libGPUImage.a"; sourceTree = "<group>"; };
 		13DABF61179CEDAC0011CCC6 /* TabButtonA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA.png; sourceTree = "<group>"; };
 		13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonA@2x.png"; sourceTree = "<group>"; };
 		13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA_HL.png; sourceTree = "<group>"; };
@@ -406,6 +420,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B431C617AE4F1D0076BEA6 /* OpenGLES.framework in Frameworks */,
+				13B431C517AE4D320076BEA6 /* libGPUImage.a in Frameworks */,
+				13B431C317AE4C750076BEA6 /* SenTestingKit.framework in Frameworks */,
+				13B431B817AE28260076BEA6 /* CoreVideo.framework in Frameworks */,
+				13B431B617AE281C0076BEA6 /* CoreMedia.framework in Frameworks */,
 				133FF5E317ACF5D40063780D /* Security.framework in Frameworks */,
 				13A7B2ED17AC14D90095BF6E /* SystemConfiguration.framework in Frameworks */,
 				13A7B2EB17AC14D30095BF6E /* MobileCoreServices.framework in Frameworks */,
@@ -501,6 +520,8 @@
 		13613F75179BD2690082BD08 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				13B431BB17AE3D150076BEA6 /* LDCCameraFilterViewController.h */,
+				13B431BC17AE3D150076BEA6 /* LDCCameraFilterViewController.m */,
 				133FF5ED17AD03940063780D /* LDCWeatherViewController.h */,
 				133FF5EE17AD03940063780D /* LDCWeatherViewController.m */,
 				133FF5EF17AD03940063780D /* LDCWeatherViewController.xib */,
@@ -618,6 +639,12 @@
 		13B16556179592B400C6808A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13B431C417AE4D320076BEA6 /* libGPUImage.a */,
+				13B431C217AE4C750076BEA6 /* SenTestingKit.framework */,
+				13B431B917AE284A0076BEA6 /* OpenGLES.framework */,
+				13B431B717AE28260076BEA6 /* CoreVideo.framework */,
+				13B431B517AE281C0076BEA6 /* CoreMedia.framework */,
+				13B431A817AE26C60076BEA6 /* GPUImage.xcodeproj */,
 				133FF5E217ACF5D40063780D /* Security.framework */,
 				13A7B2EC17AC14D90095BF6E /* SystemConfiguration.framework */,
 				13A7B2EA17AC14D30095BF6E /* MobileCoreServices.framework */,
@@ -1037,6 +1064,7 @@
 				133FF5E117ACF5C20063780D /* UIImageView+AFNetworking.m in Sources */,
 				133FF5F017AD03940063780D /* LDCWeatherViewController.m in Sources */,
 				133FF5FE17AD201F0063780D /* NSMutableString+NSMutableString_CustomMethods.m in Sources */,
+				13B431BD17AE3D150076BEA6 /* LDCCameraFilterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,10 +1152,21 @@
 		13B16578179592B400C6808A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewPack/ViewPack-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				INFOPLIST_FILE = "ViewPack/ViewPack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ViewPack-eakmabpfjhqhgcgujrrsylpuxvyr/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1136,10 +1175,21 @@
 		13B16579179592B400C6808A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewPack/ViewPack-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				INFOPLIST_FILE = "ViewPack/ViewPack-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ViewPack-eakmabpfjhqhgcgujrrsylpuxvyr/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				VALID_ARCHS = "armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};

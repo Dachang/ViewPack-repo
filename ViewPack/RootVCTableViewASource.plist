@@ -24,6 +24,7 @@
 	<array>
 		<string>Map View</string>
 		<string>Weather View</string>
+		<string>Camera Filter</string>
 	</array>
 </dict>
 </plist>
