@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "LDCSideMenuViewController.h"
 
-@interface LDCControlPanelViewController : LDCSideMenuViewController
-
+@interface LDCControlPanelViewController : LDCSideMenuViewController<UIAlertViewDelegate>
+{
+    UISlider *slider;
+    UILabel *sliderLabel;
+    UISwitch *switchTest;
+    UIImageView *imageView;
+}
 @end
