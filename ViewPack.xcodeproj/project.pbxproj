@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1302A1D417AF886B00FD5572 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1302A1CF17AF885300FD5572 /* MBProgressHUD.m */; };
+		1302A1D817AF92DB00FD5572 /* GCDiscreetNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1302A1D717AF92DB00FD5572 /* GCDiscreetNotificationView.m */; };
 		131F95F71797D61200123B6C /* scrollViewBackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F31797D61200123B6C /* scrollViewBackButton.png */; };
 		131F95F81797D61200123B6C /* scrollViewBackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */; };
 		131F95F91797D61200123B6C /* TabBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 131F95F51797D61200123B6C /* TabBar@2x.png */; };
@@ -205,6 +207,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1302A1CE17AF885300FD5572 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1302A1CF17AF885300FD5572 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1302A1D617AF92DB00FD5572 /* GCDiscreetNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDiscreetNotificationView.h; sourceTree = "<group>"; };
+		1302A1D717AF92DB00FD5572 /* GCDiscreetNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDiscreetNotificationView.m; sourceTree = "<group>"; };
 		131F95F31797D61200123B6C /* scrollViewBackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scrollViewBackButton.png; sourceTree = "<group>"; };
 		131F95F41797D61200123B6C /* scrollViewBackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scrollViewBackButton@2x.png"; sourceTree = "<group>"; };
 		131F95F51797D61200123B6C /* TabBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabBar@2x.png"; sourceTree = "<group>"; };
@@ -459,6 +465,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1302A1D317AF885500FD5572 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1302A1CE17AF885300FD5572 /* MBProgressHUD.h */,
+				1302A1CF17AF885300FD5572 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		1302A1D517AF92DB00FD5572 /* GCDiscreetNotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				1302A1D617AF92DB00FD5572 /* GCDiscreetNotificationView.h */,
+				1302A1D717AF92DB00FD5572 /* GCDiscreetNotificationView.m */,
+			);
+			path = GCDiscreetNotificationView;
+			sourceTree = "<group>";
+		};
 		133FF5C517ACF5C20063780D /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +600,8 @@
 		1390D1A4179A5CCF00EF9537 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1302A1D517AF92DB00FD5572 /* GCDiscreetNotificationView */,
+				1302A1D317AF885500FD5572 /* MBProgressHUD */,
 				133FF5C517ACF5C20063780D /* AFNetworking */,
 				13417CB3179FB4C20015E954 /* LuyfVolumnBar */,
 				1390D18E179A5CC500EF9537 /* RESideMenu */,
@@ -1114,6 +1140,8 @@
 				133FF5F017AD03940063780D /* LDCWeatherViewController.m in Sources */,
 				133FF5FE17AD201F0063780D /* NSMutableString+NSMutableString_CustomMethods.m in Sources */,
 				13B431BD17AE3D150076BEA6 /* LDCCameraFilterViewController.m in Sources */,
+				1302A1D417AF886B00FD5572 /* MBProgressHUD.m in Sources */,
+				1302A1D817AF92DB00FD5572 /* GCDiscreetNotificationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

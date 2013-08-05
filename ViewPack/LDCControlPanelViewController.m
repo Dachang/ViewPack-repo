@@ -8,6 +8,13 @@
 
 #import "LDCControlPanelViewController.h"
 #import "LDCViewController.h"
+#import "MBProgressHUD.h"
+#import "GCDiscreetNotificationView.h"
+#import <sys/socket.h>
+#import <netinet/in.h>
+#import <arpa/inet.h>
+#import <netdb.h>
+#import <SystemConfiguration/SCNetworkReachability.h>
 
 @interface LDCControlPanelViewController ()
 
@@ -41,17 +48,34 @@
     //multi-thread
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //耗时的操作
-        NSURL *url = [NSURL URLWithString:@"http://avatar.csdn.net/B/3/F/1_dachang221.jpg"];
-        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-        UIImage *avatarImage = [[UIImage alloc] initWithData:data];
-        if(data != nil)
+        if([self connectedToNetwork])
         {
-            dispatch_async(dispatch_get_main_queue(), ^{
-            //更新UI
-                imageView = [[UIImageView alloc] initWithFrame:CGRectMake(200, 200, 200, 200)];
-                imageView.image = avatarImage;
-                [self.view addSubview:imageView];
-            });
+            //MBProgressHUD
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeAnnularDeterminate;
+            hud.labelText = @"Loading";
+            
+            NSURL *url = [NSURL URLWithString:@"http://avatar.csdn.net/B/3/F/1_dachang221.jpg"];
+            NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+            UIImage *avatarImage = [[UIImage alloc] initWithData:data];
+            
+            if(data != nil)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //更新UI
+                    [hud hide:YES];
+                    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(200, 200, 200, 200)];
+                    imageView.image = avatarImage;
+                    [self.view addSubview:imageView];
+                });
+            }
+        }
+        else
+        {
+            NSLog(@"none net");
+            _notification = [[GCDiscreetNotificationView alloc]initWithText:@"No Active Network" showActivity:NO inPresentationMode:GCDiscreetNotificationViewPresentationModeBottom inView:self.view];
+//            [self.notification showAndDismissAutomaticallyAnimated];
+            [self.notification showAndDismissAfter:1];
         }
     });
     
@@ -210,5 +234,32 @@
     }
 }
 
+#pragma mark - 检查是否有网络连接
+
+
+- (BOOL) connectedToNetwork
+{
+    // Create zero addy
+    struct sockaddr_in zeroAddress;
+    bzero(&zeroAddress, sizeof(zeroAddress));
+    zeroAddress.sin_len = sizeof(zeroAddress);
+    zeroAddress.sin_family = AF_INET;
+    
+    // Recover reachability flags
+    SCNetworkReachabilityRef defaultRouteReachability = SCNetworkReachabilityCreateWithAddress(NULL, (struct sockaddr *)&zeroAddress);
+    SCNetworkReachabilityFlags flags;
+    
+    BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags);
+    CFRelease(defaultRouteReachability);
+    
+    if (!didRetrieveFlags)
+    {
+        return NO;
+    }
+    
+    BOOL isReachable = flags & kSCNetworkFlagsReachable;
+    BOOL needsConnection = flags & kSCNetworkFlagsConnectionRequired;
+    return (isReachable && !needsConnection) ? YES : NO;
+}
 
 @end

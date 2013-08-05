@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LDCSideMenuViewController.h"
+@class GCDiscreetNotificationView;
 
 @interface LDCControlPanelViewController : LDCSideMenuViewController<UIAlertViewDelegate>
 {
@@ -16,4 +17,7 @@
     UISwitch *switchTest;
     UIImageView *imageView;
 }
+
+@property (nonatomic, retain) GCDiscreetNotificationView *notification;
+
 @end
