@@ -15,6 +15,8 @@
     
     NSOperationQueue *_queue;
     NSArray *_feeds;
+    
+    NSString *_articleDateString;
 }
 
 @property (strong, nonatomic) UITableView *tableView;

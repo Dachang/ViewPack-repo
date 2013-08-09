@@ -168,6 +168,8 @@
 		13B8BF7C17B5131A00AB1F1E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF7317B5131A00AB1F1E /* Reachability.m */; };
 		13B8BF7E17B5133700AB1F1E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B8BF7D17B5133700AB1F1E /* CFNetwork.framework */; };
 		13B8BF8017B5137800AB1F1E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B8BF7F17B5137800AB1F1E /* libz.1.2.5.dylib */; };
+		13B8BF8417B51EDD00AB1F1E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF8317B51EDD00AB1F1E /* GDataXMLNode.m */; };
+		13B8BF8B17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF8A17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m */; };
 		13DABF75179CEDAC0011CCC6 /* TabButtonA.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF61179CEDAC0011CCC6 /* TabButtonA.png */; };
 		13DABF76179CEDAC0011CCC6 /* TabButtonA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */; };
 		13DABF77179CEDAC0011CCC6 /* TabButtonA_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */; };
@@ -444,6 +446,10 @@
 		13B8BF7317B5131A00AB1F1E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		13B8BF7D17B5133700AB1F1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		13B8BF7F17B5137800AB1F1E /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		13B8BF8217B51EDD00AB1F1E /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		13B8BF8317B51EDD00AB1F1E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		13B8BF8917B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+GDataXMLElement_Extras.h"; sourceTree = "<group>"; };
+		13B8BF8A17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+GDataXMLElement_Extras.m"; sourceTree = "<group>"; };
 		13DABF61179CEDAC0011CCC6 /* TabButtonA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA.png; sourceTree = "<group>"; };
 		13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonA@2x.png"; sourceTree = "<group>"; };
 		13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA_HL.png; sourceTree = "<group>"; };
@@ -645,6 +651,8 @@
 		1390D1A4179A5CCF00EF9537 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				13B8BF8117B51E6C00AB1F1E /* GDataXML */,
+				13B8BF5D17B512B800AB1F1E /* ASIHTTPRequest */,
 				1302A1D517AF92DB00FD5572 /* GCDiscreetNotificationView */,
 				1302A1D317AF885500FD5572 /* MBProgressHUD */,
 				133FF5C517ACF5C20063780D /* AFNetworking */,
@@ -755,7 +763,6 @@
 		13B1655D179592B400C6808A /* ViewPack */ = {
 			isa = PBXGroup;
 			children = (
-				13B8BF5D17B512B800AB1F1E /* ASIHTTPRequest */,
 				13B1657C1795B08F00C6808A /* Image */,
 				1390D1B5179AD1A300EF9537 /* Audio */,
 				1390D1A4179A5CCF00EF9537 /* Library */,
@@ -934,6 +941,17 @@
 				13B8BF7317B5131A00AB1F1E /* Reachability.m */,
 			);
 			path = ASIHTTPRequest;
+			sourceTree = "<group>";
+		};
+		13B8BF8117B51E6C00AB1F1E /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				13B8BF8217B51EDD00AB1F1E /* GDataXMLNode.h */,
+				13B8BF8317B51EDD00AB1F1E /* GDataXMLNode.m */,
+				13B8BF8917B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.h */,
+				13B8BF8A17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m */,
+			);
+			path = GDataXML;
 			sourceTree = "<group>";
 		};
 		13C86DAD17AA43E9006DAE19 /* PageViewController */ = {
@@ -1232,6 +1250,8 @@
 				13B8BF7A17B5131A00AB1F1E /* ASIInputStream.m in Sources */,
 				13B8BF7B17B5131A00AB1F1E /* ASINetworkQueue.m in Sources */,
 				13B8BF7C17B5131A00AB1F1E /* Reachability.m in Sources */,
+				13B8BF8417B51EDD00AB1F1E /* GDataXMLNode.m in Sources */,
+				13B8BF8B17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1325,13 +1345,19 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewPack/ViewPack-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
+				HEADER_SEARCH_PATHS = (
+					"/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**",
+					"/usr/include/libxml2/**",
+				);
 				INFOPLIST_FILE = "ViewPack/ViewPack-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ViewPack-eakmabpfjhqhgcgujrrsylpuxvyr/Build/Products/Debug-iphoneos\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				VALID_ARCHS = "armv7s armv7";
@@ -1348,13 +1374,19 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ViewPack/ViewPack-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
+				HEADER_SEARCH_PATHS = (
+					"/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**",
+					"/usr/include/libxml2/**",
+				);
 				INFOPLIST_FILE = "ViewPack/ViewPack-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/ViewPack-eakmabpfjhqhgcgujrrsylpuxvyr/Build/Products/Debug-iphoneos\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "/Users/dachang/Desktop/Files/Libs/GPUImage-master/framework/**";
 				VALID_ARCHS = "armv7s armv7";

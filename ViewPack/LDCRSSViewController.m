@@ -8,6 +8,8 @@
 
 #import "LDCRSSViewController.h"
 #import "LDCRSSEntry.h"
+#import "GDataXMLNode.h"
+#import "GDataXMLElement+GDataXMLElement_Extras.h"
 
 @interface LDCRSSViewController ()
 
@@ -118,10 +120,10 @@
     NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
+//    NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
     
     cell.textLabel.text = entry.articleTitle;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", articleDateString, entry.blogTitle];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", _articleDateString, entry.blogTitle];
     
     return cell;
 }
@@ -130,10 +132,110 @@
 
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
-    LDCRSSEntry *entry = [[LDCRSSEntry alloc] initWithBlogTitle:request.url.absoluteString articleTitle:request.url.absoluteString articleUrl:request.url.absoluteString articleDate:[NSDate date]];
-    int insertIndex = 0;
-    [_allEntries insertObject:entry atIndex:insertIndex];
-    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:insertIndex inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
+//    LDCRSSEntry *entry = [[LDCRSSEntry alloc] initWithBlogTitle:request.url.absoluteString articleTitle:request.url.absoluteString articleUrl:request.url.absoluteString articleDate:[NSDate date]];
+//    int insertIndex = 0;
+//    [_allEntries insertObject:entry atIndex:insertIndex];
+//    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:insertIndex inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
+    
+    [_queue addOperationWithBlock:^{
+        
+        NSError *error;
+        GDataXMLDocument *doc = [[GDataXMLDocument alloc] initWithData:[request responseData]
+                                                               options:0 error:&error];
+        if (doc == nil) {
+            NSLog(@"Failed to parse %@", request.url);
+        } else {
+            //temp entries
+            NSMutableArray *entries = [NSMutableArray array];
+            [self parseFeed:doc.rootElement entries:entries];
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                for (LDCRSSEntry *entry in entries) {
+                    
+                    int insertIdx = 0;
+                    [_allEntries insertObject:entry atIndex:insertIdx];
+                    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:insertIdx inSection:0]]
+                                          withRowAnimation:UITableViewRowAnimationRight];
+                    
+                }
+                
+            }];
+            
+        }        
+    }];
+}
+
+#pragma mark - XML Parse
+
+- (void)parseFeed:(GDataXMLElement *)rootElement entries:(NSMutableArray *)entries {
+    if ([rootElement.name compare:@"rss"] == NSOrderedSame) {
+        [self parseRss:rootElement entries:entries];
+    } else if ([rootElement.name compare:@"feed"] == NSOrderedSame) {
+        [self parseAtom:rootElement entries:entries];
+    } else {
+        NSLog(@"Unsupported root element: %@", rootElement.name);
+    }
+}
+
+//These functions are fairly simple, and pull out the data we’re looking for in each entry according to the RSS and Atom formats.
+
+- (void)parseRss:(GDataXMLElement *)rootElement entries:(NSMutableArray *)entries {
+    
+    NSArray *channels = [rootElement elementsForName:@"channel"];
+    for (GDataXMLElement *channel in channels) {
+        
+        NSString *blogTitle = [channel valueForChild:@"title"];
+        
+        NSArray *items = [channel elementsForName:@"item"];
+        for (GDataXMLElement *item in items) {
+            
+            NSString *articleTitle = [item valueForChild:@"title"];
+            NSString *articleUrl = [item valueForChild:@"link"];
+            _articleDateString = [item valueForChild:@"pubDate"];
+            NSDate *articleDate = nil;
+            
+            LDCRSSEntry *entry = [[[LDCRSSEntry alloc] initWithBlogTitle:blogTitle
+                                                      articleTitle:articleTitle
+                                                        articleUrl:articleUrl
+                                                       articleDate:articleDate] autorelease];
+            [entries addObject:entry];
+            
+        }
+    }
+    
+}
+
+- (void)parseAtom:(GDataXMLElement *)rootElement entries:(NSMutableArray *)entries {
+    
+    NSString *blogTitle = [rootElement valueForChild:@"title"];
+    
+    NSArray *items = [rootElement elementsForName:@"entry"];
+    for (GDataXMLElement *item in items) {
+        
+        NSString *articleTitle = [item valueForChild:@"title"];
+        NSString *articleUrl = nil;
+        NSArray *links = [item elementsForName:@"link"];
+        for(GDataXMLElement *link in links) {
+            NSString *rel = [[link attributeForName:@"rel"] stringValue];
+            NSString *type = [[link attributeForName:@"type"] stringValue];
+            if ([rel compare:@"alternate"] == NSOrderedSame &&
+                [type compare:@"text/html"] == NSOrderedSame) {
+                articleUrl = [[link attributeForName:@"href"] stringValue];
+            }
+        }
+        
+        _articleDateString = [item valueForChild:@"updated"];
+        NSDate *articleDate = nil;
+        
+        LDCRSSEntry *entry = [[[LDCRSSEntry alloc] initWithBlogTitle:blogTitle
+                                                  articleTitle:articleTitle
+                                                    articleUrl:articleUrl
+                                                   articleDate:articleDate] autorelease];
+        [entries addObject:entry];
+        
+    }      
+    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request
