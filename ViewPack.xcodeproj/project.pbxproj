@@ -170,6 +170,10 @@
 		13B8BF8017B5137800AB1F1E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B8BF7F17B5137800AB1F1E /* libz.1.2.5.dylib */; };
 		13B8BF8417B51EDD00AB1F1E /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF8317B51EDD00AB1F1E /* GDataXMLNode.m */; };
 		13B8BF8B17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF8A17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m */; };
+		13B8BF8E17B52D1700AB1F1E /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF8D17B52D0500AB1F1E /* NSDate+InternetDateTime.m */; };
+		13B8BF9417B52EBA00AB1F1E /* NSArray+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF9317B52EBA00AB1F1E /* NSArray+Extras.m */; };
+		13B8BF9817B5331400AB1F1E /* LDCRSSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8BF9617B5331400AB1F1E /* LDCRSSDetailViewController.m */; };
+		13B8BF9917B5331400AB1F1E /* LDCRSSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B8BF9717B5331400AB1F1E /* LDCRSSDetailViewController.xib */; };
 		13DABF75179CEDAC0011CCC6 /* TabButtonA.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF61179CEDAC0011CCC6 /* TabButtonA.png */; };
 		13DABF76179CEDAC0011CCC6 /* TabButtonA@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */; };
 		13DABF77179CEDAC0011CCC6 /* TabButtonA_HL.png in Resources */ = {isa = PBXBuildFile; fileRef = 13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */; };
@@ -450,6 +454,13 @@
 		13B8BF8317B51EDD00AB1F1E /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		13B8BF8917B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GDataXMLElement+GDataXMLElement_Extras.h"; sourceTree = "<group>"; };
 		13B8BF8A17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GDataXMLElement+GDataXMLElement_Extras.m"; sourceTree = "<group>"; };
+		13B8BF8C17B52D0500AB1F1E /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		13B8BF8D17B52D0500AB1F1E /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		13B8BF9217B52EBA00AB1F1E /* NSArray+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extras.h"; sourceTree = "<group>"; };
+		13B8BF9317B52EBA00AB1F1E /* NSArray+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extras.m"; sourceTree = "<group>"; };
+		13B8BF9517B5331400AB1F1E /* LDCRSSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCRSSDetailViewController.h; sourceTree = "<group>"; };
+		13B8BF9617B5331400AB1F1E /* LDCRSSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCRSSDetailViewController.m; sourceTree = "<group>"; };
+		13B8BF9717B5331400AB1F1E /* LDCRSSDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LDCRSSDetailViewController.xib; sourceTree = "<group>"; };
 		13DABF61179CEDAC0011CCC6 /* TabButtonA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA.png; sourceTree = "<group>"; };
 		13DABF62179CEDAC0011CCC6 /* TabButtonA@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabButtonA@2x.png"; sourceTree = "<group>"; };
 		13DABF63179CEDAC0011CCC6 /* TabButtonA_HL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TabButtonA_HL.png; sourceTree = "<group>"; };
@@ -610,6 +621,9 @@
 		13613F75179BD2690082BD08 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				13B8BF9517B5331400AB1F1E /* LDCRSSDetailViewController.h */,
+				13B8BF9617B5331400AB1F1E /* LDCRSSDetailViewController.m */,
+				13B8BF9717B5331400AB1F1E /* LDCRSSDetailViewController.xib */,
 				13B8BF5A17B506E700AB1F1E /* LDCRSSViewController.h */,
 				13B8BF5B17B506E700AB1F1E /* LDCRSSViewController.m */,
 				13B431BB17AE3D150076BEA6 /* LDCCameraFilterViewController.h */,
@@ -688,6 +702,10 @@
 		1390D1B8179ADA9400EF9537 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13B8BF9217B52EBA00AB1F1E /* NSArray+Extras.h */,
+				13B8BF9317B52EBA00AB1F1E /* NSArray+Extras.m */,
+				13B8BF8C17B52D0500AB1F1E /* NSDate+InternetDateTime.h */,
+				13B8BF8D17B52D0500AB1F1E /* NSDate+InternetDateTime.m */,
 				133FF5FC17AD201F0063780D /* NSMutableString+NSMutableString_CustomMethods.h */,
 				133FF5FD17AD201F0063780D /* NSMutableString+NSMutableString_CustomMethods.m */,
 				139BF3C717A0E61000E3E223 /* LDCCustomGesture+ExtraMethods.h */,
@@ -1185,6 +1203,7 @@
 				133FF5F117AD03940063780D /* LDCWeatherViewController.xib in Resources */,
 				1330A8AF17AD2C00001192D6 /* cloudy@2x.png in Resources */,
 				1330A8B017AD2C00001192D6 /* cloudy.png in Resources */,
+				13B8BF9917B5331400AB1F1E /* LDCRSSDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1252,6 +1271,9 @@
 				13B8BF7C17B5131A00AB1F1E /* Reachability.m in Sources */,
 				13B8BF8417B51EDD00AB1F1E /* GDataXMLNode.m in Sources */,
 				13B8BF8B17B5233400AB1F1E /* GDataXMLElement+GDataXMLElement_Extras.m in Sources */,
+				13B8BF8E17B52D1700AB1F1E /* NSDate+InternetDateTime.m in Sources */,
+				13B8BF9417B52EBA00AB1F1E /* NSArray+Extras.m in Sources */,
+				13B8BF9817B5331400AB1F1E /* LDCRSSDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

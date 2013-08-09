@@ -10,6 +10,9 @@
 #import "LDCRSSEntry.h"
 #import "GDataXMLNode.h"
 #import "GDataXMLElement+GDataXMLElement_Extras.h"
+#import "NSDate+InternetDateTime.h"
+#import "NSArray+Extras.h"
+#import "LDCRSSDetailViewController.h"
 
 @interface LDCRSSViewController ()
 
@@ -19,6 +22,7 @@
 @synthesize allEntries = _allEntries;
 @synthesize feeds = _feeds;
 @synthesize queue = _queue;
+@synthesize detailViewController = _detailViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -120,12 +124,25 @@
     NSDateFormatter * dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-//    NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
+    NSString *articleDateString = [dateFormatter stringFromDate:entry.articleDate];
     
     cell.textLabel.text = entry.articleTitle;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", _articleDateString, entry.blogTitle];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", articleDateString, entry.blogTitle];
     
     return cell;
+}
+
+#pragma mark - tableView delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(_detailViewController != nil)
+    {
+        self.detailViewController = [[LDCRSSDetailViewController alloc]initWithNibName:@"LDCRSSDetailViewController" bundle:[NSBundle mainBundle]];
+    }
+    LDCRSSEntry *entry = [_allEntries objectAtIndex:indexPath.row];
+    _detailViewController.entry = entry;
+//    [self.navigationController pushViewController:_detailViewController animated:YES];
 }
 
 #pragma mark - ASIHTTPRequestDelegate
@@ -153,7 +170,11 @@
                 
                 for (LDCRSSEntry *entry in entries) {
                     
-                    int insertIdx = 0;
+                    int insertIdx = [_allEntries indexForInsertingObject:entry sortedUsingBlock:^(id a, id b){
+                        LDCRSSEntry *entry1 = (LDCRSSEntry*) a;
+                        LDCRSSEntry *entry2 = (LDCRSSEntry*) b;
+                        return [entry1.articleDate compare:entry2.articleDate];
+                    }];
                     [_allEntries insertObject:entry atIndex:insertIdx];
                     [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:insertIdx inSection:0]]
                                           withRowAnimation:UITableViewRowAnimationRight];
@@ -193,7 +214,7 @@
             NSString *articleTitle = [item valueForChild:@"title"];
             NSString *articleUrl = [item valueForChild:@"link"];
             _articleDateString = [item valueForChild:@"pubDate"];
-            NSDate *articleDate = nil;
+            NSDate *articleDate = [NSDate dateFromInternetDateTimeString:_articleDateString formatHint:DateFormatHintRFC822];
             
             LDCRSSEntry *entry = [[[LDCRSSEntry alloc] initWithBlogTitle:blogTitle
                                                       articleTitle:articleTitle
@@ -226,7 +247,7 @@
         }
         
         _articleDateString = [item valueForChild:@"updated"];
-        NSDate *articleDate = nil;
+        NSDate *articleDate = [NSDate dateFromInternetDateTimeString:_articleDateString formatHint:DateFormatHintRFC3339];
         
         LDCRSSEntry *entry = [[[LDCRSSEntry alloc] initWithBlogTitle:blogTitle
                                                   articleTitle:articleTitle

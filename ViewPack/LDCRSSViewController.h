@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ASIHTTPRequest.h"
+@class LDCRSSDetailViewController;
 
 @interface LDCRSSViewController : UIViewController<UITableViewDataSource, UITableViewDelegate,ASIHTTPRequestDelegate>
 {
@@ -17,6 +18,8 @@
     NSArray *_feeds;
     
     NSString *_articleDateString;
+    
+    LDCRSSDetailViewController *_detailViewController;
 }
 
 @property (strong, nonatomic) UITableView *tableView;
@@ -25,5 +28,7 @@
 
 @property (retain) NSOperationQueue *queue;
 @property (retain) NSArray *feeds;
+
+@property (retain) LDCRSSDetailViewController *detailViewController;
 
 @end

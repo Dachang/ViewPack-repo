@@ -29,6 +29,7 @@
     
     webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
     NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://joker-dc.lofter.com"]];
+    webView.scalesPageToFit = YES;
     [self.view addSubview: webView];
     [webView loadRequest:request];
     
