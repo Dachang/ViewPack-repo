@@ -22,6 +22,7 @@
 #import "LDCMapViewController.h"
 #import "LDCWeatherViewController.h"
 #import "LDCCameraFilterViewController.h"
+#import "LDCRSSViewController.h"
 
 @interface LDCViewController ()
 
@@ -151,7 +152,9 @@
     }
     else if(row == 0 && section == 1)
     {
-        //add
+        UIViewController *vc = [[LDCRSSViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
     }
     else if(row == 1 && section == 1)
     {
