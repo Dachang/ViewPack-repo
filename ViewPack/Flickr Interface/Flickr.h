@@ -13,9 +13,17 @@
 typedef void (^FlickrSearchCompletionBlock)(NSString *searchTerm, NSArray *results, NSError *error);
 typedef void (^FlickrPhotoCompletionBlock)(UIImage *photoImage, NSError *error);
 
+@protocol FlickrDelegate <NSObject>
+
+@optional
+- (void)showHUD;
+
+@end
+
 @interface Flickr : NSObject
 
 @property(strong) NSString *apiKey;
+@property(nonatomic, weak) id<FlickrDelegate> delegate;
 
 - (void)searchFlickrForTerm:(NSString *) term completionBlock:(FlickrSearchCompletionBlock) completionBlock;
 + (void)loadImageForPhoto:(FlickrPhoto *)flickrPhoto thumbnail:(BOOL)thumbnail completionBlock:(FlickrPhotoCompletionBlock) completionBlock;

@@ -8,6 +8,7 @@
 
 #import "Flickr.h"
 #import "FlickrPhoto.h"
+#import "MBProgressHUD.h"
 
 #define kFlickrAPIKey @"d02c877c0a4220890f14fc95f8b16983"
 
@@ -30,11 +31,14 @@
 
 - (void)searchFlickrForTerm:(NSString *) term completionBlock:(FlickrSearchCompletionBlock) completionBlock
 {
+    [self.delegate showHUD];
+    
     NSString *searchURL = [Flickr flickrSearchURLForSearchTerm:term];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_async(queue, ^{
         NSError *error = nil;
+        
         NSString *searchResultString = [NSString stringWithContentsOfURL:[NSURL URLWithString:searchURL]
                                                            encoding:NSUTF8StringEncoding
                                                               error:&error];
@@ -44,6 +48,7 @@
         else
         {
             // Parse the JSON Response
+            
             NSData *jsonData = [searchResultString dataUsingEncoding:NSUTF8StringEncoding];
             NSDictionary *searchResultsDict = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                               options:kNilOptions
@@ -60,6 +65,8 @@
                     completionBlock(term, nil, error);
                 } else {
                 
+                    
+                    
                     NSArray *objPhotos = searchResultsDict[@"photos"][@"photo"];
                     NSMutableArray *flickrPhotos = [@[] mutableCopy];
                     for(NSMutableDictionary *objPhoto in objPhotos)

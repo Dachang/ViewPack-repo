@@ -7,9 +7,9 @@
 //
 
 #import "LDCCollectionViewController.h"
-#import "Flickr.h"
 #import "FlickrPhoto.h"
 #import "LDCCollectionViewCell.h"
+#import "MBProgressHUD.h"
 
 @interface LDCCollectionViewController ()
 
@@ -49,6 +49,7 @@
     self.searches = [@[] mutableCopy];
     self.searchResults = [@{} mutableCopy];
     self.flickr = [[Flickr alloc] init];
+    self.flickr.delegate = self;
     
     self.textField.delegate = self;
     self.collectionView.delegate = self;
@@ -56,6 +57,7 @@
     
     UINib *nib = [UINib nibWithNibName:@"LDCColllectionViewCell" bundle:[NSBundle mainBundle]];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"FlickrCell"];
+    
 }
 
 - (void)customUIInit
@@ -93,6 +95,7 @@
                 self.searchResults[searchTerm] = results; }
             // 3
             dispatch_async(dispatch_get_main_queue(), ^{
+                [_progressHUD hide:YES];
                 [self.collectionView reloadData];
             });
         } else { // 1
@@ -152,6 +155,16 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //add
+}
+
+#pragma mark - flickr delegate
+
+- (void)showHUD
+{
+    NSLog(@"HUD");
+    _progressHUD = [MBProgressHUD showHUDAddedTo:self.collectionView animated:YES];
+    _progressHUD.mode = MBProgressHUDModeCustomView;
+    _progressHUD.labelText = @"Loading";
 }
 
 @end

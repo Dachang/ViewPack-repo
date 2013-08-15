@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Flickr.h"
 
-@interface LDCCollectionViewController : UIViewController<UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
+@class MBProgressHUD;
+
+@interface LDCCollectionViewController : UIViewController<UITextFieldDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, FlickrDelegate>
 
 @property (nonatomic, weak) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *shareButton;
 @property (nonatomic, weak) IBOutlet UITextField *textField;
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, weak) MBProgressHUD *progressHUD;
 
 @end

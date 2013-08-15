@@ -138,7 +138,7 @@
 		13A77D9817BCAC3E00B58B4F /* search_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A77D8417BCAC3E00B58B4F /* search_field@2x.png */; };
 		13A77D9917BCAC3E00B58B4F /* search_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A77D8517BCAC3E00B58B4F /* search_text.png */; };
 		13A77D9A17BCAC3E00B58B4F /* search_text@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A77D8617BCAC3E00B58B4F /* search_text@2x.png */; };
-		13A77DA017BCB46700B58B4F /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A77D9D17BCB46700B58B4F /* Flickr.m */; };
+		13A77DA017BCB46700B58B4F /* Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A77D9D17BCB46700B58B4F /* Flickr.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		13A77DA117BCB46700B58B4F /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A77D9F17BCB46700B58B4F /* FlickrPhoto.m */; };
 		13A77DA417BCC67100B58B4F /* LDCCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A77DA317BCC67100B58B4F /* LDCCollectionViewCell.m */; };
 		13A77DA617BCC7C300B58B4F /* LDCColllectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A77DA517BCC7C300B58B4F /* LDCColllectionViewCell.xib */; };
