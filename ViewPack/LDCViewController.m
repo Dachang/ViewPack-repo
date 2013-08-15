@@ -23,6 +23,7 @@
 #import "LDCWeatherViewController.h"
 #import "LDCCameraFilterViewController.h"
 #import "LDCRSSViewController.h"
+#import "LDCCollectionViewController.h"
 
 @interface LDCViewController ()
 
@@ -196,17 +197,23 @@
     }
     else if (row == 0 && section == 3)
     {
-        UIViewController *vc = [[LDCMapViewController alloc] init];
+        UIViewController *vc = [[LDCCollectionViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
     else if (row == 1 && section == 3)
     {
-        UIViewController *vc = [[LDCWeatherViewController alloc] init];
+        UIViewController *vc = [[LDCMapViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];
         [vc release];
     }
     else if (row == 2 && section == 3)
+    {
+        UIViewController *vc = [[LDCWeatherViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:NULL];
+        [vc release];
+    }
+    else if (row == 3 && section == 3)
     {
         UIViewController *vc = [[LDCCameraFilterViewController alloc] init];
         [self presentViewController:vc animated:YES completion:NULL];

@@ -22,6 +22,7 @@
 	</array>
 	<key>3</key>
 	<array>
+		<string>CollectionView</string>
 		<string>Map View</string>
 		<string>Weather View</string>
 		<string>Camera Filter</string>
