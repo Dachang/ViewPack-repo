@@ -77,6 +77,26 @@
     return cell;
 }
 
+- (void)itemAdded
+{
+    //create the new item
+    SHCToDoItem *toDoItem = [[SHCToDoItem alloc] init];
+    [_toDoItems insertObject:toDoItem atIndex:0];
+    //refresh the table
+    [_tableView reloadData];
+    //enter edit mode
+    SHCTableViewCell *editCell;
+    for(SHCTableViewCell *cell in _tableView.visibleCells)
+    {
+        if(cell.todoItem == toDoItem)
+        {
+            editCell = cell;
+            break;
+        }
+    }
+    [editCell.label becomeFirstResponder];
+}
+
 #pragma mark - UITableViewDataDelegate protocol methods
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 50.0f;

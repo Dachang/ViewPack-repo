@@ -8,7 +8,6 @@
 
 #import "SHCTableView.h"
 
-const float SHC_ROW_HEIGHT = 50.0f;
 
 @implementation SHCTableView
 {

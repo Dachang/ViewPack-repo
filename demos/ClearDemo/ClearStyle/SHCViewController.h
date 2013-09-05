@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SHCTableView.h"
+#import "SHCTableViewDragAddNew.h"
 #import "SHCTableViewCellDelegate.h"
 
 @interface SHCViewController : UIViewController <SHCTableViewDataSource, SHCTableViewCellDelegate>
 
-@property (strong, nonatomic) IBOutlet SHCTableView *tableView;
+@property (weak, nonatomic) IBOutlet SHCTableViewDragAddNew *tableView;
 
 @end

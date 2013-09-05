@@ -8,7 +8,7 @@
 
 #import "SHCTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SHCStrikethroughLabel.h"
+
 
 @implementation SHCTableViewCell {
     CAGradientLayer* _gradientLayer;

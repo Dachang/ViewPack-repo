@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		138C3E0717D835A100A953F9 /* SHCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C3E0617D835A100A953F9 /* SHCTableView.m */; };
+		138C3E0C17D8DBBE00A953F9 /* SHCTableViewDragAddNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 138C3E0A17D8D4EC00A953F9 /* SHCTableViewDragAddNew.m */; };
 		DD5DEAD6160EC2A300B2D851 /* SHCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5DEAD5160EC2A300B2D851 /* SHCTableViewCell.m */; };
 		DD5DEAD9160EC44B00B2D851 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5DEAD8160EC44B00B2D851 /* QuartzCore.framework */; };
 		DD5DEAE5160EE8AA00B2D851 /* SHCStrikethroughLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5DEAE4160EE8AA00B2D851 /* SHCStrikethroughLabel.m */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		138C3E0517D835A100A953F9 /* SHCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCTableView.h; sourceTree = "<group>"; };
 		138C3E0617D835A100A953F9 /* SHCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCTableView.m; sourceTree = "<group>"; };
+		138C3E0917D8D4EC00A953F9 /* SHCTableViewDragAddNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCTableViewDragAddNew.h; sourceTree = "<group>"; };
+		138C3E0A17D8D4EC00A953F9 /* SHCTableViewDragAddNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCTableViewDragAddNew.m; sourceTree = "<group>"; };
 		DD5DEAD4160EC2A300B2D851 /* SHCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCTableViewCell.h; sourceTree = "<group>"; };
 		DD5DEAD5160EC2A300B2D851 /* SHCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCTableViewCell.m; sourceTree = "<group>"; };
 		DD5DEAD8160EC44B00B2D851 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -105,6 +108,8 @@
 				DDD7E0AF160DE4610087DFBA /* SHCAppDelegate.m */,
 				138C3E0517D835A100A953F9 /* SHCTableView.h */,
 				138C3E0617D835A100A953F9 /* SHCTableView.m */,
+				138C3E0917D8D4EC00A953F9 /* SHCTableViewDragAddNew.h */,
+				138C3E0A17D8D4EC00A953F9 /* SHCTableViewDragAddNew.m */,
 				DDD7E0B7160DE4610087DFBA /* SHCViewController.h */,
 				DDD7E0B8160DE4610087DFBA /* SHCViewController.m */,
 				DDD7E0BA160DE4610087DFBA /* SHCViewController.xib */,
@@ -207,6 +212,7 @@
 				DD5DEAD6160EC2A300B2D851 /* SHCTableViewCell.m in Sources */,
 				DD5DEAE5160EE8AA00B2D851 /* SHCStrikethroughLabel.m in Sources */,
 				138C3E0717D835A100A953F9 /* SHCTableView.m in Sources */,
+				138C3E0C17D8DBBE00A953F9 /* SHCTableViewDragAddNew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

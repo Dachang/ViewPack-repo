@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "SHCTableViewCell.h"
 
+#define SHC_ROW_HEIGHT 50.0f
+
 @protocol SHCTableViewDataSource <NSObject>
 //indicates the number of rows in the table
 - (NSInteger)numberOfRows;
 //obtains the cell for given row
 - (UITableViewCell*)cellForRow:(NSInteger)row;
+//Informs the datasource that a new item has been added at the top of the table
+- (void)itemAdded;
 
 @end
 
