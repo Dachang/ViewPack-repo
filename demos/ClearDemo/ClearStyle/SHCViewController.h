@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHCTableView.h"
 #import "SHCTableViewCellDelegate.h"
 
-@interface SHCViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SHCTableViewCellDelegate>
+@interface SHCViewController : UIViewController <SHCTableViewDataSource, SHCTableViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet SHCTableView *tableView;
 
 @end

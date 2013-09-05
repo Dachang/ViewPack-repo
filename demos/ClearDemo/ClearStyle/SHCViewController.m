@@ -43,11 +43,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
 	self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    
-    self.tableView.separatorColor = [UIColor clearColor];
     self.tableView.backgroundColor = [UIColor blackColor];
-	[self.tableView registerClass:[SHCTableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -62,20 +58,19 @@
 }
 
 #pragma mark - UITableViewDataSource protocol methods
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfRows
+{
     return _toDoItems.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell*)cellForRow:(NSInteger)row
+{
     NSString *ident = @"cell";
-    // re-use or create a cell
-    SHCTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ident forIndexPath:indexPath];
-    // find the to-do item for this index
-    int index = [indexPath row];
-    SHCToDoItem *item = _toDoItems[index];
-    // set the text
-	cell.delegate = self;
-	cell.todoItem = item;
+    SHCTableViewCell *cell = [[SHCTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
+    SHCToDoItem *item = _toDoItems[row];
+    cell.todoItem = item;
+    cell.delegate = self;
+    cell.backgroundColor = [self colorForIndex:row];
     return cell;
 }
 
@@ -88,14 +83,66 @@
     cell.backgroundColor = [self colorForIndex:indexPath.row];
 }
 
--(void)toDoItemDeleted:(id)todoItem {
-    // use the UITableView to animate the removal of this row
-    NSUInteger index = [_toDoItems indexOfObject:todoItem];
-    [self.tableView beginUpdates];
-    [_toDoItems removeObject:todoItem];
-    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:index inSection:0]]
-                          withRowAnimation:UITableViewRowAnimationFade];
-    [self.tableView endUpdates];
-}
+//-(void)toDoItemDeleted:(SHCToDoItem *)todoItem
+//{
+//    float delay = 0.0;
+//    
+//    //remove the model object
+//    [_toDoItems removeObject:todoItem];
+//    
+//    //find the visible cells
+//    NSArray* visibleCells = [self.tableView visibleCells];
+//    
+//    UIView *lastView = [visibleCells lastObject];
+//    bool startAnimating = false;
+//    
+//    //iterate over all of the cells
+//    for (SHCTableViewCell* cell in visibleCells)
+//    {
+//        if(startAnimating)
+//        {
+//            [UIView animateWithDuration:0.1 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//                cell.frame = CGRectOffset(cell.frame, 0.0f, -cell.frame.size.height);
+//            } completion:^(BOOL finished){
+//                if(cell == lastView)
+//                {
+//                    //reloadData forces the UITableView to 'dispose' of all of the cells and re-query thedatasource
+//                    [self.tableView reloadData];
+//                }
+//            }];
+//            delay += 0.1;
+//        }
+//        
+//        //if reach the item that was deleted, start animating
+//        if(cell.todoItem == todoItem)
+//        {
+//            startAnimating = true;
+//            cell.hidden = YES;
+//        }
+//    }
+//}
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

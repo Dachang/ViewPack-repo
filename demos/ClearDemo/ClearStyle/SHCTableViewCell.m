@@ -115,7 +115,7 @@ const float LABEL_LEFT_MARGIN = 15.0f;
     }
     
     if (recognizer.state == UIGestureRecognizerStateChanged) {
-        // translate the center
+        // translate the center, make the cell move through pan gesture
         CGPoint translation = [recognizer translationInView:self];
         self.center = CGPointMake(_originalCenter.x + translation.x, _originalCenter.y);
         // determine whether the item has been dragged far enough to initiate a delete / complete
