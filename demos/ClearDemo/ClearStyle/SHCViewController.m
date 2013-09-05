@@ -43,6 +43,7 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
 	self.tableView.dataSource = self;
+    [self.tableView registerClassForCells:[SHCTableViewCell class]];
     self.tableView.backgroundColor = [UIColor blackColor];
 }
 
@@ -65,8 +66,8 @@
 
 - (UITableViewCell*)cellForRow:(NSInteger)row
 {
-    NSString *ident = @"cell";
-    SHCTableViewCell *cell = [[SHCTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ident];
+//    NSString *ident = @"cell";
+    SHCTableViewCell *cell = (SHCTableViewCell*)[self.tableView dequeueReusableCell];
     SHCToDoItem *item = _toDoItems[row];
     cell.todoItem = item;
     cell.delegate = self;

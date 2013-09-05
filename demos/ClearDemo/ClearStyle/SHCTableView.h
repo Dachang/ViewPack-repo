@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHCTableViewCell.h"
 
 @protocol SHCTableViewDataSource <NSObject>
 //indicates the number of rows in the table
@@ -16,8 +17,13 @@
 
 @end
 
-@interface SHCTableView : UIView
+@interface SHCTableView : UIView<UIScrollViewDelegate>
 
 @property (nonatomic, assign) id<SHCTableViewDataSource> dataSource;
+
+//dequeues a cell that can be reused
+- (UIView*)dequeueReusableCell;
+//register a class for use as new cells
+- (void)registerClassForCells:(Class)cellClass;
 
 @end
