@@ -14,6 +14,7 @@
     // a array of to-do items
     NSMutableArray *_toDoItems;
     float _editingOffset;
+    SHCTableViewDragAddNew* _dragAddNew;
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -46,6 +47,7 @@
 	self.tableView.dataSource = self;
     [self.tableView registerClassForCells:[SHCTableViewCell class]];
     self.tableView.backgroundColor = [UIColor blackColor];
+    _dragAddNew = [[SHCTableViewDragAddNew alloc] initWithTableView:self.tableView];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -126,7 +128,7 @@
     {
         if(startAnimating)
         {
-            [UIView animateWithDuration:0.1 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            [UIView animateWithDuration:0.08 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 cell.frame = CGRectOffset(cell.frame, 0.0f, -cell.frame.size.height);
             } completion:^(BOOL finished){
                 if(cell == lastView)
@@ -135,7 +137,7 @@
                     [self.tableView reloadData];
                 }
             }];
-            delay += 0.1;
+            delay += 0.08;
         }
         
         //if reach the item that was deleted, start animating

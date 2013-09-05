@@ -26,6 +26,7 @@
     UIScrollView *scrollView;
 }
 @property (nonatomic, assign) id<SHCTableViewDataSource> dataSource;
+@property (nonatomic, assign) id<UIScrollViewDelegate> delegate;
 @property (nonatomic, assign, readonly) UIScrollView *scrollView;
 
 //dequeues a cell that can be reused

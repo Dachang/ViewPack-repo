@@ -13,15 +13,18 @@
 {
     SHCTableViewCell* _placeholderCell;
     BOOL _pullDownInProgress;
+    SHCTableView* _tableView;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (id)initWithTableView:(SHCTableView *)tableView
 {
-    self = [super initWithCoder:aDecoder];
+    self = [super init];
     if(self)
     {
         _placeholderCell = [[SHCTableViewCell alloc] init];
         _placeholderCell.backgroundColor = [UIColor redColor];
+        _tableView = tableView;
+        _tableView.delegate = self;
     }
     return self;
 }
@@ -33,20 +36,18 @@
     if(_pullDownInProgress)
     {
         //add the placeholder
-        [self insertSubview:_placeholderCell atIndex:0];
+        [_tableView insertSubview:_placeholderCell atIndex:0];
     }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [super scrollViewDidScroll:scrollView];
-    
-    if(_pullDownInProgress && self.scrollView.contentOffset.y <= 0.0f)
+    if(_pullDownInProgress && _tableView.scrollView.contentOffset.y <= 0.0f)
     {
-        _placeholderCell.frame = CGRectMake(0, -self.scrollView.contentOffset.y - SHC_ROW_HEIGHT, self.frame.size.width, SHC_ROW_HEIGHT);
-        _placeholderCell.label.text = -self.scrollView.contentOffset.y > SHC_ROW_HEIGHT ?
+        _placeholderCell.frame = CGRectMake(0, -_tableView.scrollView.contentOffset.y - SHC_ROW_HEIGHT, _tableView.frame.size.width, SHC_ROW_HEIGHT);
+        _placeholderCell.label.text = -_tableView.scrollView.contentOffset.y > SHC_ROW_HEIGHT ?
         @"Release to Add Item" : @"Pull to Add Item";
-        _placeholderCell.alpha = MIN(1.0f, -self.scrollView.contentOffset.y/SHC_ROW_HEIGHT);
+        _placeholderCell.alpha = MIN(1.0f, -_tableView.scrollView.contentOffset.y/SHC_ROW_HEIGHT);
     }
     else
     {
@@ -56,9 +57,9 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if(_pullDownInProgress && -self.scrollView.contentOffset.y > SHC_ROW_HEIGHT)
+    if(_pullDownInProgress && -_tableView.scrollView.contentOffset.y > SHC_ROW_HEIGHT)
     {
-        [self.dataSource itemAdded];
+        [_tableView.dataSource itemAdded];
     }
     _pullDownInProgress = false;
     [_placeholderCell removeFromSuperview];

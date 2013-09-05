@@ -13,6 +13,6 @@
 
 @interface SHCViewController : UIViewController <SHCTableViewDataSource, SHCTableViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet SHCTableViewDragAddNew *tableView;
+@property (weak, nonatomic) IBOutlet SHCTableView *tableView;
 
 @end

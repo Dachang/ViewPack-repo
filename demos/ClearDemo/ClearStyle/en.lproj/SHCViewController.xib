@@ -35,7 +35,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIView" id="913960298">
+					<object class="IBUIView" id="653270726">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 548}</string>
@@ -46,7 +46,7 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="544945161">
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="171821874">
 								<int key="NSID">2</int>
 							</object>
 						</object>
@@ -56,11 +56,11 @@
 				<string key="NSFrame">{{0, 20}, {320, 548}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="913960298"/>
+				<reference key="NSNextKeyView" ref="653270726"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC43NQA</bytes>
-					<reference key="NSCustomColorSpace" ref="544945161"/>
+					<reference key="NSCustomColorSpace" ref="171821874"/>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -98,7 +98,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tableView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="913960298"/>
+						<reference key="destination" ref="653270726"/>
 					</object>
 					<int key="connectionID">21</int>
 				</object>
@@ -126,9 +126,9 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="913960298"/>
+							<reference ref="653270726"/>
 							<object class="IBNSLayoutConstraint" id="124850763">
-								<reference key="firstItem" ref="913960298"/>
+								<reference key="firstItem" ref="653270726"/>
 								<int key="firstAttribute">3</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="774585933"/>
@@ -144,7 +144,7 @@
 								<int key="contentType">3</int>
 							</object>
 							<object class="IBNSLayoutConstraint" id="467929745">
-								<reference key="firstItem" ref="913960298"/>
+								<reference key="firstItem" ref="653270726"/>
 								<int key="firstAttribute">6</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="774585933"/>
@@ -160,7 +160,7 @@
 								<int key="contentType">3</int>
 							</object>
 							<object class="IBNSLayoutConstraint" id="982607038">
-								<reference key="firstItem" ref="913960298"/>
+								<reference key="firstItem" ref="653270726"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="774585933"/>
@@ -176,7 +176,7 @@
 								<int key="contentType">3</int>
 							</object>
 							<object class="IBNSLayoutConstraint" id="630792659">
-								<reference key="firstItem" ref="913960298"/>
+								<reference key="firstItem" ref="653270726"/>
 								<int key="firstAttribute">4</int>
 								<int key="relation">0</int>
 								<reference key="secondItem" ref="774585933"/>
@@ -196,7 +196,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="913960298"/>
+						<reference key="object" ref="653270726"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -226,7 +226,7 @@
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="14.CustomClassName">SHCTableViewDragAddNew</string>
+				<string key="14.CustomClassName">SHCTableView</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<boolean value="NO" key="14.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -267,7 +267,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">SHCTableViewDragAddNew</string>
-					<string key="superclassName">SHCTableView</string>
+					<string key="superclassName">NSObject</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/SHCTableViewDragAddNew.h</string>
@@ -278,13 +278,13 @@
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">tableView</string>
-						<string key="NS.object.0">SHCTableView</string>
+						<string key="NS.object.0">SHCTableViewDragAddNew</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">tableView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">tableView</string>
-							<string key="candidateClassName">SHCTableView</string>
+							<string key="candidateClassName">SHCTableViewDragAddNew</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
