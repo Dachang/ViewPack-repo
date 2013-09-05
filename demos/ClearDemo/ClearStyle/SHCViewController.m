@@ -9,12 +9,14 @@
 #import "SHCViewController.h"
 #import "SHCToDoItem.h"
 #import "SHCTableViewCell.h"
+#import "SHCTableViewPinchToAdd.h"
 
 @implementation SHCViewController {
     // a array of to-do items
     NSMutableArray *_toDoItems;
     float _editingOffset;
     SHCTableViewDragAddNew* _dragAddNew;
+    SHCTableViewPinchToAdd* _pinchAddNew;
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -48,6 +50,7 @@
     [self.tableView registerClassForCells:[SHCTableViewCell class]];
     self.tableView.backgroundColor = [UIColor blackColor];
     _dragAddNew = [[SHCTableViewDragAddNew alloc] initWithTableView:self.tableView];
+    _pinchAddNew = [[SHCTableViewPinchToAdd alloc] initWithTableView:self.tableView];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -81,9 +84,14 @@
 
 - (void)itemAdded
 {
+    [self itemAddedAtIndex:0];
+}
+
+- (void)itemAddedAtIndex:(NSInteger)index
+{
     //create the new item
     SHCToDoItem *toDoItem = [[SHCToDoItem alloc] init];
-    [_toDoItems insertObject:toDoItem atIndex:0];
+    [_toDoItems insertObject:toDoItem atIndex:index];
     //refresh the table
     [_tableView reloadData];
     //enter edit mode
