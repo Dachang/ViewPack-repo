@@ -7,7 +7,7 @@
 //
 
 // A UILabel subclass that can optionally have a strikethrough
-@interface SHCStrikethroughLabel : UILabel
+@interface SHCStrikethroughLabel : UITextField
 
 // A boolean value that determines whether the label should have a strikethrough.
 @property (nonatomic) bool strikethrough;

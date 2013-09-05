@@ -18,12 +18,19 @@
 @end
 
 @interface SHCTableView : UIView<UIScrollViewDelegate>
-
+{
+    UIScrollView *scrollView;
+}
 @property (nonatomic, assign) id<SHCTableViewDataSource> dataSource;
+@property (nonatomic, assign, readonly) UIScrollView *scrollView;
 
 //dequeues a cell that can be reused
 - (UIView*)dequeueReusableCell;
 //register a class for use as new cells
 - (void)registerClassForCells:(Class)cellClass;
+//an array of cells that are currently visible, sorted from top to bottom
+- (NSArray*)visibleCells;
+//forces the table to dispose of all cells and re-build the table
+- (void)reloadData;
 
 @end

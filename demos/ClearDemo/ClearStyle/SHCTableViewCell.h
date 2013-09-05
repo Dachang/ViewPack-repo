@@ -10,7 +10,7 @@
 #import "SHCTableViewCellDelegate.h"
 
 // A custom table cell that renders SHCToDoItem items.
-@interface SHCTableViewCell : UITableViewCell
+@interface SHCTableViewCell : UITableViewCell<UITextFieldDelegate>
 
 // The item that this cell renders
 @property (nonatomic) SHCToDoItem *todoItem;

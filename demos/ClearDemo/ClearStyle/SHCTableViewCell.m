@@ -38,6 +38,8 @@ const float UI_CUES_WIDTH = 50.0f;
         [self addSubview:_crossLabel];
 		// create a label that renders the todo item text
 		_label = [[SHCStrikethroughLabel alloc] initWithFrame:CGRectNull];
+        _label.delegate = self;
+        _label.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 		_label.textColor = [UIColor whiteColor];
 		_label.font = [UIFont boldSystemFontOfSize:16];
 		_label.backgroundColor = [UIColor clearColor];
@@ -157,6 +159,31 @@ const float LABEL_LEFT_MARGIN = 15.0f;
             _label.strikethrough = YES;
         }
     }
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return NO;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    self.todoItem.onEditing = YES;
+    return !(self.todoItem.completed || !(self.todoItem.onEditing));
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self.delegate cellDidBeginEditing:self];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self.delegate cellDidEndEditing:self];
+    self.todoItem.text = textField.text;
+    self.todoItem.onEditing = NO;
 }
 
 @end

@@ -16,6 +16,9 @@
 // A boolean value that determines the completed state of this item.
 @property (nonatomic) BOOL completed;
 
+// A boolean value that detertmines that when an item is on editing, the others should be locked
+@property (nonatomic) BOOL onEditing;
+
 // Returns an SHCToDoItem item initialised with the given text.
 -(id)initWithText:(NSString*)text;
 

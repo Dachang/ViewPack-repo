@@ -13,6 +13,7 @@
 @implementation SHCViewController {
     // a array of to-do items
     NSMutableArray *_toDoItems;
+    float _editingOffset;
 }
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -69,6 +70,7 @@
 //    NSString *ident = @"cell";
     SHCTableViewCell *cell = (SHCTableViewCell*)[self.tableView dequeueReusableCell];
     SHCToDoItem *item = _toDoItems[row];
+    item.onEditing = NO;
     cell.todoItem = item;
     cell.delegate = self;
     cell.backgroundColor = [self colorForIndex:row];
@@ -84,44 +86,87 @@
     cell.backgroundColor = [self colorForIndex:indexPath.row];
 }
 
-//-(void)toDoItemDeleted:(SHCToDoItem *)todoItem
-//{
-//    float delay = 0.0;
-//    
-//    //remove the model object
-//    [_toDoItems removeObject:todoItem];
-//    
-//    //find the visible cells
-//    NSArray* visibleCells = [self.tableView visibleCells];
-//    
-//    UIView *lastView = [visibleCells lastObject];
-//    bool startAnimating = false;
-//    
-//    //iterate over all of the cells
-//    for (SHCTableViewCell* cell in visibleCells)
-//    {
-//        if(startAnimating)
-//        {
-//            [UIView animateWithDuration:0.1 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
-//                cell.frame = CGRectOffset(cell.frame, 0.0f, -cell.frame.size.height);
-//            } completion:^(BOOL finished){
-//                if(cell == lastView)
-//                {
-//                    //reloadData forces the UITableView to 'dispose' of all of the cells and re-query thedatasource
-//                    [self.tableView reloadData];
-//                }
-//            }];
-//            delay += 0.1;
-//        }
-//        
-//        //if reach the item that was deleted, start animating
-//        if(cell.todoItem == todoItem)
-//        {
-//            startAnimating = true;
-//            cell.hidden = YES;
-//        }
-//    }
-//}
+#pragma mark - SHCTableViewCellDelegate
+
+-(void)toDoItemDeleted:(SHCToDoItem *)todoItem
+{
+    float delay = 0.0;
+    
+    //remove the model object
+    [_toDoItems removeObject:todoItem];
+    
+    //find the visible cells
+    NSArray* visibleCells = [self.tableView visibleCells];
+    
+    UIView *lastView = [visibleCells lastObject];
+    bool startAnimating = false;
+    
+    //iterate over all of the cells
+    for (SHCTableViewCell* cell in visibleCells)
+    {
+        if(startAnimating)
+        {
+            [UIView animateWithDuration:0.1 delay:delay options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                cell.frame = CGRectOffset(cell.frame, 0.0f, -cell.frame.size.height);
+            } completion:^(BOOL finished){
+                if(cell == lastView)
+                {
+                    //reloadData forces the UITableView to 'dispose' of all of the cells and re-query thedatasource
+                    [self.tableView reloadData];
+                }
+            }];
+            delay += 0.1;
+        }
+        
+        //if reach the item that was deleted, start animating
+        if(cell.todoItem == todoItem)
+        {
+            startAnimating = true;
+            cell.hidden = YES;
+            
+            if(cell == lastView)
+            {
+                [self.tableView reloadData];
+            }
+        }
+    }
+}
+
+- (void)cellDidBeginEditing:(SHCTableViewCell *)editingCell
+{
+    self.tableView.scrollView.scrollEnabled = NO;
+    _editingOffset = _tableView.scrollView.contentOffset.y - editingCell.frame.origin.y;
+    for(SHCTableViewCell* cell in [_tableView visibleCells])
+    {
+        if(cell != editingCell)
+        {
+            cell.userInteractionEnabled = NO;
+        }
+        [UIView animateWithDuration:0.3 animations:^{
+            cell.frame = CGRectOffset(cell.frame, 0, _editingOffset);
+            if(cell != editingCell)
+            {
+                cell.alpha = 0.3;
+            }
+        }];
+    }
+}
+
+- (void)cellDidEndEditing:(SHCTableViewCell *)editingCell
+{
+    self.tableView.scrollView.scrollEnabled = YES;
+    for(SHCTableViewCell* cell in [_tableView visibleCells])
+    {
+        cell.userInteractionEnabled = YES;
+        [UIView animateWithDuration:0.3 animations:^{
+            cell.frame = CGRectOffset(cell.frame, 0, -_editingOffset);
+            if(cell != editingCell)
+            {
+                cell.alpha = 1.0;
+            }
+        }];
+    }
+}
 
 @end
 
