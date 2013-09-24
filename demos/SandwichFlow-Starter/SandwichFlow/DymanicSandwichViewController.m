@@ -10,7 +10,7 @@
 #import "SandwichViewController.h"
 #import "AppDelegate.h"
 
-@interface DymanicSandwichViewController ()
+@interface DymanicSandwichViewController () <UICollisionBehaviorDelegate>
 
 @end
 
@@ -22,6 +22,8 @@
     UIDynamicAnimator* _animator;
     CGPoint _previousTouchPoint;
     BOOL _draggingView;
+    UISnapBehavior* _snap;
+    BOOL _viewDocked;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -105,8 +107,17 @@
     CGPoint boundaryEnd = CGPointMake(self.view.bounds.size.width,boundary);
     [collision addBoundaryWithIdentifier:@1 fromPoint:boundaryStart toPoint:boundaryEnd];
     
+    boundaryStart = CGPointMake(0.0, 0.0);
+    boundaryEnd = CGPointMake(self.view.bounds.size.width, 0.0);
+    [collision addBoundaryWithIdentifier:@2 fromPoint:boundaryStart toPoint:boundaryEnd];
+    collision.collisionDelegate = self;
+    
     //apply some gravity
     [_gravity addItem:view];
+    
+    //UIDynamicItemBehaviour allows you to change the physical properties of a dynamic item
+    UIDynamicItemBehavior* itemBehaviour = [[UIDynamicItemBehavior alloc] initWithItems:@[view]];
+    [_animator addBehavior:itemBehaviour];
     
     return view;
 }
@@ -136,8 +147,83 @@
     else if (gesture.state == UIGestureRecognizerStateEnded && _draggingView)
     {
         //the gesture has ended
+        [self tryDockView:draggedView];
+        [self addVelocityToView:draggedView fromGesture:gesture];
         [_animator updateItemUsingCurrentState:draggedView];
         _draggingView = NO;
+    }
+}
+
+#pragma mark - get itemBehaviour of the view
+//this iterates over the behaviours until it finds the one with the correct UIDynamicItemBehaviour associated with the given view
+- (UIDynamicItemBehavior*) itemBehaviourForView:(UIView*)view
+{
+    for(UIDynamicItemBehavior* behaviour in _animator.behaviors)
+    {
+        if(behaviour.class == [UIDynamicItemBehavior class] && [behaviour.items firstObject] == view)
+        {
+            return behaviour;
+        }
+    }
+    return nil;
+}
+
+#pragma mark - add the velocity to the behaviour
+- (void)addVelocityToView:(UIView*)view fromGesture:(UIPanGestureRecognizer*)gesture
+{
+    CGPoint vel = [gesture velocityInView:self.view];
+    //remove the velocity on x direction
+    vel.x = 0;
+    UIDynamicItemBehavior* behaviour = [self itemBehaviourForView:view];
+    [behaviour addLinearVelocity:vel forItem:view];
+}
+
+#pragma mark - snap Behaviour to 'dock' a view
+- (void)tryDockView:(UIView*)view
+{
+    BOOL viewHasReachedDockLocation = view.frame.origin.y < 100.0;
+    
+    if(viewHasReachedDockLocation)
+    {
+        if(!_viewDocked)
+        {
+            _snap = [[UISnapBehavior alloc] initWithItem:view snapToPoint:self.view.center];
+            [_animator addBehavior:_snap];
+            [self setAlphaWhenViewDocked:view alpha:0.0];
+            _viewDocked = YES;
+        }
+    }
+    else
+    {
+        if(_viewDocked)
+        {
+            [_animator removeBehavior:_snap];
+            [self setAlphaWhenViewDocked:view alpha:1.0];
+            _viewDocked = NO;
+        }
+    }
+}
+
+//this is used to hide those non-docked views
+- (void)setAlphaWhenViewDocked:(UIView*)view alpha:(CGFloat)alpha
+{
+    for (UIView* aView in _views)
+    {
+        if(aView != view)
+        {
+            aView.alpha = alpha;
+        }
+    }
+}
+
+#pragma mark - UICollision Behaviour delegate methods
+
+- (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p
+{
+    if([@2 isEqual:identifier])
+    {
+        UIView* view = (UIView*) item;
+        [self tryDockView:view];
     }
 }
 
