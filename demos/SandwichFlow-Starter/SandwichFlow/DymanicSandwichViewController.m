@@ -112,6 +112,12 @@
     [self.view addSubview:viewController.view];
     [viewController didMoveToParentViewController:self];
     
+    //add motion effect
+//    UIInterpolatingMotionEffect* xMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+//    xMotion.minimumRelativeValue = @(-offset*0.5);
+//    xMotion.maximumRelativeValue = @(offset*0.5);
+//    [viewController.view addMotionEffect:xMotion];
+    
     //add a gesture recognizer
     UIPanGestureRecognizer* pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [viewController.view addGestureRecognizer:pan];
@@ -239,10 +245,26 @@
 
 - (void)collisionBehavior:(UICollisionBehavior *)behavior beganContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier atPoint:(CGPoint)p
 {
+    UIView* view = (UIView*) item;
     if([@2 isEqual:identifier])
     {
-        UIView* view = (UIView*) item;
         [self tryDockView:view];
+    }
+    
+    if ([@1 isEqual:identifier])
+    {
+        UIDynamicItemBehavior* itemBehaviourForCollision = [self itemBehaviourForView:view];
+        CGPoint linearVelocityForCollision = [itemBehaviourForCollision linearVelocityForItem:view];
+        
+        for(UIView* otherView in _views)
+        {
+            if (view != otherView)
+            {
+                UIDynamicItemBehavior* itemBehaviour = [self itemBehaviourForView:otherView];
+                float bounceMagnitude = arc4random() % 50 + linearVelocityForCollision.y;
+                [itemBehaviour addLinearVelocity:CGPointMake(0, bounceMagnitude) forItem:otherView];
+            }
+        }
     }
 }
 
